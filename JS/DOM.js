@@ -33,7 +33,7 @@ const Tableau_Id = [
     "CommissionNFTPourcentage", "ErrorContainerNFT",
     "CommissionNFTenDollard", "PourcentageNFT",
     "Input_CapitalizationFrequency", "stakingapymode",
-    "Phrase_APR", "Phrase_APY"];
+    "Phrase_APR", "Phrase_APY", "RisqueReward"];
 
 
 const getDomElements = ids => ids.reduce((obj, id) => {
