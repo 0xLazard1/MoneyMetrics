@@ -15,7 +15,6 @@
  * - Enfin, elle gère l'affichage des résultats pertinents selon que le 'Toggle_StopLoss' soit activé ou non.
  */
 
-
 import { elements } from "../../../DOM.js";
 
 export const Spot = () => {

@@ -42,16 +42,16 @@ export const APR = () => {
         return;
     }
 
-    if (elements.Input_Staking, elements.Input_Staking?.checked) {
+    if (elements.Input_Staking, elements.Input_APR.checked) {
 
         const BrutTokenGagné = quantitestaking * pourcentageapr / 100;  // Total des tokens gagnés
         const Commission = BrutTokenGagné * commission / 100;           // Commission basée sur le pourcentage
         const NetTokenGagné = BrutTokenGagné - Commission;              // Tokens après soustraction de la commission
         const TokenBenefice = NetTokenGagné + quantitestaking;          // Total des tokens après ajout du bénéfice net
 
-        displayResults(ResultatCalculStaking, 'Nombre de Token Farmer', 'green', `${NetTokenGagné.toFixed(2)}`)
-        displayResults(WalletBeneficeStaking, 'Nombre de Token Total', 'green', `${TokenBenefice.toFixed(2)}`)
-        displayResults(CommissionStaking, 'Nombre de Token Perdu en Commission', 'red', `${Commission.toFixed(2)}`)
+        displayResults(ResultatCalculStaking, 'Tokens obtenus ', 'green', `${NetTokenGagné.toFixed(2)}`)
+        displayResults(WalletBeneficeStaking, 'Total de tokens après staking ', 'green', `${TokenBenefice.toFixed(2)}`)
+        displayResults(CommissionStaking, 'Tokens déduits en commission ', 'red', `${Commission.toFixed(2)}`)
     }
 }
 

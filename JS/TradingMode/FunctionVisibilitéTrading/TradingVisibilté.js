@@ -1,7 +1,5 @@
-
-
 /**
- * TradingVisibilité:
+ * TradingVisibilité():
  * 
  * Cette fonction gère la visibilité des différents éléments du DOM en fonction des modes de trading choisis : 'Spot' ou 'Levier'.
  * 

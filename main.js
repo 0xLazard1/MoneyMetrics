@@ -9,6 +9,8 @@ import { APR } from "./JS/StakingMode/FunctionCalculStaking/APR/APR.js";
 import { ResetStaking } from "./JS/StakingMode/FunctionReset/ResetStaking.js";
 import { NFTCalcul } from "./JS/NftMode/FunctionCalculNFT/CalculNFT.js";
 import { ResetNFT } from "./JS/NftMode/FunctionResetNFT/ResetNFT.js";
+import { StakingVisibilité } from "./JS/StakingMode/FunctionVisibilité/VisibilitéStaking.js";
+import { APY } from "./JS/StakingMode/FunctionCalculStaking/APY/APY.js";
 
 
 
@@ -52,8 +54,17 @@ ResetAll.addEventListener("click", Reset);
 Button_CalculerLesResultatsStaking.addEventListener("click", APR);
 
 
-//Utilisation pour le fichier Reset.js
+//Utilisation pour le fichier APY.js
+Button_CalculerLesResultatsStaking.addEventListener("click", APY);
+
+
+//Utilisation pour le fichier StakingReset.js
 Button_ResetStaking.addEventListener("click", ResetStaking);
+
+
+//Utilisation pour le fichier TradingVisibilité.js
+Input_APY.addEventListener("change", StakingVisibilité);
+Input_APR.addEventListener("change", StakingVisibilité);
 
 
 //Utilisation pour le fichier CalculNFT.js
@@ -62,4 +73,8 @@ Button_CalculerLesResultatsNFT.addEventListener("click", NFTCalcul);
 
 //Utilisation pour le ficher ResetNFT.js
 Button_ResetNFT.addEventListener("click", ResetNFT);
+
+
+
+
 

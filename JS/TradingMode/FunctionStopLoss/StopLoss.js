@@ -1,5 +1,5 @@
 /**
- * StopLoss:
+ * StopLoss():
  * 
  * Fonction qui gère la visibilité et le texte des éléments du DOM en fonction de l'état du bouton 'Stop Loss'.
  * Elle vérifie d'abord si le mode de trading est 'Spot' en utilisant 'Input_Spot'. Si c'est le cas :

@@ -1,3 +1,35 @@
+/**
+ * ErreursLong():
+ * 
+ * Cette fonction est appelée lorsqu'une erreur survient en mode "long".
+ * Elle réinitialise tous les éléments avec la fonction 'Reset()' et affiche ensuite un message d'erreur
+ * approprié dans 'ErrorContainer'.
+ * 
+ */
+/**
+ * ErreursShort():
+ * 
+ * Cette fonction est appelée lorsqu'une erreur survient en mode "short".
+ * Elle réinitialise tous les éléments avec la fonction 'Reset()' et affiche ensuite un message d'erreur
+ * approprié dans 'ErrorContainer'.
+ * 
+ */
+/**
+ * ErreursLiquidation():
+ * 
+ * Cette fonction est réservée pour gérer les erreurs spécifiques lors de situations de liquidation.
+ * (Note: La fonction est actuellement vide et doit être complétée.)
+ * 
+ */
+/**
+ * ErreurStopLoss():
+ * 
+ * Cette fonction est appelée lorsqu'une erreur survient avec la fonctionnalité 'StopLoss'.
+ * Elle réinitialise tous les éléments avec la fonction 'Reset()' et affiche ensuite un message d'erreur
+ * approprié dans 'ErrorContainer'.
+ * 
+ */
+
 
 import { elements } from "../../DOM.js";
 import { Reset } from "../FunctionReset/Reset.js";

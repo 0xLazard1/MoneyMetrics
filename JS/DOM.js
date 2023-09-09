@@ -1,5 +1,6 @@
 import { ChoixMode } from "./ChoixMode.js"
 import { TradingVisibilité } from "./TradingMode/FunctionVisibilitéTrading/TradingVisibilté.js";
+import { StakingVisibilité } from "./StakingMode/FunctionVisibilité/VisibilitéStaking.js";
 
 const Tableau_Id = [
     "Input_Trading", "Input_Staking",
@@ -30,7 +31,9 @@ const Tableau_Id = [
     "Button_CalculerLesResultatsNFT", "Button_ResetNFT",
     "ResultatCalculNFT", "WalletBeneficeNFT",
     "CommissionNFTPourcentage", "ErrorContainerNFT",
-    "CommissionNFTenDollard", "PourcentageNFT"];
+    "CommissionNFTenDollard", "PourcentageNFT",
+    "Input_CapitalizationFrequency", "stakingapymode",
+    "Phrase_APR", "Phrase_APY"];
 
 
 const getDomElements = ids => ids.reduce((obj, id) => {
@@ -52,12 +55,15 @@ window.addEventListener("DOMContentLoaded", () => {
     const radioButtons = document.getElementsByName("Choice");
     const inputSpot = elements.Input_Spot;
     const inputLong = elements.Input_Long;
-    if (radioButtons.length > 0 && inputSpot && inputLong) {
+    const inputapy = elements.Input_APY;
+    if (radioButtons.length > 0 && inputSpot && inputLong && inputapy) {
         radioButtons.forEach(button => button.checked = false);
         inputSpot.checked = true;
         inputLong.checked = true;
+        inputapy.checked = true;
         ChoixMode();
         TradingVisibilité();
+        StakingVisibilité();
     } else {
         console.error("Ne trouve pas les radios dans modes");
     }

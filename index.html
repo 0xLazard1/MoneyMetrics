@@ -152,12 +152,23 @@
             </form>
 
             <div class="staking-input-wrapper">
+                <p id="stakingapymode" class="staking-input-label">Fréquence de capitalisation pour l'APY</p>
+                <select id="Input_CapitalizationFrequency" class="staking-input">
+                    <option value="daily">Quotidienne</option>
+                    <option value="monthly">Mensuelle</option>
+                    <option value="quarterly">Trimestrielle</option>
+                    <option value="annually">Annuelle</option>
+                </select>
+            </div>
+
+            <div class="staking-input-wrapper">
                 <p id="Phrase_QuantiteToken" class="staking-input-label">Quantité de tokens</p>
                 <input type="number" min="0" step="0.000001" id="Input_QuantiteStaking" class="staking-input">
             </div>
 
             <div class="staking-input-wrapper">
                 <p id="Phrase_APR" class="staking-input-label">APR (en %)</p>
+                <p id="Phrase_APY" class="staking-input-label">APY (en %)</p>
                 <input type="number" min="0" step="0.000001" id="Input_PourcentageAPR" class="staking-input">
             </div>
 
@@ -249,17 +260,72 @@
 
 
         <!-- 
-   ##############################################################
-   ##                                                          ##
-   ##                      Lending/Borrowing                   ##     
-   ##                                                          ##
-   ##############################################################
+##############################################################
+##                                                          ##
+##                      Lending/Borrowing                   ##     
+##                                                          ##
+##############################################################
+-->
+        <!-- 
+##############################################################
+##                                                          ##
+##                      Prêt/Emprunt                        ##     
+##                                                          ##
+##############################################################
 -->
 
+        <container id="PartieLending" class="pret-emprunt-container">
+            <div class="pret-emprunt-heading">
+                <h1 class="pret-emprunt-title">Estimation de prêt & emprunt</h1>
+            </div>
 
-        <container id="PartieLending">
-            <h1>Lending </h1>
+            <form class="pret-emprunt-form">
+                <p class="pret-emprunt-choice">Veuillez sélectionner votre choix : Prêt ou Emprunt</p>
+                <div class="pret-emprunt-option">
+                    <input type="radio" id="Input_Pret" name="typeOperation" value="pret" class="pret-emprunt-radio"
+                        checked>
+                    <label for="Input_Pret" class="pret-emprunt-label">Prêt</label>
+                    <input type="radio" id="Input_Emprunt" name="typeOperation" value="emprunt"
+                        class="pret-emprunt-radio">
+                    <label for="Input_Emprunt" class="pret-emprunt-label">Emprunt</label>
+                </div>
+            </form>
+
+            <div class="pret-emprunt-input-wrapper">
+                <p class="pret-emprunt-input-label">Montant :</p>
+                <input type="number" min="0" step="0.000001" id="Input_Montant" class="pret-emprunt-input">
+            </div>
+
+            <div class="pret-emprunt-input-wrapper">
+                <p class="pret-emprunt-input-label">Taux d'intérêt (% annuel) :</p>
+                <input type="number" min="0" step="0.000001" id="Input_TauxInteret" class="pret-emprunt-input">
+            </div>
+
+            <div class="pret-emprunt-input-wrapper">
+                <p class="pret-emprunt-input-label">Durée (en mois) :</p>
+                <input type="number" min="0" id="Input_Duree" class="pret-emprunt-input">
+            </div>
+
+            <div class="pret-emprunt-button-wrapper">
+                <button type="button" id="Button_CalculerPretEmprunt" class="pret-emprunt-button">Effectuer le
+                    calcul</button>
+            </div>
+
+            <div class="pret-emprunt-button-wrapper">
+                <button type="button" id="Button_ResetPretEmprunt"
+                    class="pret-emprunt-button-reset">Réinitialiser</button>
+            </div>
+
+            <section class="right-column pret-emprunt-results-section">
+                <p id="ResultatPret" class="pret-emprunt-result"></p>
+                <p id="ResultatEmprunt" class="pret-emprunt-result"></p>
+                <p id="InteretsPret" class="pret-emprunt-result"></p>
+                <p id="InteretsEmprunt" class="pret-emprunt-result"></p>
+                <p id="ErrorContainerPretEmprunt" class="pret-emprunt-error"></p>
+            </section>
         </container>
+
+
 
 
 
