@@ -1,5 +1,16 @@
 Organisation Projet 
 
+
+Le fichier principal, (Main.js), contient tous les écouteurs d événements. Il est lu par le fichier (index.html).
+Le fichier (DOM.js) regroupe toutes les ID dans un tableau. Une fonction parcourt ce tableau et récupère chaque ID pour le push sur des éléments.
+Le fichier (ChoixMode.js) permet de choisir entre différents modes. Une fois le mode choisi, les sous-dossiers, qui contiennent les fonctions, s appellent entre eux en fonction des besoins.
+
+Ordres des Calls 
+-1 Main.js 
+-2 Dom.js 
+-3 ChoixMode.js 
+-4 Sous-Dossier.js 
+
 📦Estimation-Gain-Perte
 │
 ├─ 📜Index.html
@@ -37,17 +48,29 @@ Organisation Projet
 │   │
 │   ├─ 📂StakingMode
 │   │   │
-│   │   ├─  📂CalculFunctionsStaking
-|   |   │    ├─ 📜APR.js      
-│   │   │    └─ 📜APY.js      
+│   │   ├─ 📂CalculFunctionsStaking
+|   |   │   ├─ 📜APR.js      
+│   │   │   └─ 📜APY.js      
 │   │   │   
-│   │   └─  📂FunctionResetStaking
-│   │        └─ 📜APY.js      
-│   │
+│   │   ├─ 📂FunctionResetStaking
+│   │   │   └─ 📜StakingReset.js      
+│   │   │
+│   │   └─ 📂FunctionVisibilité
+│   │       └─ 📜StakingVisibilité.js
 │   │
 │   ├─ 📂NFTMode
-│   │   └─ 📜NFT.js
+│   │   │
+│   │   ├─ 📂CalculFunctionsNFT
+|   |   │    └─ 📜CalculNFT.js      
+│   │   │          
+│   │   │   
+│   │   └─ 📂FunctionResetNFT
+│   │       └─ 📜ResetNFT.js       
+│   │   
 │   │
 │   └─ 📂LendingMode
 │       └─ 📜Lending.js
 └─ 
+
+
+
