@@ -12,148 +12,258 @@
 </head>
 
 <body>
-    <container>
-        <div>
-            <input type="radio" id="Input_Trading" name="Choice" value="Trading">
-            <label for="Input_Trading">Trading Mode</label>
-            <input type="radio" id="Input_Staking" name="Choice" value="Staking">
-            <label for="Input_Staking">Staking Mode</label>
-            <input type="radio" id="Input_NFT" name="Choice" value="NFT">
-            <label for="Input_NFT">Nft Mode</label>
-            <input type="radio" id="Input_Lending" name="Choice" value="Lending">
-            <label for="Input_Lending">Lending Mode</label>
+
+
+    <!-- 
+   ##############################################################
+   ##                                                          ##
+   ##                      CHOIX MODE                          ##
+   ##                                                          ##
+   ##############################################################
+-->
+    <container class="mode-container">
+        <div class="mode-selection">
+            <input type="radio" id="Input_Trading" name="Choice" value="Trading" class="mode-radio">
+            <label for="Input_Trading" class="mode-label">Trading Mode</label>
+
+            <input type="radio" id="Input_Staking" name="Choice" value="Staking" class="mode-radio">
+            <label for="Input_Staking" class="mode-label">Staking Mode</label>
+
+            <input type="radio" id="Input_NFT" name="Choice" value="NFT" class="mode-radio">
+            <label for="Input_NFT" class="mode-label">Nft Mode</label>
+
+            <input type="radio" id="Input_Lending" name="Choice" value="Lending" class="mode-radio">
+            <label for="Input_Lending" class="mode-label">Lending Mode</label>
         </div>
     </container>
 
+
     <section>
-        <container id="PartieTrading">
-            <section class="left-column">
-                <div>
-                    <h1>Estimation de gain/perte en spot et en levier</h1>
+
+        <!-- 
+   ##############################################################
+   ##                                                          ##
+   ##                      Trading                             ##
+   ##                                                          ##
+   ##############################################################
+-->
+        <container id="PartieTrading" class="trading-container">
+            <section class="left-column trading-left-column">
+                <div class="trading-heading">
+                    <h1 class="trading-title">Estimation de gain/perte en spot et en levier</h1>
                 </div>
-                <form>
-                    <p>Veuillez sélectionner le mode de trading</p>
-                    <div>
-                        <input type="radio" id="Input_Spot" name="contact" value="Spot" checked>
-                        <label for="Input_Spot">Spot (transaction au comptant)</label>
 
-                        <input type="radio" id="Input_Levier" name="contact" value="Levier" checked>
-                        <label for="Input_Levier">Levier (transaction à effet de levier)</label>
-                    </div>
-                </form>
-                <form id="Block_Levier">
-                    <p id="Phrase_Levier">Veuillez sélectionner le type de position à prendre</p>
-                    <div>
-                        <input type="radio" id="Input_Long" name="contact" value="Long">
-                        <label for="Input_Long">Long (acheter)</label>
+                <form class="trading-form">
+                    <p class="trading-choice">Veuillez sélectionner le mode de trading</p>
+                    <div class="trading-option">
+                        <input type="radio" id="Input_Spot" name="contact" value="Spot" class="trading-radio" checked>
+                        <label for="Input_Spot" class="trading-label">Spot (transaction au comptant)</label>
 
-                        <input type="radio" id="Input_Short" name="contact" value="Short">
-                        <label for="Input_Short">Short (vendre)</label>
+                        <input type="radio" id="Input_Levier" name="contact" value="Levier" class="trading-radio">
+                        <label for="Input_Levier" class="trading-label">Levier (transaction à effet de levier)</label>
                     </div>
                 </form>
 
-                <section>
-                    <div>
-                        <p id="PhraseSelection_Levier">Sélectionnez l'effet de levier à appliquer à la position</p>
-                        <input type="range" min="1" max="100" id="Input_RangeLevier" />
-                        <span id="Levier_Value">1</span>
-                    </div>
-                    <div>
-                        <p id="Phrase_PrixDentrée">Prix d'entrée</p>
-                        <input type="number" min="0" step="0.000001" id="Input_Prixdentree">
+                <form id="Block_Levier" class="lever-form">
+                    <p id="Phrase_Levier" class="lever-choice">Veuillez sélectionner le type de position à prendre</p>
+                    <div class="lever-option">
+                        <input type="radio" id="Input_Long" name="contact" value="Long" class="lever-radio">
+                        <label for="Input_Long" class="lever-label">Long (acheter)</label>
 
+                        <input type="radio" id="Input_Short" name="contact" value="Short" class="lever-radio">
+                        <label for="Input_Short" class="lever-label">Short (vendre)</label>
                     </div>
+                </form>
 
-                    <div style="position: relative;">
-                        <p id="Phrase_CapitalInvesi">Capital Investi</p>
-                        <input type="number" min="0" step="0.000001" id="Input_CapitalInvesi">
-                        <span id="multiplicator"
-                            style="position: absolute; left: 45px; transform: translateY(-50%); opacity: 0.5; pointer-events: none; margin-top: 9.5px;"></span>
+                <section class="trading-input-section">
+                    <div class="lever-range-wrapper">
+                        <p id="PhraseSelection_Levier" class="lever-input-label">Sélectionnez l'effet de levier à
+                            appliquer à la position</p>
+                        <input type="range" min="1" max="100" id="Input_RangeLevier" class="lever-range" />
+                        <span id="Levier_Value" class="lever-value-display">1</span>
                     </div>
-
-
-                    <div>
-                        <p id="Phrase_NiveauDeSortie">Niveau de sortie</p>
-                        <input type="number" min="0" step="0.000001" id="Input_NiveauDeSortie">
+                    <div class="trading-input-wrapper">
+                        <p id="Phrase_PrixDentrée" class="trading-input-label">Prix d'entrée</p>
+                        <input type="number" min="0" step="0.000001" id="Input_Prixdentree" class="trading-input">
                     </div>
-                    <div id="PartieStopLoss">
-                        <div>
-                            <p id="Text_StopLoss">Ordre De Stop Loss</p>
-                            <input type="number" min="0" step="0.000001" id="Input_StopLoss">
-                        </div>
+                    <div class="trading-input-wrapper trading-relative-wrapper">
+                        <p id="Phrase_CapitalInvesi" class="trading-input-label">Capital Investi</p>
+                        <input type="number" min="0" step="0.000001" id="Input_CapitalInvesi" class="trading-input">
+                        <span id="multiplicator" class="multiplicator-indicator"></span>
                     </div>
-                    <div>
-                        <input type="checkbox" id="Toggle_StopLoss" name="Toggle_StopLoss">
-                        <label for="Toggle_StopLoss" id="LabelTextStopLoss"></label>
+                    <div class="trading-input-wrapper">
+                        <p id="Phrase_NiveauDeSortie" class="trading-input-label">Niveau de sortie</p>
+                        <input type="number" min="0" step="0.000001" id="Input_NiveauDeSortie" class="trading-input">
                     </div>
-
-
-                    <div>
-                        <button type="button" id="Button_CalculerLesResultats">Effectuer le calcul pour obtenir les
-                            résultats</button>
+                    <div id="PartieStopLoss" class="stoploss-input-wrapper">
+                        <p id="Text_StopLoss" class="stoploss-label">Ordre De Stop Loss</p>
+                        <input type="number" min="0" step="0.000001" id="Input_StopLoss" class="stoploss-input">
                     </div>
-                    <div>
-                        <button type="button" id="ResetAll">Reset</button>
+                    <div class="stoploss-toggle-wrapper">
+                        <input type="checkbox" id="Toggle_StopLoss" name="Toggle_StopLoss" class="stoploss-toggle">
+                        <label for="Toggle_StopLoss" id="LabelTextStopLoss" class="stoploss-toggle-label"></label>
+                    </div>
+                    <div class="trading-button-wrapper">
+                        <button type="button" id="Button_CalculerLesResultats" class="trading-button">Effectuer le
+                            calcul pour obtenir les résultats</button>
+                    </div>
+                    <div class="trading-button-wrapper">
+                        <button type="button" id="ResetAll" class="trading-button-reset">Reset</button>
                     </div>
                 </section>
             </section>
 
-            <section class="right-column">
-                <p id="ResultatCalcul"></p>
-                <p id="WalletBenefice"></p>
-                <p id="Pourcentage"></p>
-                <p id="PerteStopLoss"></p>
-                <p id="WalletSl"></p>
-                <p id="Liquidation"></p>
-                <p id="RisqueReward"></p>
-                <p id="ErrorContainer"></p>
+            <section class="right-column trading-results-section">
+                <p id="ResultatCalcul" class="trading-result"></p>
+                <p id="WalletBenefice" class="trading-result"></p>
+                <p id="Pourcentage" class="trading-result"></p>
+                <p id="PerteStopLoss" class="trading-result"></p>
+                <p id="WalletSl" class="trading-result"></p>
+                <p id="Liquidation" class="trading-result"></p>
+                <p id="RisqueReward" class="trading-result"></p>
+                <p id="ErrorContainer" class="trading-error"></p>
             </section>
         </container>
 
 
-        <container id="PartieStaking">
-            <div>
-                <h1>Estimation de gain/perte en staking avec APR/APY</h1>
+
+        <!-- 
+   ##############################################################
+   ##                                                          ##
+   ##                      Staking                             ##
+   ##                                                           ##
+   ##############################################################
+-->
+
+
+        <container id="PartieStaking" class="staking-container">
+            <div class="staking-heading">
+                <h1 class="staking-title">Estimation de gain/perte en staking avec APR/APY</h1>
             </div>
-            <form>
-                <p>Veuillez sélectionner votre choix de staking : APR ou APY</p>
-                <div>
-                    <input type="radio" id="Input_APY" name="contact" value="APY" checked>
-                    <label for="Input_APY"> <label>APY (Annual Percentage Yield) </label>
-                        <input type="radio" id="Input_APR" name="contact" value="APR">
-                        <label for="Input_APR">APR (Annual Percentage Rate)</label>
+
+            <form class="staking-form">
+                <p class="staking-choice">Veuillez sélectionner votre choix de staking : APR ou APY</p>
+                <div class="staking-option">
+                    <input type="radio" id="Input_APY" name="contact" value="APY" class="staking-radio" checked>
+                    <label for="Input_APY" class="staking-label">APY (Annual Percentage Yield)</label>
+                    <input type="radio" id="Input_APR" name="contact" value="APR" class="staking-radio">
+                    <label for="Input_APR" class="staking-label">APR (Annual Percentage Rate)</label>
                 </div>
             </form>
-            <div>
-                <p id="Phrase_QuantiteToken">Quantité de tokens</p>
-                <input type="number" min="0" step="0.000001" id="Input_Prixdentree">
+
+            <div class="staking-input-wrapper">
+                <p id="Phrase_QuantiteToken" class="staking-input-label">Quantité de tokens</p>
+                <input type="number" min="0" step="0.000001" id="Input_QuantiteStaking" class="staking-input">
             </div>
 
-            <div>
-                <p id="Phrase_APR">APR</p>
-                <input type="number" min="0" step="0.000001" id="Input_CapitalInvesi">
+            <div class="staking-input-wrapper">
+                <p id="Phrase_APR" class="staking-input-label">APR (en %)</p>
+                <input type="number" min="0" step="0.000001" id="Input_PourcentageAPR" class="staking-input">
             </div>
 
-            <div>
-                <p id="Phrase_NiveauDeSortie">Commision</p>
-                <input type="number" min="0" step="0.000001" id="Input_NiveauDeSortie">
+            <div class="staking-input-wrapper">
+                <p id="Phrase_NiveauDeSortie" class="staking-input-label">Commision (en %)</p>
+                <input type="number" min="0" step="0.000001" id="Input_CommisionStaking" class="staking-input">
             </div>
+
+            <div class="staking-button-wrapper">
+                <button type="button" id="Button_CalculerLesResultatsStaking" class="staking-button">Effectuer le calcul
+                    pour obtenir les résultats</button>
             </div>
+
+            <div class="staking-button-wrapper">
+                <button type="button" id="Button_ResetStaking" class="staking-button-reset">Reset</button>
+            </div>
+
+            <section class="right-column staking-results-section">
+                <p id="ResultatCalculStaking" class="staking-result"></p>
+                <p id="WalletBeneficeStaking" class="staking-result"></p>
+                <p id="CommissionStaking" class="staking-result"></p>
+                <p id="PourcentageStaking" class="staking-result"></p>
+                <p id="RisqueRewardStaking" class="staking-result"></p>
+                <p id="ErrorContainerStaking" class="staking-error"></p>
+            </section>
         </container>
-    </section>
 
 
 
-    <container id="PartieNFT">
-        <h1>NFT </h1>
-    </container>
-    <container id="PartieLending">
-        <h1>Lending </h1>
-    </container>
+        <!-- 
+   ##############################################################
+   ##                                                          ##
+   ##                           NFT                            ##     
+   ##                                                          ##
+   ##############################################################
+-->
+        <container id="PartieNFT" class="nft-container">
+            <div class="nft-heading">
+                <h1 class="nft-title"> Estimation de gain/perte sur les NFTs </h1>
+            </div>
+
+            <div class="nft-instruction">
+                <p>Veuillez entrée les valeurs correspondante </p>
+            </div>
+
+            <section class="nft-input-section">
+                <div class="nft-input-wrapper">
+                    <p id="Phrase_PrixdentreeNFT" class="nft-input-label">Valeur à l'achat du NFT (en $)</p>
+                    <input type="number" min="0" step="0.000001" id="Input_PrixdentreeNFT" class="nft-input">
+                </div>
+
+                <div class="nft-input-wrapper">
+                    <p id="Phrase_PrixdeReventeNFT" class="nft-input-label">Valeur à la revente du NFT (en $)</p>
+                    <input type="number" min="0" step="0.000001" id="Input_PrixdeReventeNFT" class="nft-input">
+                </div>
+
+                <div class="nft-input-wrapper">
+                    <p id="Phrase_FraisCreateurNFT" class="nft-input-label">Frais Créateur (en %)</p>
+                    <input type="number" min="0" step="0.000001" id="Input_FraisCreateurNFT" class="nft-input">
+                </div>
+
+                <div class="nft-input-wrapper">
+                    <p id="Phrase_FraisMarketNFT" class="nft-input-label">Frais MarketPlace (en %)</p>
+                    <input type="number" min="0" step="0.000001" id="Input_FraisMarketNFT" class="nft-input">
+                </div>
+
+                <div class="nft-button-wrapper">
+                    <button type="button" id="Button_CalculerLesResultatsNFT" class="nft-button">Effectuer le calcul
+                        pour
+                        obtenir les résultats</button>
+                </div>
+
+                <div class="nft-button-wrapper">
+                    <button type="button" id="Button_ResetNFT" class="nft-button-reset">Reset</button>
+                </div>
+            </section>
+
+            <section class="right-column nft-results-section">
+                <p id="ResultatCalculNFT" class="nft-result"></p>
+                <p id="WalletBeneficeNFT" class="nft-result"></p>
+                <p id="PourcentageNFT" class="nft-result"></p>
+                <p id="CommissionNFTenDollard" class="nft-result"></p>
+                <p id="CommissionNFTPourcentage" class="nft-result"></p>
+                <p id="ErrorContainerNFT" class="nft-error"></p>
+            </section>
+
+        </container>
 
 
 
-    <script type="module" src="main.js"></script>
+        <!-- 
+   ##############################################################
+   ##                                                          ##
+   ##                      Lending/Borrowing                   ##     
+   ##                                                          ##
+   ##############################################################
+-->
+
+
+        <container id="PartieLending">
+            <h1>Lending </h1>
+        </container>
+
+
+
+        <script type="module" src="main.js"></script>
 
 
 </body>

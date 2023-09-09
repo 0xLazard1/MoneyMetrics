@@ -18,7 +18,19 @@ const Tableau_Id = [
     "WalletBenefice", "ErrorContainer",
     "Input_Long", "Input_Short",
     "multiplicator", "ResetAll",
-    "Liquidation"];
+    "Liquidation", "Input_APR",
+    "Input_APY", "Input_QuantiteStaking",
+    "Button_CalculerLesResultats", "Input_PourcentageAPR",
+    "Input_CommisionStaking", "ResultatCalculStaking",
+    "WalletBeneficeStaking", "PourcentageStaking",
+    "RisqueRewardStaking", "ErrorContainerStaking",
+    "CommissionStaking", "Button_ResetStaking",
+    "Input_PrixdentreeNFT", "Input_PrixdeReventeNFT",
+    "Input_FraisCreateurNFT", "Input_FraisMarketNFT",
+    "Button_CalculerLesResultatsNFT", "Button_ResetNFT",
+    "ResultatCalculNFT", "WalletBeneficeNFT",
+    "CommissionNFTPourcentage", "ErrorContainerNFT",
+    "CommissionNFTenDollard", "PourcentageNFT"];
 
 
 const getDomElements = ids => ids.reduce((obj, id) => {
@@ -39,9 +51,11 @@ export const elements = getDomElements(Tableau_Id);
 window.addEventListener("DOMContentLoaded", () => {
     const radioButtons = document.getElementsByName("Choice");
     const inputSpot = elements.Input_Spot;
-    if (radioButtons.length > 0 && inputSpot) {
+    const inputLong = elements.Input_Long;
+    if (radioButtons.length > 0 && inputSpot && inputLong) {
         radioButtons.forEach(button => button.checked = false);
         inputSpot.checked = true;
+        inputLong.checked = true;
         ChoixMode();
         TradingVisibilité();
     } else {

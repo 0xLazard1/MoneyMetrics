@@ -36,7 +36,14 @@ Organisation Projet
 │   │       └─ 📜Visibilté.js
 │   │
 │   ├─ 📂StakingMode
-│   │   └─ 📜Staking.js
+│   │   │
+│   │   ├─  📂CalculFunctionsStaking
+|   |   │    ├─ 📜APR.js      
+│   │   │    └─ 📜APY.js      
+│   │   │   
+│   │   └─  📂FunctionResetStaking
+│   │        └─ 📜APY.js      
+│   │
 │   │
 │   ├─ 📂NFTMode
 │   │   └─ 📜NFT.js

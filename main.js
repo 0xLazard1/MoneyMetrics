@@ -5,6 +5,10 @@ import { Spot } from "./JS/TradingMode/FunctionCalcul/SpotCalcul/Spot.js";
 import { Levier } from "./JS/TradingMode/FunctionCalcul/LevierCalcul/Levier.js";
 import { UpdateLevier } from "./JS/TradingMode/FunctionCalcul/LevierCalcul/UpdateLevier.js";
 import { Reset } from "./JS/TradingMode/FunctionReset/Reset.js";
+import { APR } from "./JS/StakingMode/FunctionCalculStaking/APR/APR.js";
+import { ResetStaking } from "./JS/StakingMode/FunctionReset/ResetStaking.js";
+import { NFTCalcul } from "./JS/NftMode/FunctionCalculNFT/CalculNFT.js";
+import { ResetNFT } from "./JS/NftMode/FunctionResetNFT/ResetNFT.js";
 
 
 
@@ -42,4 +46,20 @@ Input_RangeLevier.addEventListener("input", UpdateLevier);
 
 //Utilisation pour le fichier Reset.js
 ResetAll.addEventListener("click", Reset);
+
+
+//Utilisation pour le fichier APR.js
+Button_CalculerLesResultatsStaking.addEventListener("click", APR);
+
+
+//Utilisation pour le fichier Reset.js
+Button_ResetStaking.addEventListener("click", ResetStaking);
+
+
+//Utilisation pour le fichier CalculNFT.js
+Button_CalculerLesResultatsNFT.addEventListener("click", NFTCalcul);
+
+
+//Utilisation pour le ficher ResetNFT.js
+Button_ResetNFT.addEventListener("click", ResetNFT);
 
