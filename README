@@ -1,0 +1,46 @@
+Organisation Projet 
+
+📦Estimation-Gain-Perte
+│
+├─ 📜Index.html
+├─ 📜Main.js  
+├─ 📜README.md
+│
+├─ 📂CSS
+│   └─ 📜index.css
+│
+├─ 📂JS
+│   ├─ 📜ChoixMode.js  
+│   ├─ 📜DOM.js
+│   │
+│   ├─ 📂TradingMode
+│   │   │
+│   │   ├─ 📂CalculFunctions
+│   │   │   ├─ 📂Levier
+│   │   │   │   ├─ 📜Levier.js
+│   │   │   │   └─ 📜Update.js
+│   │   │   │
+│   │   │   ├─ 📂Spot
+│   │   │   │   └─ 📜Spot.js
+│   │   │   │
+│   │   │   └─ 📂StopLoss
+│   │   │       └─ 📜StopLoss.js
+│   │   │
+│   │   ├─ 📂ErrorFunction
+│   │   │   └─ 📜Erreur.js
+│   │   │
+│   │   ├─ 📂ResetFunction
+│   │   │   └─ 📜Reset.js
+│   │   │
+│   │   └─ 📂VisibilityFunction
+│   │       └─ 📜Visibilté.js
+│   │
+│   ├─ 📂StakingMode
+│   │   └─ 📜Staking.js
+│   │
+│   ├─ 📂NFTMode
+│   │   └─ 📜NFT.js
+│   │
+│   └─ 📂LendingMode
+│       └─ 📜Lending.js
+└─ 
