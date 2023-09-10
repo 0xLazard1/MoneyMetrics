@@ -1,0 +1,294 @@
+html, body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #4a4f6e;
+    
+}
+
+
+.mode-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.mode-selection {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.mode-radio {
+    display: none;
+}
+
+.mode-label {
+    font-size: 22px;
+    cursor: pointer;
+    color: #fffafa;
+    position: relative;
+}
+
+.mode-radio:checked + .mode-label::before {
+    content: '•';
+    position: absolute;
+    
+    top: -10px;
+    left: -20px;
+    font-size: 40px;
+    color: #d7d7ff;
+}
+
+.container {
+    color: #333;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 500px;  
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+}
+
+.trading-container {
+    background-color: #d7d7ff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;  
+}
+
+.staking-container {
+    background-color: #d7d7ff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nft-container {
+    background-color: #d7d7ff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pret-emprunt-container {
+    background-color: #d7d7ff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+input[type="number"],
+input[type="range"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="number"],
+input[type="range"],
+select {
+    width: 95%;
+    padding: 10px;
+    
+    
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="button"] {
+    padding: 10px 20px;
+    background-color: #7e81b7;
+    color: #fff;
+    border: none;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button[type="button"]:hover {
+    background-color: #9da1e2;
+}
+
+
+.trading-radio {
+    display: none; 
+}
+
+.trading-label {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #a2a6e6;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 10px;
+}
+
+.trading-radio:checked + .trading-label {
+    background-color: #7a7dab;
+}
+
+.trading-label:hover {
+    background-color: #555776;
+}
+
+.lever-radio {
+    display: none; 
+}
+
+.lever-label {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #a2a6e6;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 10px;
+}
+
+.lever-radio:checked + .lever-label {
+    background-color: #7a7dab;
+}
+
+.lever-label:hover {
+    background-color: #555776;
+}
+
+
+.lever-range {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.lever-input-label {
+    font-size: 16px;
+    color: #161616;
+    margin-bottom: 10px;
+}
+
+.lever-value-display {
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+
+
+.lever-range {
+    width: 100%;
+    margin: 10px 0;
+    -webkit-appearance: none; 
+    appearance: none; 
+}
+
+.lever-range::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    background-color: #a2a6e6;
+    border-radius: 4px;
+}
+
+.lever-range::-webkit-slider-thumb {
+    width: 16px;
+    height: 16px;
+    background-color: #7a7dab;
+    border: 2px solid #555776;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    appearance: none; 
+    margin-top: -5px; 
+}
+
+.staking-radio {
+    display: none; 
+}
+
+.staking-label {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #a2a6e6;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 10px;
+}
+
+.staking-radio:checked + .staking-label {
+    background-color: #7a7dab;
+}
+
+.staking-label:hover {
+    background-color: #555776;
+}
+
+
+.pret-emprunt-radio {
+    display: none;
+}
+
+.pret-emprunt-label {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #a2a6e6;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 10px;
+}
+
+.pret-emprunt-radio:checked + .pret-emprunt-label {
+    background-color: #7a7dab;
+}
+
+
+.pret-emprunt-label:hover {
+    background-color: #555776;
+}
+
+
+
+
