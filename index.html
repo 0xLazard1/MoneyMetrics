@@ -277,10 +277,10 @@
                 <div class="pret-emprunt-option">
                     <input type="radio" id="Input_Pret" name="typeOperation" value="pret" class="pret-emprunt-radio"
                         checked>
-                    <label for="Input_Pret" class="pret-emprunt-label">Prêt</label>
+                    <label for="Input_Pret" class="pret-emprunt-label">Lending</label>
                     <input type="radio" id="Input_Emprunt" name="typeOperation" value="emprunt"
                         class="pret-emprunt-radio">
-                    <label for="Input_Emprunt" class="pret-emprunt-label">Emprunt</label>
+                    <label for="Input_Emprunt" class="pret-emprunt-label">Borrowing</label>
                 </div>
             </form>
 
@@ -299,6 +299,27 @@
                 <input type="number" min="0" id="Input_Duree" class="pret-emprunt-input">
             </div>
 
+            <div class="pret-emprunt-input-wrapper" id="Wrapper_FrequenceCapitalisation">
+                <p class="pret-emprunt-input-label">Fréquence de capitalisation :</p>
+                <select id="Input_FrequenceCapitalisationLendingBorrwing" class="pret-emprunt-input">
+                    <option value="daily">Quotidienne</option>
+                    <option value="monthly">Mensuelle</option>
+                    <option value="quarterly">Trimestrielle</option>
+                    <option value="annually">Annuelle</option>
+                </select>
+            </div>
+
+            <div class="pret-emprunt-input-wrapper" id="Wrapper_Recomposition">
+                <p class="pret-emprunt-input-label">Recomposition des intérêts :</p>
+                <input type="checkbox" id="Input_Recomposition" class="pret-emprunt-checkbox">
+                <label for="Input_Recomposition">Réinvestir les intérêts</label>
+            </div>
+
+            <div class="pret-emprunt-input-wrapper" id="Wrapper_FraisPlateforme">
+                <p class="pret-emprunt-input-label">Frais de plateforme (% annuel) :</p>
+                <input type="number" min="0" step="0.000001" id="Input_FraisPlateforme" class="pret-emprunt-input">
+            </div>
+
             <div class="pret-emprunt-button-wrapper">
                 <button type="button" id="Button_CalculerPretEmprunt" class="pret-emprunt-button">Effectuer le
                     calcul</button>
@@ -314,9 +335,11 @@
                 <p id="ResultatEmprunt" class="pret-emprunt-result"></p>
                 <p id="InteretsPret" class="pret-emprunt-result"></p>
                 <p id="InteretsEmprunt" class="pret-emprunt-result"></p>
+                <p id="FraisTotal" class="pret-emprunt-result"></p>
                 <p id="ErrorContainerPretEmprunt" class="pret-emprunt-error"></p>
             </section>
         </container>
+
 
         <script type="module" src="main.js"></script>
 

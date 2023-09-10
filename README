@@ -67,10 +67,18 @@ Ordres des Calls
 │   │   └─ 📂FunctionResetNFT
 │   │       └─ 📜ResetNFT.js       
 │   │   
-│   │
-│   └─ 📂LendingMode
-│       └─ 📜Lending.js
+│   ├─ 📂LendingMode
+│   │   │
+│   │   ├─ 📂CalculLendingBorrowing
+│   │   │   ├─ 📜Borrowing.js
+│   │   │   └─ 📜Lending.js
+│   │   │
+│   │   ├─ 📂ResetFunction
+│   │   │   └─ 📜ResetLendingBorrowing.js
+│   │   │
+│   │   └─ 📂VisibilityFunction
+│   │      └─ 📜LendingBorrowingVisibilité.js
+│   └─ 
 └─ 
-
 
 

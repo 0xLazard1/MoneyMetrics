@@ -1,6 +1,7 @@
 import { ChoixMode } from "./ChoixMode.js"
 import { TradingVisibilité } from "./TradingMode/FunctionVisibilitéTrading/TradingVisibilté.js";
 import { StakingVisibilité } from "./StakingMode/FunctionVisibilité/VisibilitéStaking.js";
+import { LendingBorrowingVisibilité } from "./LendingMode/LendingVisibilté/LendingVisibilté.js";
 
 const Tableau_Id = [
     "Input_Trading", "Input_Staking",
@@ -33,7 +34,13 @@ const Tableau_Id = [
     "CommissionNFTPourcentage", "ErrorContainerNFT",
     "CommissionNFTenDollard", "PourcentageNFT",
     "Input_CapitalizationFrequency", "stakingapymode",
-    "Phrase_APR", "Phrase_APY", "RisqueReward"];
+    "Phrase_APR", "Phrase_APY", "RisqueReward",
+    "Input_Pret", "Input_Emprunt", "Wrapper_FrequenceCapitalisation",
+    "Wrapper_Recomposition", "ResultatPret",
+    "ResultatEmprunt", "InteretsPret", "InteretsEmprunt", "FraisTotal",
+    "ErrorContainerPretEmprunt", "Button_CalculerPretEmprunt", "Button_ResetPretEmprunt",
+    "Input_FraisPlateforme", "Input_Recomposition", "Input_FrequenceCapitalisationLendingBorrwing",
+    "Input_Duree", "Input_TauxInteret", "Input_Montant"];
 
 
 const getDomElements = ids => ids.reduce((obj, id) => {
@@ -56,14 +63,17 @@ window.addEventListener("DOMContentLoaded", () => {
     const inputSpot = elements.Input_Spot;
     const inputLong = elements.Input_Long;
     const inputapy = elements.Input_APY;
-    if (radioButtons.length > 0 && inputSpot && inputLong && inputapy) {
+    const inputlending = elements.Input_Pret;
+    if (radioButtons.length > 0 && inputSpot && inputLong && inputapy && inputlending) {
         radioButtons.forEach(button => button.checked = false);
         inputSpot.checked = true;
         inputLong.checked = true;
         inputapy.checked = true;
+        inputlending.checked = true;
         ChoixMode();
         TradingVisibilité();
         StakingVisibilité();
+        LendingBorrowingVisibilité();
     } else {
         console.error("Ne trouve pas les radios dans modes");
     }

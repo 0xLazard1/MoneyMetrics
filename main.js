@@ -11,6 +11,10 @@ import { NFTCalcul } from "./JS/NftMode/FunctionCalculNFT/CalculNFT.js";
 import { ResetNFT } from "./JS/NftMode/FunctionResetNFT/ResetNFT.js";
 import { StakingVisibilité } from "./JS/StakingMode/FunctionVisibilité/VisibilitéStaking.js";
 import { APY } from "./JS/StakingMode/FunctionCalculStaking/APY/APY.js";
+import { LendingBorrowingVisibilité } from "./JS/LendingMode/LendingVisibilté/LendingVisibilté.js";
+import { LendingCalcul } from "./JS/LendingMode/LendingCalcul/Lending.js";
+import { Borrowing } from "./JS/LendingMode/LendingCalcul/Borrowing.js";
+import { ResetLendingBorrowing } from "./JS/LendingMode/LendingReset/LendingReset.js";
 
 
 
@@ -62,7 +66,7 @@ Button_CalculerLesResultatsStaking.addEventListener("click", APY);
 Button_ResetStaking.addEventListener("click", ResetStaking);
 
 
-//Utilisation pour le fichier TradingVisibilité.js
+//Utilisation pour le fichier StakingVisibilité.js
 Input_APY.addEventListener("change", StakingVisibilité);
 Input_APR.addEventListener("change", StakingVisibilité);
 
@@ -73,6 +77,20 @@ Button_CalculerLesResultatsNFT.addEventListener("click", NFTCalcul);
 
 //Utilisation pour le ficher ResetNFT.js
 Button_ResetNFT.addEventListener("click", ResetNFT);
+
+
+//Utilisation pour le fichier LendingBorrwingVisibilité.js
+Input_Pret.addEventListener("change", LendingBorrowingVisibilité);
+Input_Emprunt.addEventListener("change", LendingBorrowingVisibilité);
+
+//Utilisation pour le fichier Lending.js
+Button_CalculerPretEmprunt.addEventListener("click", LendingCalcul);
+
+//Utilisation pour le fichier Borrowing.js
+Button_CalculerPretEmprunt.addEventListener("click", Borrowing);
+
+//Utilisation pour le fichier ResetLendingBorrowing.js
+Button_ResetPretEmprunt.addEventListener("click", ResetLendingBorrowing);
 
 
 

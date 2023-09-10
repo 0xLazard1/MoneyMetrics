@@ -47,9 +47,6 @@ export const Levier = () => {
         const perteNetSansLevier = ((stopLoss - prixEntree) / prixEntree) * capitalInvesti * rangelevier;
         const walletApresSlSansLevier = capitalInvesti + perteNetSansLevier;
 
-
-
-
         if (elements.Input_Long.checked && !elements.Input_Short.checked) {
             // Formules pour le mode Long
             const gainParAction = niveauSortie - prixEntree;
