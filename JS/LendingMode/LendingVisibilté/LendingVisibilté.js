@@ -20,18 +20,14 @@ export const LendingBorrowingVisibilité = () => {
         Object.assign(elements.Wrapper_FrequenceCapitalisation.style, { display: "block" });
         Object.assign(elements.Wrapper_Recomposition.style, { display: "block" });
 
-        // Masquer les éléments spécifiques au Borrowing, s'ils existent
-        // Exemple:
-        // Object.assign(elements.ElementBorrowingSpecifique.style, { display: "none" });
+      
 
     } else if (elements.Input_Emprunt?.checked && !elements.Input_Pret.checked) {
         // Configuration pour le mode Borrowing
         Object.assign(elements.Wrapper_FrequenceCapitalisation.style, { display: "none" });
         Object.assign(elements.Wrapper_Recomposition.style, { display: "none" });
 
-        // Afficher les éléments spécifiques au Borrowing, s'ils existent
-        // Exemple:
-        // Object.assign(elements.ElementBorrowingSpecifique.style, { display: "block" });
+     
 
     } else {
         console.error("Erreur dans la fonction 'LendingBorrowingVisibilité' lors de l'appel");
