@@ -19,6 +19,7 @@
  *     - Elle calcule de la même manière que pour le mode 'Long', mais prend en compte la nature 
  *       de la vente à découvert.
  *     - Elle affiche les résultats ou des erreurs appropriées.
+ *     - Cache le message d'erreur après une première erreur, quand toute les conditions sont bonnes.
  */
 
 
@@ -27,8 +28,8 @@ import { ErreursLong, ErreurStopLoss, ErreursShort } from "../../FunctionErreur/
 
 
 export const Levier = () => {
-    const [capitalInvesti, niveauSortie, prixEntree, stopLoss, leviervalue, rangelevier] =
-        [elements.Input_CapitalInvesi, elements.Input_NiveauDeSortie, elements.Input_Prixdentree, elements.Input_StopLoss, elements.Levier_Value, elements.Input_RangeLevier
+    const [capitalInvesti, niveauSortie, prixEntree, stopLoss, leviervalue, rangelevier, erreur] =
+        [elements.Input_CapitalInvesi, elements.Input_NiveauDeSortie, elements.Input_Prixdentree, elements.Input_StopLoss, elements.Levier_Value, elements.Input_RangeLevier, elements.ErrorContainer
         ]
             .map(el => Number(el.value));
 
@@ -65,6 +66,7 @@ export const Levier = () => {
                 if (stopLoss < prixEntree) {
                     displayResults(PerteStopLoss, 'Perte en cas de StopLoss ', 'red', `${perteNetSansLevier.toFixed(2)} $`);
                     displayResults(WalletSl, 'Wallet Après sl ', 'red', `${walletApresSlSansLevier.toFixed(2)} $`);
+                    elements.ErrorContainer.textContent = "";
                 } else {
                     ErreurStopLoss();
                 }
@@ -90,9 +92,11 @@ export const Levier = () => {
                 displayResults(WalletBenefice, 'Wallet Après Vente en Bénéfice ', 'green', `${walletApresBeneficeLevierShort.toFixed(2)} $`);
                 displayResults(Liquidation, 'Liquidation', 'blue', `${LiquidationLevierShort.toFixed(2)} $`);
                 displayResults(RisqueReward, 'R/R', 'blue', `${riskRewardRatioShort.toFixed(2)}`);
+                elements.ErrorContainer.textContent = "";
                 if (stopLoss > prixEntree) {
                     displayResults(PerteStopLoss, 'Perte en cas de StopLoss ', 'red', `${perteNetSansLevier.toFixed(2)} $`);
                     displayResults(WalletSl, 'Wallet Après sl ', 'red', `${walletApresSlSansLevierEnSL.toFixed(2)} $`);
+                    elements.ErrorContainer.textContent = "";
                 } else {
                     ErreurStopLoss();
                 }
