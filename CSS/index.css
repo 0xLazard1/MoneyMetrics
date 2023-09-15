@@ -1,0 +1,195 @@
+:root {
+    --primary-bg-color: #d7d7ff;
+    --primary-border-color: #ddd;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --button-bg-color: #7e81b7;
+    --button-hover-bg-color: #9da1e2;
+    --radio-bg-color: #a2a6e6;
+    --radio-active-bg-color: #7a7dab;
+    --radio-hover-bg-color: #555776;
+    --gradient-start: #6f72db;
+    --gradient-end: #a0a4ee;
+}
+
+html,
+body,
+h1,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #4a4f6e;
+    font-weight: 300;
+    line-height: 1.6;
+
+}
+
+.mode-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.mode-selection {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.mode-radio {
+    display: none;
+}
+
+.mode-label {
+    font-size: 22px;
+    cursor: pointer;
+    color: #fffafa;
+    position: relative;
+}
+
+.mode-radio:checked+.mode-label::before {
+    content: '•';
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    font-size: 40px;
+    color: #d7d7ff;
+}
+
+.container,
+.trading-container,
+.staking-container,
+.nft-container,
+.pret-emprunt-container {
+    background-color: var(--primary-bg-color);
+    border: 1px solid var(--primary-border-color);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.container:hover,
+.trading-container:hover,
+.staking-container:hover,
+.nft-container:hover,
+.pret-emprunt-container:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+input[type="number"],
+input[type="range"],
+select {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+button[type="button"] {
+    padding: 10px 20px;
+    background-color: var(--button-bg-color);
+    color: #fff;
+    border: none;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    transition: all 0.3s ease-in-out;
+}
+
+button[type="button"]:hover {
+    background-color: var(--radio-hover-bg-color);
+    background: linear-gradient(to left, var(--gradient-start), var(--gradient-end));
+    transform: scale(1.05);
+}
+
+input[type="number"]:focus,
+input[type="range"]:focus,
+select:focus {
+    border-color: var(--gradient-start);
+    box-shadow: 0 0 5px rgba(111, 114, 219, 0.5);
+}
+
+.trading-radio,
+.staking-radio,
+.pret-emprunt-radio,
+.lever-radio {
+    display: none;
+}
+
+.trading-label,
+.staking-label,
+.pret-emprunt-label,
+.lever-label {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: var(--radio-bg-color);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 10px;
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+}
+
+.trading-radio:checked+.trading-label,
+.staking-radio:checked+.staking-label,
+.pret-emprunt-radio:checked+.pret-emprunt-label,
+.lever-radio:checked+.lever-label {
+    background-color: var(--radio-active-bg-color);
+}
+
+.trading-label:hover,
+.staking-label:hover,
+.pret-emprunt-label:hover,
+.lever-label:hover {
+    background-color: var(--radio-hover-bg-color);
+    background: linear-gradient(to left, var(--gradient-start), var(--gradient-end));
+    transform: scale(1.05);
+}
+
+.lever-range {
+    width: 100%;
+    margin: 10px 0;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.lever-range::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    background-color: var(--radio-bg-color);
+    border-radius: 4px;
+}
+
+.lever-range::-webkit-slider-thumb {
+    width: 16px;
+    height: 16px;
+    background-color: var(--radio-active-bg-color);
+    border: 2px solid var(--radio-hover-bg-color);
+    border-radius: 50%;
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -5px;
+}
+
+.lever-input-label,
+.lever-value-display {
+    font-size: 16px;
+    color: #161616;
+    margin-bottom: 10px;
+}
