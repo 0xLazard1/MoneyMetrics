@@ -24,6 +24,7 @@ export const TradingVisibilité = () => {
         Object.assign(elements.PhraseSelection_Levier.style, { display: "none" });
         Object.assign(elements.Input_RangeLevier.style, { display: "none" });
         Object.assign(elements.Levier_Value.style, { display: "none" });
+        Object.assign(elements.levierbuttonsfast.style, { display: "none" });
         Object.assign(elements.Toggle_StopLoss.style, { display: "block" });
         Object.assign(elements.LabelTextStopLoss.style, { display: "block" });
     } else if (elements.Input_Levier?.checked && !elements.Input_Spot.checked) {
@@ -31,6 +32,7 @@ export const TradingVisibilité = () => {
         Object.assign(elements.Block_Levier.style, { display: "block" });
         Object.assign(elements.PhraseSelection_Levier.style, { display: "block" });
         Object.assign(elements.Input_RangeLevier.style, { display: "block" });
+        Object.assign(elements.levierbuttonsfast.style, { display: "block" });
         Object.assign(elements.Levier_Value.style, { display: "block" });
         Object.assign(elements.PartieStopLoss.style, { display: "block" });
         Object.assign(elements.Toggle_StopLoss.style, { display: "none" });

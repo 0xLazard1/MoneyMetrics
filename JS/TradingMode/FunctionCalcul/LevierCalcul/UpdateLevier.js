@@ -19,7 +19,26 @@
  */
 
 
+
 import { elements } from "../../../DOM.js";
+
+
+document.querySelectorAll('.lever-button').forEach(button => {
+    button.addEventListener('click', function () {
+        const lever = this.getAttribute('data-lever');
+        elements.Input_RangeLevier.value = lever;
+        elements.Levier_Value.textContent = lever;
+
+        // Mettez à jour le multiplicateur ici si nécessaire
+        let inial = elements.Input_CapitalInvesi.value;
+        let multiplicator1 = inial * parseFloat(lever);
+        if (multiplicator1 != 0) {
+            elements.multiplicator.innerHTML = `(<span>${multiplicator1}$</span>)`;
+        } else {
+            elements.multiplicator.innerHTML = "";
+        }
+    });
+});
 
 export const UpdateLevier = () => {
     if (elements.Input_Levier.checked && !elements.Input_Spot.checked) {

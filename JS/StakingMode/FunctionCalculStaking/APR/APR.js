@@ -32,8 +32,8 @@ export const APR = () => {
         element.innerHTML = `${value} : <span style="color: ${color}">${suffix}</span>`;
     };
 
-    const [quantitestaking, pourcentageapr, commission] =
-        [elements.Input_QuantiteStaking, elements.Input_PourcentageAPR, elements.Input_CommisionStaking
+    const [quantitestaking, pourcentageapr, commission, temps] =
+        [elements.Input_QuantiteStaking, elements.Input_PourcentageAPR, elements.Input_CommisionStaking, elements.Input_RangeTemps
         ]
             .map(el => Number(el.value));
 
@@ -43,16 +43,52 @@ export const APR = () => {
     }
 
     if (elements.Input_Staking, elements.Input_APR.checked) {
+        const TauxAnnuelEnDecimal = pourcentageapr / 100;
+        const TauxJournalier = TauxAnnuelEnDecimal / 365;
+        const TauxAnnuelEffectif = Math.pow((1 + TauxJournalier), 365) - 1;
+        const TotalTokensAvecInteret = quantitestaking * Math.pow((1 + TauxJournalier), temps);
+        const TokensGagnes = TotalTokensAvecInteret - quantitestaking;
+        const TauxCommission = commission / 100;
+        const TokensApresCommission = TokensGagnes * (1 - TauxCommission);
+        const TotalTokensFinal = quantitestaking + TokensApresCommission;
+        const TempsPourDoublerArrondi = Math.round(Math.log(2) / Math.log(1 + TauxJournalier));
+        const dureePourDoubler = convertirJoursEnDuree(TempsPourDoublerArrondi);
 
-        const BrutTokenGagné = quantitestaking * pourcentageapr / 100;  // Total des tokens gagnés
-        const Commission = BrutTokenGagné * commission / 100;           // Commission basée sur le pourcentage
-        const NetTokenGagné = BrutTokenGagné - Commission;              // Tokens après soustraction de la commission
-        const TokenBenefice = NetTokenGagné + quantitestaking;          // Total des tokens après ajout du bénéfice net
 
-        displayResults(ResultatCalculStaking, 'Tokens obtenus ', 'green', `${NetTokenGagné.toFixed(2)}`)
-        displayResults(WalletBeneficeStaking, 'Total de tokens après staking ', 'green', `${TokenBenefice.toFixed(2)}`)
-        displayResults(CommissionStaking, 'Tokens déduits en commission ', 'red', `${Commission.toFixed(2)}`)
+        // Affichage des résultats
+        displayResults(ResultatCalculStaking, 'Gains nets en tokens (après commission)', 'green', `${TokensApresCommission.toFixed(2)}`);
+        displayResults(WalletBeneficeStaking, 'Total de tokens en portefeuille après staking', 'green', `${TotalTokensFinal.toFixed(2)}`);
+        displayResults(CommissionStaking, 'Perte en tokens due à la commission', 'red', `${(TokensGagnes - TokensApresCommission).toFixed(2)}`);
+        displayResults(TauxAnnuelEffectifDisplay, 'Taux d\'intérêt annuel effectif', 'blue', `${(TauxAnnuelEffectif * 100).toFixed(2)}%`);
+        displayResults(TauxJournalierDisplay, 'Taux d\'intérêt quotidien', 'blue', `${(TauxJournalier * 100).toFixed(4)}%`);
+        displayResults(TempsPourDoublerDisplay, 'Temps nécessaire pour doubler les tokens', 'blue', dureePourDoubler);
     }
+
+
+    function convertirJoursEnDuree(jours) {
+        const annees = Math.floor(jours / 365);
+        jours %= 365;
+
+        const mois = Math.floor(jours / 30);
+        jours %= 30;
+
+        let duree = "";
+
+        if (annees > 0) {
+            duree += `${annees} an${annees > 1 ? 's' : ''} `;
+        }
+
+        if (mois > 0) {
+            duree += `${mois} mois `;
+        }
+
+        if (jours > 0) {
+            duree += `${jours} jour${jours > 1 ? 's' : ''}`;
+        }
+
+        return duree;
+    }
+
 }
 
 

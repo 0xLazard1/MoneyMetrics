@@ -40,7 +40,9 @@ const Tableau_Id = [
     "ResultatEmprunt", "InteretsPret", "InteretsEmprunt", "FraisTotal",
     "ErrorContainerPretEmprunt", "Button_CalculerPretEmprunt", "Button_ResetPretEmprunt",
     "Input_FraisPlateforme", "Input_Recomposition", "Input_FrequenceCapitalisationLendingBorrwing",
-    "Input_Duree", "Input_TauxInteret", "Input_Montant", "Input_RangeTemps", "Temps_Value"];
+    "Input_Duree", "Input_TauxInteret", "Input_Montant", "Input_RangeTemps", "Temps_Value",
+    "TauxAnnuelEffectifDisplay", "TauxJournalierDisplay", "TempsPourDoublerDisplay",
+    "levierbuttonsfast"];
 
 
 const getDomElements = ids => ids.reduce((obj, id) => {

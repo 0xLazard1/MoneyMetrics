@@ -79,6 +79,13 @@
                     <div class="lever-range-wrapper">
                         <p id="PhraseSelection_Levier" class="lever-input-label">Sélectionnez l'effet de levier à
                             appliquer à la position</p>
+                        <div class="lever-buttons-wrapper" id="levierbuttonsfast">
+                            <button class="lever-button" data-lever="5">x5</button>
+                            <button class="lever-button" data-lever="20">x20</button>
+                            <button class="lever-button" data-lever="25">x25</button>
+                            <button class="lever-button" data-lever="100">x100</button>
+                        </div>
+
                         <input type="range" min="1" max="100" id="Input_RangeLevier" class="lever-range" />
                         <span id="Levier_Value" class="lever-value-display">1</span>
                     </div>
@@ -151,9 +158,20 @@
                 </div>
             </form>
 
+
+
+
             <div class="temps-range-wrapper">
                 <p id="PhraseSelection_Temps" class="temps-input-label">Sélectionnez le temps de la position</p>
-                <input type="range" min="1" max="360" id="Input_RangeTemps" class="temps-range" />
+
+                <div class="temps-buttons-wrapper">
+                    <button class="temps-button" data-days="1">1 Jour</button>
+                    <button class="temps-button" data-days="7">1 Semaine</button>
+                    <button class="temps-button" data-days="182">6 Mois</button>
+                    <button class="temps-button" data-days="365">1 An</button>
+                </div>
+
+                <input type="range" min="1" max="365" id="Input_RangeTemps" class="temps-range" />
                 <span id="Temps_Value" class="temps-value-display">1 </span>
             </div>
 
@@ -192,14 +210,19 @@
                 <button type="button" id="Button_ResetStaking" class="staking-button-reset">Reset</button>
             </div>
 
+
+
+
             <section class="right-column staking-results-section">
                 <p id="ResultatCalculStaking" class="staking-result"></p>
                 <p id="WalletBeneficeStaking" class="staking-result"></p>
                 <p id="CommissionStaking" class="staking-result"></p>
-                <p id="PourcentageStaking" class="staking-result"></p>
-                <p id="RisqueRewardStaking" class="staking-result"></p>
+                <p id="TauxAnnuelEffectifDisplay" class="staking-result"></p>
+                <p id="TauxJournalierDisplay" class="staking-result"></p>
+                <p id="TempsPourDoublerDisplay" class="staking-result"></p>
                 <p id="ErrorContainerStaking" class="staking-error"></p>
             </section>
+
         </container>
 
 
