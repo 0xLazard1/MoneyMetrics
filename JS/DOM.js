@@ -41,7 +41,7 @@ const Tableau_Id = [
     "ErrorContainerPretEmprunt", "Button_CalculerPretEmprunt", "Button_ResetPretEmprunt",
     "Input_FraisPlateforme", "Input_Recomposition", "Input_FrequenceCapitalisationLendingBorrwing",
     "Input_Duree", "Input_TauxInteret", "Input_Montant", "Input_RangeTemps", "Temps_Value",
-    "TauxAnnuelEffectifDisplay", "TauxJournalierDisplay", "TempsPourDoublerDisplay",
+    "TokensParSemaineDisplay", "TokensParMoisDisplay", "TempsPourDoublerDisplay", "TokensParJourDisplay",
     "levierbuttonsfast"];
 
 

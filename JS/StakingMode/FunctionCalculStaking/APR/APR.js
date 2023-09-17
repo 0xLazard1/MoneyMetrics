@@ -45,7 +45,6 @@ export const APR = () => {
     if (elements.Input_Staking, elements.Input_APR.checked) {
         const TauxAnnuelEnDecimal = pourcentageapr / 100;
         const TauxJournalier = TauxAnnuelEnDecimal / 365;
-        const TauxAnnuelEffectif = Math.pow((1 + TauxJournalier), 365) - 1;
         const TotalTokensAvecInteret = quantitestaking * Math.pow((1 + TauxJournalier), temps);
         const TokensGagnes = TotalTokensAvecInteret - quantitestaking;
         const TauxCommission = commission / 100;
@@ -53,14 +52,25 @@ export const APR = () => {
         const TotalTokensFinal = quantitestaking + TokensApresCommission;
         const TempsPourDoublerArrondi = Math.round(Math.log(2) / Math.log(1 + TauxJournalier));
         const dureePourDoubler = convertirJoursEnDuree(TempsPourDoublerArrondi);
-
+        const TokensParJour = TokensApresCommission / temps;
+        const TokensParSemaine = (TokensApresCommission / temps) * 7;
+        const TokensParMois = (TokensApresCommission / temps) * 30;
 
         // Affichage des résultats
         displayResults(ResultatCalculStaking, 'Gains nets en tokens (après commission)', 'green', `${TokensApresCommission.toFixed(2)}`);
         displayResults(WalletBeneficeStaking, 'Total de tokens en portefeuille après staking', 'green', `${TotalTokensFinal.toFixed(2)}`);
         displayResults(CommissionStaking, 'Perte en tokens due à la commission', 'red', `${(TokensGagnes - TokensApresCommission).toFixed(2)}`);
-        displayResults(TauxAnnuelEffectifDisplay, 'Taux d\'intérêt annuel effectif', 'blue', `${(TauxAnnuelEffectif * 100).toFixed(2)}%`);
-        displayResults(TauxJournalierDisplay, 'Taux d\'intérêt quotidien', 'blue', `${(TauxJournalier * 100).toFixed(4)}%`);
+        if (temps >= 30) {
+            displayResults(TokensParMoisDisplay, 'Tokens par mois après commission', 'green', `${TokensParMois.toFixed(2)}`);
+        }
+
+        if (temps >= 7) {
+            displayResults(TokensParSemaineDisplay, 'Tokens par semaine après commission', 'green', `${TokensParSemaine.toFixed(2)}`);
+        }
+
+        if (temps >= 1) {
+            displayResults(TokensParJourDisplay, 'Tokens par jour après commission', 'green', `${TokensParJour.toFixed(2)}`);
+        }
         displayResults(TempsPourDoublerDisplay, 'Temps nécessaire pour doubler les tokens', 'blue', dureePourDoubler);
     }
 
