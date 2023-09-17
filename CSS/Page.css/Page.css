@@ -1,0 +1,14 @@
+:root {
+    --primary-bg-color: #f1f5f8;
+    --primary-border-color: #e2e8f0;
+    --selected-bg-color: #007bff;
+    --selected-text-color: #ffffff;
+    --hover-bg-color: #0056b3;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--primary-bg-color);
+}
+
+

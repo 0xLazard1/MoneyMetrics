@@ -45,8 +45,7 @@ export const Levier = () => {
     if (elements.Input_Levier && elements.Input_Levier.checked && !elements.Input_Spot.checked) {
         // Formules communes
         const nombreAction = (capitalInvesti * rangelevier) / prixEntree;
-        const perteNetSansLevier = ((stopLoss - prixEntree) / prixEntree) * capitalInvesti * rangelevier;
-        const walletApresSlSansLevier = capitalInvesti + perteNetSansLevier;
+       
 
         if (elements.Input_Long.checked && !elements.Input_Short.checked) {
             // Formules pour le mode Long
@@ -54,17 +53,19 @@ export const Levier = () => {
             const gainBrutLevier = gainParAction * nombreAction;
             const gainNetLevier = gainBrutLevier;
             const walletApresBeneficeLevier = capitalInvesti + gainNetLevier;
+            const perteNetSansLevier = ((stopLoss - prixEntree) / prixEntree) * capitalInvesti * rangelevier;
+            const walletApresSlSansLevier = capitalInvesti + perteNetSansLevier;
             const LiquidationLevierLong = (prixEntree * (1 - 1 / rangelevier));
-            const riskRewardRatioLong = gainNetLevier / LiquidationLevierLong;
+            const riskRewardRatioLong = gainNetLevier / perteNetSansLevier;
 
             // Affichage pour le mode Long
             if (prixEntree < niveauSortie && capitalInvesti != 0) {
                 displayResults(ResultatCalcul, 'Bénéfice', 'green', `${gainNetLevier.toFixed(2)}$`);
                 displayResults(WalletBenefice, 'Wallet Après Vente en Bénéfice ', 'green', `${walletApresBeneficeLevier.toFixed(2)} $`);
                 displayResults(Liquidation, 'Liquidation', 'blue', `${LiquidationLevierLong.toFixed(2)} $`);
-                displayResults(RisqueReward, 'R/R', 'blue', `${riskRewardRatioLong.toFixed(2)}`);
-                if (stopLoss < prixEntree) {
-                    displayResults(PerteStopLoss, 'Perte en cas de StopLoss ', 'red', `${perteNetSansLevier.toFixed(2)} $`);
+                displayResults(RisqueReward, 'R/R', 'blue', `${Math.abs(riskRewardRatioLong).toFixed(2)}`);
+                if (stopLoss < prixEntree) { //Affichage Erreur
+                    displayResults(PerteStopLoss, 'Perte en cas de StopLoss ', 'red', `${Math.abs(perteNetSansLevier).toFixed(2)} $`);
                     displayResults(WalletSl, 'Wallet Après sl ', 'red', `${walletApresSlSansLevier.toFixed(2)} $`);
                     elements.ErrorContainer.textContent = "";
                 } else {
@@ -83,7 +84,7 @@ export const Levier = () => {
             const perteNetSansLevier = ((stopLoss - prixEntree) / prixEntree) * capitalInvesti * rangelevier;
             const walletApresSlSansLevierEnSL = capitalInvesti - perteNetSansLevier;
             const LiquidationLevierShort = (prixEntree * (1 + 1 / rangelevier));
-            const riskRewardRatioShort = gainNetLevierShort / LiquidationLevierShort;
+            const riskRewardRatioShort = gainNetLevierShort / perteNetSansLevier;
 
 
             // Affichage pour le mode Short
