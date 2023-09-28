@@ -31,10 +31,9 @@ export const ResetLendingBorrowing = () => {
     const valueMontant = parseFloat(elements.Input_Montant.value);
     const valueTauxInteret = parseFloat(elements.Input_TauxInteret.value);
     const valueFraisPlateforme = parseFloat(elements.Input_FraisPlateforme.value);
-    const valueDuree = parseFloat(elements.Input_Duree.value);
 
-    if (valueMontant > 0 || valueTauxInteret > 0 || valueFraisPlateforme > 0 || valueDuree > 0) {
-        [elements.Input_Montant, elements.Input_TauxInteret, elements.Input_FraisPlateforme, elements.Input_Duree].forEach(input => input.value = "0");
+    if (valueMontant > 0 || valueTauxInteret > 0 || valueFraisPlateforme > 0) {
+        [elements.Input_Montant, elements.Input_TauxInteret, elements.Input_FraisPlateforme].forEach(input => input.value = "0");
         [elements.ResultatPret, elements.InteretsPret, elements.FraisTotal, elements.ResultatEmprunt, elements.InteretsEmprunt].forEach(element => element.innerHTML = "");
     }
 }

@@ -27,11 +27,11 @@ export const LendingCalcul = () => {
 
     const montant = Number(elements.Input_Montant.value);
     const tauxInteret = Number(elements.Input_TauxInteret.value) / 100;
-    const duree = Number(elements.Input_Duree.value);
     const fraisPlateforme = Number(elements.Input_FraisPlateforme.value) / 100;
     const recomposition = elements.Input_Recomposition.checked;
+    const numeriquetemps = Number(elements.Input_RangeTemps_Lending.value) / 365;
 
-    if (!montant || !tauxInteret || !duree) {
+    if (!montant || !tauxInteret || !numeriquetemps || !fraisPlateforme) {
         elements.ResultatPret.innerHTML = "";
         elements.InteretsPret.innerHTML = "";
         elements.FraisTotal.innerHTML = "";
@@ -56,10 +56,8 @@ export const LendingCalcul = () => {
             break;
     }
 
-    const temps = duree / 12;  // Convertir la durée en années
-    const interets = montant * Math.pow(1 + (tauxInteret / capitalisationPerAnnee), capitalisationPerAnnee * temps) - montant;
+    const interets = montant * Math.pow(1 + (tauxInteret / capitalisationPerAnnee), capitalisationPerAnnee * numeriquetemps) - montant;
     const frais = interets * fraisPlateforme;
-
     const montantFinal = montant + interets - (recomposition ? 0 : frais);
 
     displayResults(elements.ResultatPret, montantFinal.toFixed(2), 'green', 'Montant final après prêt : ', 'tokens');

@@ -26,11 +26,13 @@ export const Borrowing = () => {
         element.innerHTML = `${value} : <span style="color: ${color}">${suffix}</span>`;
     };
 
-    const [montant, tauxInteret, duree, fraisPlateforme] =
-        [elements.Input_Montant, elements.Input_TauxInteret, elements.Input_Duree, elements.Input_FraisPlateforme]
+    const [montant, tauxInteret, fraisPlateforme] =
+        [elements.Input_Montant, elements.Input_TauxInteret, elements.Input_FraisPlateforme]
             .map(el => Number(el.value));
 
-    if (!montant || !tauxInteret || !duree) {
+    const numeriquetemps = Number(elements.Input_RangeTemps_Lending.value) / 365;
+
+    if (!montant || !tauxInteret || !numeriquetemps || !fraisPlateforme) {
         [elements.ResultatEmprunt, elements.InteretsEmprunt, elements.FraisTotal].forEach(el => el.innerHTML = "");
         return;
     }
@@ -57,7 +59,7 @@ export const Borrowing = () => {
                 break;
         }
 
-        for (let i = 0; i < duree; i++) {
+        for (let i = 0; i < numeriquetemps; i++) {
             const interetsPourLeMois = (montantTotal * tauxInteret / 12) / capitalisationPerAnnee; // assuming yearly rate
             interetsTotal += interetsPourLeMois;
             if (elements.Input_Recomposition.checked) {

@@ -16,6 +16,7 @@ import { LendingCalcul } from "./JS/LendingMode/LendingCalcul/Lending.js";
 import { Borrowing } from "./JS/LendingMode/LendingCalcul/Borrowing.js";
 import { ResetLendingBorrowing } from "./JS/LendingMode/LendingReset/LendingReset.js";
 import { UpdateTemps } from "./JS/StakingMode/FunctionCalculStaking/UpdateTemps/UpdateTemps.js";
+import { UpdateTemps_lending } from "./JS/LendingMode/LendingCalcul/UpdateTemps/UpdateTemps.js";
 
 
 
@@ -97,6 +98,8 @@ Button_ResetPretEmprunt.addEventListener("click", ResetLendingBorrowing);
 
 //Utilisation pour le fichier UpdateTemps.js
 Input_RangeTemps.addEventListener("input", UpdateTemps);
+
+Input_RangeTemps_Lending.addEventListener("input", UpdateTemps_lending);
 
 
 

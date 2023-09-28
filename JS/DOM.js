@@ -24,8 +24,7 @@ const Tableau_Id = [
     "Input_APY", "Input_QuantiteStaking",
     "Button_CalculerLesResultats", "Input_PourcentageAPR",
     "Input_CommisionStaking", "ResultatCalculStaking",
-    "WalletBeneficeStaking", "PourcentageStaking",
-    "RisqueRewardStaking", "ErrorContainerStaking",
+    "WalletBeneficeStaking", "ErrorContainerStaking",
     "CommissionStaking", "Button_ResetStaking",
     "Input_PrixdentreeNFT", "Input_PrixdeReventeNFT",
     "Input_FraisCreateurNFT", "Input_FraisMarketNFT",
@@ -40,9 +39,9 @@ const Tableau_Id = [
     "ResultatEmprunt", "InteretsPret", "InteretsEmprunt", "FraisTotal",
     "ErrorContainerPretEmprunt", "Button_CalculerPretEmprunt", "Button_ResetPretEmprunt",
     "Input_FraisPlateforme", "Input_Recomposition", "Input_FrequenceCapitalisationLendingBorrwing",
-    "Input_Duree", "Input_TauxInteret", "Input_Montant", "Input_RangeTemps", "Temps_Value",
+    , "Input_TauxInteret", "Input_Montant", "Input_RangeTemps", "Temps_Value",
     "TokensParSemaineDisplay", "TokensParMoisDisplay", "TempsPourDoublerDisplay", "TokensParJourDisplay",
-    "levierbuttonsfast", "Toggle_AutoCompound", "WalletPerte", "LabelAutoCompounds"];
+    "levierbuttonsfast", "WalletPerte", "Input_FrequenceCapitalisationLendingBorrwing", "Input_RangeTemps_Lending", "Temps_Value_Lending"];
 
 
 const getDomElements = ids => ids.reduce((obj, id) => {
