@@ -38,6 +38,8 @@ Toggle_StopLoss.addEventListener("change", StopLoss);
 
 
 
+
+
 //Utilisation pour le fichier CalculSpot.js
 Button_CalculerLesResultats.addEventListener("click", Spot);
 

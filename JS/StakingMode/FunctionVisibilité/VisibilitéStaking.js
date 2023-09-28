@@ -22,6 +22,11 @@ export const StakingVisibilité = () => {
         Object.assign(elements.stakingapymode.style, { display: "block" });
         Object.assign(elements.Phrase_APY.style, { display: "block" });
         Object.assign(elements.Phrase_APR.style, { display: "none" });
+        Object.assign(elements.TokensParMoisDisplay.style, { display: "none" });
+        Object.assign(elements.TokensParSemaineDisplay.style, { display: "none" });
+        Object.assign(elements.TokensParJourDisplay.style, { display: "none" });
+        Object.assign(elements.TempsPourDoublerDisplay.style, { display: "none" });
+
 
     } else if (elements.Input_APR?.checked && !elements.Input_APY.checked) {
         // Configuration pour le mode APR
@@ -29,6 +34,12 @@ export const StakingVisibilité = () => {
         Object.assign(elements.stakingapymode.style, { display: "none" });
         Object.assign(elements.Phrase_APY.style, { display: "none" });
         Object.assign(elements.Phrase_APR.style, { display: "block" });
+        Object.assign(elements.TokensParMoisDisplay.style, { display: "block" });
+        Object.assign(elements.TokensParSemaineDisplay.style, { display: "block" });
+        Object.assign(elements.TokensParMoisDisplay.style, { display: "block" });
+        Object.assign(elements.TokensParJourDisplay.style, { display: "block" });
+        Object.assign(elements.TempsPourDoublerDisplay.style, { display: "block" });
+
 
     } else {
         console.error("Erreur dans la fonction 'StakingVisibilité' lors de l'appel");
