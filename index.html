@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/index.css">
+    <link media="all" rel="stylesheet" href="CSS/index.css">
 
     <title>MoneyMetrics</title>
 
@@ -21,7 +21,7 @@
    ##                                                          ##
    ##############################################################
 -->
-    <container class="mode-container">
+    <div class="mode-container">
         <div class="mode-selection">
             <input type="radio" id="Input_Trading" name="Choice" value="Trading" class="mode-radio">
             <label for="Input_Trading" class="mode-label">Trading</label>
@@ -35,7 +35,7 @@
             <input type="radio" id="Input_Lending" name="Choice" value="Lending" class="mode-radio">
             <label for="Input_Lending" class="mode-label">Lending/Borrowing</label>
         </div>
-    </container>
+    </div>
 
 
     <section>
@@ -47,8 +47,8 @@
    ##                                                          ##
    ##############################################################
 -->
-        <container id="PartieTrading" class="trading-container">
-            <section class="left-column trading-left-column">
+        <div id="PartieTrading" class="trading-container">
+            <section class="left-column-trading-left-column">
                 <div class="trading-heading">
                     <h1 class="trading-title">Estimation de gain/perte en spot et en levier</h1>
                 </div>
@@ -120,9 +120,10 @@
                 </section>
             </section>
 
-            <section class="right-column trading-results-section">
+            <section class="right-column-trading-results-section">
                 <p id="ResultatCalcul" class="trading-result"></p>
                 <p id="WalletBenefice" class="trading-result"></p>
+                <p id="WalletPerte" class="trading-result"></p>
                 <p id="Pourcentage" class="trading-result"></p>
                 <p id="PerteStopLoss" class="trading-result"></p>
                 <p id="WalletSl" class="trading-result"></p>
@@ -130,7 +131,7 @@
                 <p id="RisqueReward" class="trading-result"></p>
                 <p id="ErrorContainer" class="trading-error"></p>
             </section>
-        </container>
+        </div>
 
 
 
@@ -218,7 +219,7 @@
 
 
 
-            <section class="right-column staking-results-section">
+            <section class="right-column-staking-results-section">
                 <p id="ResultatCalculStaking" class="staking-result"></p>
                 <p id="WalletBeneficeStaking" class="staking-result"></p>
                 <p id="CommissionStaking" class="staking-result"></p>
@@ -365,7 +366,7 @@
                     class="pret-emprunt-button-reset">Réinitialiser</button>
             </div>
 
-            <section class="right-column pret-emprunt-results-section">
+            <section class="right-column-pret-emprunt-results-section">
                 <p id="ResultatPret" class="pret-emprunt-result"></p>
                 <p id="ResultatEmprunt" class="pret-emprunt-result"></p>
                 <p id="InteretsPret" class="pret-emprunt-result"></p>

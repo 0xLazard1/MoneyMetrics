@@ -53,7 +53,7 @@ export const Spot = () => {
         } else {
             displayResults(elements.ResultatCalcul, 'Perte', 'red', `${gainNet.toFixed(2)}$`);
             displayResults(elements.Pourcentage, 'Pourcentage', 'red', `${PourcentageNet.toFixed(2)}%`);
-            displayResults(elements.WalletBenefice, 'Wallet Après Vente en Perte', 'red', `${WalletAfterSl.toFixed(2)}$`);
+            displayResults(elements.WalletBenefice, 'Wallet Après Vente en Perte', 'red', `${WalletAvecBenefice.toFixed(2)}$`);
         }
 
         if (!elements.Toggle_StopLoss.checked) {
@@ -62,7 +62,6 @@ export const Spot = () => {
         } else {
             elements.PerteStopLoss.innerHTML = "";
             displayResults(elements.PartieStopLoss.style, "none");
-
         }
     }
 }

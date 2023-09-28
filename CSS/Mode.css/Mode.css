@@ -1,0 +1,50 @@
+/* Conteneur principal */
+.mode-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sélection du mode */
+.mode-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles pour les radios et les étiquettes */
+.mode-radio {
+    display: none;
+}
+
+.mode-label {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ddd;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Style pour le hover */
+.mode-label:hover {
+    background-color: #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style lorsque le radio est sélectionné */
+.mode-radio:checked+.mode-label {
+    background-color: #007bff;
+    color: white;
+    border: 2px solid #007bff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

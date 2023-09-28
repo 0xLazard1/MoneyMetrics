@@ -42,7 +42,7 @@ const Tableau_Id = [
     "Input_FraisPlateforme", "Input_Recomposition", "Input_FrequenceCapitalisationLendingBorrwing",
     "Input_Duree", "Input_TauxInteret", "Input_Montant", "Input_RangeTemps", "Temps_Value",
     "TokensParSemaineDisplay", "TokensParMoisDisplay", "TempsPourDoublerDisplay", "TokensParJourDisplay",
-    "levierbuttonsfast", "Toggle_AutoCompound"];
+    "levierbuttonsfast", "Toggle_AutoCompound", "WalletPerte"];
 
 
 const getDomElements = ids => ids.reduce((obj, id) => {
