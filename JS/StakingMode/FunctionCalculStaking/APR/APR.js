@@ -42,7 +42,7 @@ export const APR = () => {
         return;
     }
 
-    if (elements.Input_Staking, elements.Input_APR.checked) {
+    if (elements.Input_APR.checked) {
         const TauxAnnuelEnDecimal = pourcentageapr / 100;
         const TauxJournalier = TauxAnnuelEnDecimal / 365;
         const TotalTokensAvecInteret = quantitestaking * Math.pow((1 + TauxJournalier), temps);
