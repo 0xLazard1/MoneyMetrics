@@ -109,13 +109,21 @@ document.addEventListener("DOMContentLoaded", function () {
     var modeSelection = document.querySelector(".mode-selection");
     var modeRadios = document.querySelectorAll(".mode-radio");
 
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+
     menuButton.addEventListener("click", function () {
-        modeSelection.style.display = (modeSelection.style.display === "none" || modeSelection.style.display === "") ? "flex" : "none";
+        if (isMobile()) {
+            modeSelection.style.display = (modeSelection.style.display === "none" || modeSelection.style.display === "") ? "flex" : "none";
+        }
     });
 
     modeRadios.forEach(function (radio) {
         radio.addEventListener("change", function () {
-            modeSelection.style.display = "none";
+            if (isMobile()) {
+                modeSelection.style.display = "none";
+            }
         });
     });
 });
