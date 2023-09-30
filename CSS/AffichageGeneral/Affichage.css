@@ -1,5 +1,38 @@
+/* titre principaux */
+.trading-title,
+.staking-title,
+.nft-title,
+.pret-emprunt-title {
+    font-size: 30px;
+}
+
+.test {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.left-column-trading-left-column,
+.right-column-trading-results-section {
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.left-column-trading-left-column {
+    border: 1px solid red;
+}
+
+.right-column-trading-results-section {
+    border: 1px solid blue;
+}
+
+
+
+
 @media (max-width: 768px) {
 
+    /* titre principaux  */
     .trading-title,
     .staking-title,
     .nft-title,
@@ -7,4 +40,13 @@
         font-size: 15px;
     }
 
+
+    @media (max-width: 768px) {
+
+        .left-column-trading-left-column,
+        .right-column-trading-results-section {
+            min-width: 100%;
+            /* Prend toute la largeur */
+        }
+    }
 }

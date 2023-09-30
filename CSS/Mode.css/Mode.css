@@ -29,7 +29,7 @@
     color: black;
     font-size: 30px;
     position: relative;
-    right: -300px;
+    right: -330px;
 }
 
 
@@ -146,6 +146,7 @@
 
     .menu-button {
         display: block;
+        background-color: red;
         margin-left: auto;
     }
 
@@ -164,8 +165,6 @@
         position: relative;
         right: -150px;
     }
-
-
 
     .menu-button-checkbox:checked~.mode-selection {
         display: flex;

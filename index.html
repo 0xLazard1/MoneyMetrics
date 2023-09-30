@@ -67,90 +67,92 @@
 
 
     <div id="PartieTrading" class="trading-container">
-        <section class="left-column-trading-left-column">
-            <div class="trading-heading">
-                <h1 class="trading-title">Estimation de gain/perte en spot et en levier</h1>
+        <div class="test">
+            <div class="left-column-trading-left-column">
+
+                <form class="trading-form">
+                    <p class="trading-choice">Veuillez sélectionner le mode de trading</p>
+                    <div class="trading-option">
+                        <input type="radio" id="Input_Spot" name="contact" value="Spot" class="trading-radio" checked>
+                        <label for="Input_Spot" class="trading-label">Spot (transaction au comptant)</label>
+
+                        <input type="radio" id="Input_Levier" name="contact" value="Levier" class="trading-radio">
+                        <label for="Input_Levier" class="trading-label">Levier (transaction à effet de levier)</label>
+                    </div>
+                </form>
+
+                <form id="Block_Levier" class="lever-form">
+                    <p id="Phrase_Levier" class="lever-choice">Veuillez sélectionner le type de position à prendre</p>
+                    <div class="lever-option">
+                        <input type="radio" id="Input_Long" name="contact" value="Long" class="lever-radio">
+                        <label for="Input_Long" class="lever-label">Long (acheter)</label>
+
+                        <input type="radio" id="Input_Short" name="contact" value="Short" class="lever-radio">
+                        <label for="Input_Short" class="lever-label">Short (vendre)</label>
+                    </div>
+                </form>
+
+                <div class="trading-input-section">
+                    <div class="lever-range-wrapper">
+                        <p id="PhraseSelection_Levier" class="lever-input-label">Sélectionnez l'effet de levier à
+                            appliquer à la position</p>
+                        <div class="lever-buttons-wrapper" id="levierbuttonsfast">
+                            <button class="lever-button" data-lever="8">x8</button>
+                            <button class="lever-button" data-lever="20">x20</button>
+                            <button class="lever-button" data-lever="25">x25</button>
+                            <button class="lever-button" data-lever="100">x100</button>
+                        </div>
+
+                        <input type="range" min="1" max="100" id="Input_RangeLevier" class="lever-range" />
+                        <span id="Levier_Value" class="lever-value-display">1</span>
+                    </div>
+                    <div class="trading-input-wrapper">
+                        <p id="Phrase_PrixDentrée" class="trading-input-label">Prix d'entrée</p>
+                        <input type="number" min="0" step="0.000001" id="Input_Prixdentree" class="trading-input">
+                    </div>
+                    <div class="trading-input-wrapper trading-relative-wrapper">
+                        <p id="Phrase_CapitalInvesi" class="trading-input-label">Capital Investi</p>
+                        <input type="number" min="0" step="0.000001" id="Input_CapitalInvesi" class="trading-input">
+                        <span id="multiplicator" class="multiplicator-indicator"></span>
+                    </div>
+                    <div class="trading-input-wrapper">
+                        <p id="Phrase_NiveauDeSortie" class="trading-input-label">Niveau de sortie</p>
+                        <input type="number" min="0" step="0.000001" id="Input_NiveauDeSortie" class="trading-input">
+                    </div>
+                    <div id="PartieStopLoss" class="stoploss-input-wrapper">
+                        <p id="Text_StopLoss" class="stoploss-label">Ordre De Stop Loss</p>
+                        <input type="number" min="0" step="0.000001" id="Input_StopLoss" class="stoploss-input">
+                    </div>
+                    <div class="stoploss-toggle-wrapper">
+                        <input type="checkbox" id="Toggle_StopLoss" name="Toggle_StopLoss" class="stoploss-toggle">
+                        <label for="Toggle_StopLoss" id="LabelTextStopLoss" class="stoploss-toggle-label"></label>
+                    </div>
+                    <div class="trading-button-wrapper">
+                        <button type="button" id="Button_CalculerLesResultats" class="trading-button">Effectuer le
+                            calcul pour obtenir les résultats</button>
+                    </div>
+                    <div class="trading-button-wrapper">
+                        <button type="button" id="ResetAll" class="button is-large">Reset</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="right-column-trading-results-section">
+                <p id="ResultatCalcul" class="trading-result"></p>
+                <p id="WalletBenefice" class="trading-result"></p>
+                <p id="WalletPerte" class="trading-result"></p>
+                <p id="Pourcentage" class="trading-result"></p>
+                <p id="PerteStopLoss" class="trading-result"></p>
+                <p id="WalletSl" class="trading-result"></p>
+                <p id="Liquidation" class="trading-result"></p>
+                <p id="RisqueReward" class="trading-result"></p>
+                <p id="ErrorContainer" class="trading-error"></p>
             </div>
 
-            <form class="trading-form">
-                <p class="trading-choice">Veuillez sélectionner le mode de trading</p>
-                <div class="trading-option">
-                    <input type="radio" id="Input_Spot" name="contact" value="Spot" class="trading-radio" checked>
-                    <label for="Input_Spot" class="trading-label">Spot (transaction au comptant)</label>
-
-                    <input type="radio" id="Input_Levier" name="contact" value="Levier" class="trading-radio">
-                    <label for="Input_Levier" class="trading-label">Levier (transaction à effet de levier)</label>
-                </div>
-            </form>
-
-            <form id="Block_Levier" class="lever-form">
-                <p id="Phrase_Levier" class="lever-choice">Veuillez sélectionner le type de position à prendre</p>
-                <div class="lever-option">
-                    <input type="radio" id="Input_Long" name="contact" value="Long" class="lever-radio">
-                    <label for="Input_Long" class="lever-label">Long (acheter)</label>
-
-                    <input type="radio" id="Input_Short" name="contact" value="Short" class="lever-radio">
-                    <label for="Input_Short" class="lever-label">Short (vendre)</label>
-                </div>
-            </form>
-
-            <section class="trading-input-section">
-                <div class="lever-range-wrapper">
-                    <p id="PhraseSelection_Levier" class="lever-input-label">Sélectionnez l'effet de levier à
-                        appliquer à la position</p>
-                    <div class="lever-buttons-wrapper" id="levierbuttonsfast">
-                        <button class="lever-button" data-lever="8">x8</button>
-                        <button class="lever-button" data-lever="20">x20</button>
-                        <button class="lever-button" data-lever="25">x25</button>
-                        <button class="lever-button" data-lever="100">x100</button>
-                    </div>
-
-                    <input type="range" min="1" max="100" id="Input_RangeLevier" class="lever-range" />
-                    <span id="Levier_Value" class="lever-value-display">1</span>
-                </div>
-                <div class="trading-input-wrapper">
-                    <p id="Phrase_PrixDentrée" class="trading-input-label">Prix d'entrée</p>
-                    <input type="number" min="0" step="0.000001" id="Input_Prixdentree" class="trading-input">
-                </div>
-                <div class="trading-input-wrapper trading-relative-wrapper">
-                    <p id="Phrase_CapitalInvesi" class="trading-input-label">Capital Investi</p>
-                    <input type="number" min="0" step="0.000001" id="Input_CapitalInvesi" class="trading-input">
-                    <span id="multiplicator" class="multiplicator-indicator"></span>
-                </div>
-                <div class="trading-input-wrapper">
-                    <p id="Phrase_NiveauDeSortie" class="trading-input-label">Niveau de sortie</p>
-                    <input type="number" min="0" step="0.000001" id="Input_NiveauDeSortie" class="trading-input">
-                </div>
-                <div id="PartieStopLoss" class="stoploss-input-wrapper">
-                    <p id="Text_StopLoss" class="stoploss-label">Ordre De Stop Loss</p>
-                    <input type="number" min="0" step="0.000001" id="Input_StopLoss" class="stoploss-input">
-                </div>
-                <div class="stoploss-toggle-wrapper">
-                    <input type="checkbox" id="Toggle_StopLoss" name="Toggle_StopLoss" class="stoploss-toggle">
-                    <label for="Toggle_StopLoss" id="LabelTextStopLoss" class="stoploss-toggle-label"></label>
-                </div>
-                <div class="trading-button-wrapper">
-                    <button type="button" id="Button_CalculerLesResultats" class="trading-button">Effectuer le
-                        calcul pour obtenir les résultats</button>
-                </div>
-                <div class="trading-button-wrapper">
-                    <button type="button" id="ResetAll" class="button is-large">Reset</button>
-                </div>
-            </section>
-        </section>
-
-        <section class="right-column-trading-results-section">
-            <p id="ResultatCalcul" class="trading-result"></p>
-            <p id="WalletBenefice" class="trading-result"></p>
-            <p id="WalletPerte" class="trading-result"></p>
-            <p id="Pourcentage" class="trading-result"></p>
-            <p id="PerteStopLoss" class="trading-result"></p>
-            <p id="WalletSl" class="trading-result"></p>
-            <p id="Liquidation" class="trading-result"></p>
-            <p id="RisqueReward" class="trading-result"></p>
-            <p id="ErrorContainer" class="trading-error"></p>
-        </section>
+        </div>
     </div>
+
+
 
 
 

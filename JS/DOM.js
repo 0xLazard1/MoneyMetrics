@@ -79,3 +79,27 @@ window.addEventListener("DOMContentLoaded", () => {
         console.error("Ne trouve pas les radios dans modes");
     }
 })
+
+document.addEventListener("DOMContentLoaded", function () {
+    var menuButton = document.querySelector(".menu-button");
+    var modeSelection = document.querySelector(".mode-selection");
+    var modeRadios = document.querySelectorAll(".mode-radio");
+
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+
+    menuButton.addEventListener("click", function () {
+        if (isMobile()) {
+            modeSelection.style.display = (modeSelection.style.display === "none" || modeSelection.style.display === "") ? "flex" : "none";
+        }
+    });
+
+    modeRadios.forEach(function (radio) {
+        radio.addEventListener("change", function () {
+            if (isMobile()) {
+                modeSelection.style.display = "none";
+            }
+        });
+    });
+});
