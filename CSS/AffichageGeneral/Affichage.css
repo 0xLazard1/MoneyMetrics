@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+
+    .trading-title,
+    .staking-title,
+    .nft-title,
+    .pret-emprunt-title {
+        font-size: 15px;
+    }
+
+}

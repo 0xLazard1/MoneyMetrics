@@ -102,6 +102,20 @@ Input_RangeTemps.addEventListener("input", UpdateTemps);
 Input_RangeTemps_Lending.addEventListener("input", UpdateTemps_lending);
 
 
+//Affichage du menu en Responsive
 
+document.addEventListener("DOMContentLoaded", function () {
+    var menuButton = document.querySelector(".menu-button");
+    var modeSelection = document.querySelector(".mode-selection");
+    var modeRadios = document.querySelectorAll(".mode-radio");
 
+    menuButton.addEventListener("click", function () {
+        modeSelection.style.display = (modeSelection.style.display === "none" || modeSelection.style.display === "") ? "flex" : "none";
+    });
 
+    modeRadios.forEach(function (radio) {
+        radio.addEventListener("change", function () {
+            modeSelection.style.display = "none";
+        });
+    });
+});
