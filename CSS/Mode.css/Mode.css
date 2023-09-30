@@ -1,17 +1,32 @@
 /* Styles par défaut pour les grands écrans */
 .mode-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    /* alignement des éléments */
     align-items: center;
+    /* centrage vertical */
     margin-top: 20px;
+    padding: 10px;
     border: 1px solid black;
 }
 
 .mode-selection {
-    width: auto;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
     height: auto;
-    border: 2px solid red;
+    margin: 0 10px;
+    padding: 0 10px;
 }
+
+.twitter-icon {
+    color: blue;
+    font-size: 30px;
+    position: relative;
+    right: -420px;
+}
+
 
 
 .mode-radio:checked+.mode-label {
