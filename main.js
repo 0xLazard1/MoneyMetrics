@@ -102,8 +102,3 @@ Input_RangeTemps.addEventListener("input", UpdateTemps);
 Input_RangeTemps_Lending.addEventListener("input", UpdateTemps_lending);
 
 
-
-
-
-
-

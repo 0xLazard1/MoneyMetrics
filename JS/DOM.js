@@ -103,3 +103,26 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+const modeRadios = document.querySelectorAll('.mode-radio');
+
+// Parcourir la liste des boutons radio et ajouter un écouteur d'événements
+modeRadios.forEach(radio => {
+    radio.addEventListener('change', function () {
+        // Trouver le conteneur du footer
+        const footerContainer = document.querySelector('.footer-container');
+
+        // Afficher le footer
+        footerContainer.style.display = 'flex';
+
+        // Mettre à jour la hauteur minimale du conteneur de la page si nécessaire
+        const pageContainer = document.querySelector('.page-container');
+        const contentHeight = document.querySelector('.content-wrap').offsetHeight;
+
+        if (contentHeight > window.innerHeight) {
+            pageContainer.style.minHeight = `${contentHeight}px`;
+        } else {
+            pageContainer.style.minHeight = 'auto';
+        }
+    });
+});

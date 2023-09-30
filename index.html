@@ -67,6 +67,9 @@
 
 
     <div id="PartieTrading" class="trading-container">
+        <div class="staking-heading">
+            <h1 class="trading-title">Estimation de gain/perte en Spot ou Trading</h1>
+        </div>
         <div class="test">
             <div class="left-column-trading-left-column">
 
@@ -127,13 +130,7 @@
                         <input type="checkbox" id="Toggle_StopLoss" name="Toggle_StopLoss" class="stoploss-toggle">
                         <label for="Toggle_StopLoss" id="LabelTextStopLoss" class="stoploss-toggle-label"></label>
                     </div>
-                    <div class="trading-button-wrapper">
-                        <button type="button" id="Button_CalculerLesResultats" class="trading-button">Effectuer le
-                            calcul pour obtenir les résultats</button>
-                    </div>
-                    <div class="trading-button-wrapper">
-                        <button type="button" id="ResetAll" class="button is-large">Reset</button>
-                    </div>
+
                 </div>
 
             </div>
@@ -150,6 +147,16 @@
             </div>
 
         </div>
+
+        <div class="Button-Trading">
+            <div class="trading-button-wrapper">
+                <button type="button" id="Button_CalculerLesResultats" class="trading-button">Effectuer le
+                    calcul pour obtenir les résultats</button>
+            </div>
+            <div class="trading-button-wrapper">
+                <button type="button" id="ResetAll" class="button is-large">Reset</button>
+            </div>
+        </div>
     </div>
 
 
@@ -165,89 +172,94 @@
 -->
 
 
-    <container id="PartieStaking" class="staking-container">
+    <div id="PartieStaking" class="staking-container">
+
         <div class="staking-heading">
-            <h1 class="staking-title">Estimation de gain/perte en staking avec APR/APY</h1>
+            <h1 class="trading-title">Estimation de gain/perte en staking avec APR/APY</h1>
         </div>
+        <div class="test">
+            <div class="left-column-trading-left-column">
+                <form class="staking-form">
+                    <p class="staking-choice">Veuillez sélectionner votre choix de staking : APR ou APY</p>
+                    <div class="staking-option">
+                        <input type="radio" id="Input_APY" name="contact" value="APY" class="staking-radio" checked>
+                        <label for="Input_APY" class="staking-label">APY (Annual Percentage Yield)</label>
+                        <input type="radio" id="Input_APR" name="contact" value="APR" class="staking-radio">
+                        <label for="Input_APR" class="staking-label">APR (Annual Percentage Rate)</label>
+                    </div>
+                </form>
 
-        <form class="staking-form">
-            <p class="staking-choice">Veuillez sélectionner votre choix de staking : APR ou APY</p>
-            <div class="staking-option">
-                <input type="radio" id="Input_APY" name="contact" value="APY" class="staking-radio" checked>
-                <label for="Input_APY" class="staking-label">APY (Annual Percentage Yield)</label>
-                <input type="radio" id="Input_APR" name="contact" value="APR" class="staking-radio">
-                <label for="Input_APR" class="staking-label">APR (Annual Percentage Rate)</label>
+
+
+
+                <div class="temps-range-wrapper">
+
+
+                    <p id="PhraseSelection_Temps" class="temps-input-label">Sélectionnez le temps de la position</p>
+
+                    <div class="temps-buttons-wrapper">
+                        <button class="temps-button" data-days="1">1 Jour</button>
+                        <button class="temps-button" data-days="7">1 Semaine</button>
+                        <button class="temps-button" data-days="182">6 Mois</button>
+                        <button class="temps-button" data-days="365">1 An</button>
+                    </div>
+
+                    <input type="range" min="1" max="365" id="Input_RangeTemps" class="temps-range" />
+                    <span id="Temps_Value" class="temps-value-display">1 </span>
+                </div>
+
+                <div class="staking-input-wrapper">
+                    <p id="stakingapymode" class="staking-input-label">Fréquence de capitalisation pour l'APY</p>
+                    <select id="Input_CapitalizationFrequency" class="staking-input">
+                        <option value="daily">Quotidienne</option>
+                        <option value="monthly">Mensuelle</option>
+                        <option value="quarterly">Trimestrielle</option>
+                        <option value="annually">Annuelle</option>
+                    </select>
+                </div>
+
+                <div class="staking-input-wrapper">
+                    <p id="Phrase_QuantiteToken" class="staking-input-label">Quantité de tokens</p>
+                    <input type="number" min="0" step="0.000001" id="Input_QuantiteStaking" class="staking-input">
+                </div>
+
+                <div class="staking-input-wrapper">
+                    <p id="Phrase_APR" class="staking-input-label">APR (en %)</p>
+                    <p id="Phrase_APY" class="staking-input-label">APY (en %)</p>
+                    <input type="number" min="0" step="0.000001" id="Input_PourcentageAPR" class="staking-input">
+                </div>
+
+                <div class="staking-input-wrapper">
+                    <p id="Phrase_NiveauDeSortie" class="staking-input-label">Commision (en %)</p>
+                    <input type="number" min="0" step="0.000001" id="Input_CommisionStaking" class="staking-input">
+                </div>
+
+
+                <div class="staking-button-wrapper">
+                    <button type="button" id="Button_CalculerLesResultatsStaking" class="staking-button">Effectuer le
+                        calcul
+                        pour obtenir les résultats</button>
+                </div>
+
+                <div class="staking-button-wrapper">
+                    <button type="button" id="Button_ResetStaking" class="staking-button-reset">Reset</button>
+                </div>
             </div>
-        </form>
 
 
 
-
-        <div class="temps-range-wrapper">
-            <p id="PhraseSelection_Temps" class="temps-input-label">Sélectionnez le temps de la position</p>
-
-            <div class="temps-buttons-wrapper">
-                <button class="temps-button" data-days="1">1 Jour</button>
-                <button class="temps-button" data-days="7">1 Semaine</button>
-                <button class="temps-button" data-days="182">6 Mois</button>
-                <button class="temps-button" data-days="365">1 An</button>
-            </div>
-
-            <input type="range" min="1" max="365" id="Input_RangeTemps" class="temps-range" />
-            <span id="Temps_Value" class="temps-value-display">1 </span>
+            <section class="right-column-trading-results-section">
+                <p id="ResultatCalculStaking" class="staking-result"></p>
+                <p id="WalletBeneficeStaking" class="staking-result"></p>
+                <p id="CommissionStaking" class="staking-result"></p>
+                <p id="TokensParJourDisplay" class="staking-result"></p>
+                <p id="TokensParSemaineDisplay" class="staking-result"></p>
+                <p id="TokensParMoisDisplay" class="staking-result"></p>
+                <p id="TempsPourDoublerDisplay" class="staking-result"></p>
+                <p id="ErrorContainerStaking" class="staking-error"></p>
+            </section>
         </div>
-
-        <div class="staking-input-wrapper">
-            <p id="stakingapymode" class="staking-input-label">Fréquence de capitalisation pour l'APY</p>
-            <select id="Input_CapitalizationFrequency" class="staking-input">
-                <option value="daily">Quotidienne</option>
-                <option value="monthly">Mensuelle</option>
-                <option value="quarterly">Trimestrielle</option>
-                <option value="annually">Annuelle</option>
-            </select>
-        </div>
-
-        <div class="staking-input-wrapper">
-            <p id="Phrase_QuantiteToken" class="staking-input-label">Quantité de tokens</p>
-            <input type="number" min="0" step="0.000001" id="Input_QuantiteStaking" class="staking-input">
-        </div>
-
-        <div class="staking-input-wrapper">
-            <p id="Phrase_APR" class="staking-input-label">APR (en %)</p>
-            <p id="Phrase_APY" class="staking-input-label">APY (en %)</p>
-            <input type="number" min="0" step="0.000001" id="Input_PourcentageAPR" class="staking-input">
-        </div>
-
-        <div class="staking-input-wrapper">
-            <p id="Phrase_NiveauDeSortie" class="staking-input-label">Commision (en %)</p>
-            <input type="number" min="0" step="0.000001" id="Input_CommisionStaking" class="staking-input">
-        </div>
-
-
-        <div class="staking-button-wrapper">
-            <button type="button" id="Button_CalculerLesResultatsStaking" class="staking-button">Effectuer le calcul
-                pour obtenir les résultats</button>
-        </div>
-
-        <div class="staking-button-wrapper">
-            <button type="button" id="Button_ResetStaking" class="staking-button-reset">Reset</button>
-        </div>
-
-
-
-
-        <section class="right-column-staking-results-section">
-            <p id="ResultatCalculStaking" class="staking-result"></p>
-            <p id="WalletBeneficeStaking" class="staking-result"></p>
-            <p id="CommissionStaking" class="staking-result"></p>
-            <p id="TokensParJourDisplay" class="staking-result"></p>
-            <p id="TokensParSemaineDisplay" class="staking-result"></p>
-            <p id="TokensParMoisDisplay" class="staking-result"></p>
-            <p id="TempsPourDoublerDisplay" class="staking-result"></p>
-            <p id="ErrorContainerStaking" class="staking-error"></p>
-        </section>
-
-    </container>
+    </div>
 
 
 
@@ -260,53 +272,58 @@
 -->
     <container id="PartieNFT" class="nft-container">
         <div class="nft-heading">
-            <h1 class="nft-title"> Estimation de gain/perte sur les NFTs </h1>
+            <h1 class="trading-title"> Estimation de gain/perte sur les NFTs </h1>
         </div>
+        <div class="test">
+            <div class="left-column-trading-left-column">
 
-        <div class="nft-instruction">
-            <p>Veuillez entrée les valeurs correspondante </p>
+
+                <div class="nft-instruction">
+                    <p>Veuillez entrée les valeurs correspondante </p>
+                </div>
+
+                <section class="nft-input-section">
+                    <div class="nft-input-wrapper">
+                        <p id="Phrase_PrixdentreeNFT" class="nft-input-label">Valeur à l'achat du NFT (en $)</p>
+                        <input type="number" min="0" step="0.000001" id="Input_PrixdentreeNFT" class="nft-input">
+                    </div>
+
+                    <div class="nft-input-wrapper">
+                        <p id="Phrase_PrixdeReventeNFT" class="nft-input-label">Valeur à la revente du NFT (en $)</p>
+                        <input type="number" min="0" step="0.000001" id="Input_PrixdeReventeNFT" class="nft-input">
+                    </div>
+
+                    <div class="nft-input-wrapper">
+                        <p id="Phrase_FraisCreateurNFT" class="nft-input-label">Frais Créateur (en %)</p>
+                        <input type="number" min="0" step="0.000001" id="Input_FraisCreateurNFT" class="nft-input">
+                    </div>
+
+                    <div class="nft-input-wrapper">
+                        <p id="Phrase_FraisMarketNFT" class="nft-input-label">Frais MarketPlace (en %)</p>
+                        <input type="number" min="0" step="0.000001" id="Input_FraisMarketNFT" class="nft-input">
+                    </div>
+
+                    <div class="nft-button-wrapper">
+                        <button type="button" id="Button_CalculerLesResultatsNFT" class="nft-button">Effectuer le calcul
+                            pour
+                            obtenir les résultats</button>
+                    </div>
+
+                    <div class="nft-button-wrapper">
+                        <button type="button" id="Button_ResetNFT" class="nft-button-reset">Reset</button>
+                    </div>
+                </section>
+            </div>
+
+            <section class="right-column-trading-results-section">
+                <p id="ResultatCalculNFT" class="nft-result"></p>
+                <p id="WalletBeneficeNFT" class="nft-result"></p>
+                <p id="PourcentageNFT" class="nft-result"></p>
+                <p id="CommissionNFTenDollard" class="nft-result"></p>
+                <p id="CommissionNFTPourcentage" class="nft-result"></p>
+                <p id="ErrorContainerNFT" class="nft-error"></p>
+            </section>
         </div>
-
-        <section class="nft-input-section">
-            <div class="nft-input-wrapper">
-                <p id="Phrase_PrixdentreeNFT" class="nft-input-label">Valeur à l'achat du NFT (en $)</p>
-                <input type="number" min="0" step="0.000001" id="Input_PrixdentreeNFT" class="nft-input">
-            </div>
-
-            <div class="nft-input-wrapper">
-                <p id="Phrase_PrixdeReventeNFT" class="nft-input-label">Valeur à la revente du NFT (en $)</p>
-                <input type="number" min="0" step="0.000001" id="Input_PrixdeReventeNFT" class="nft-input">
-            </div>
-
-            <div class="nft-input-wrapper">
-                <p id="Phrase_FraisCreateurNFT" class="nft-input-label">Frais Créateur (en %)</p>
-                <input type="number" min="0" step="0.000001" id="Input_FraisCreateurNFT" class="nft-input">
-            </div>
-
-            <div class="nft-input-wrapper">
-                <p id="Phrase_FraisMarketNFT" class="nft-input-label">Frais MarketPlace (en %)</p>
-                <input type="number" min="0" step="0.000001" id="Input_FraisMarketNFT" class="nft-input">
-            </div>
-
-            <div class="nft-button-wrapper">
-                <button type="button" id="Button_CalculerLesResultatsNFT" class="nft-button">Effectuer le calcul
-                    pour
-                    obtenir les résultats</button>
-            </div>
-
-            <div class="nft-button-wrapper">
-                <button type="button" id="Button_ResetNFT" class="nft-button-reset">Reset</button>
-            </div>
-        </section>
-
-        <section class="right-column nft-results-section">
-            <p id="ResultatCalculNFT" class="nft-result"></p>
-            <p id="WalletBeneficeNFT" class="nft-result"></p>
-            <p id="PourcentageNFT" class="nft-result"></p>
-            <p id="CommissionNFTenDollard" class="nft-result"></p>
-            <p id="CommissionNFTPourcentage" class="nft-result"></p>
-            <p id="ErrorContainerNFT" class="nft-error"></p>
-        </section>
 
     </container>
 
@@ -322,84 +339,103 @@
 
     <container id="PartieLending" class="pret-emprunt-container">
         <div class="pret-emprunt-heading">
-            <h1 class="pret-emprunt-title">Estimation de prêt & emprunt</h1>
+            <h1 class="trading-title">Estimation de prêt & emprunt</h1>
         </div>
 
-        <form class="pret-emprunt-form">
-            <p class="pret-emprunt-choice">Veuillez sélectionner votre choix : Prêt ou Emprunt</p>
-            <div class="pret-emprunt-option">
-                <input type="radio" id="Input_Pret" name="typeOperation" value="pret" class="pret-emprunt-radio"
-                    checked>
-                <label for="Input_Pret" class="pret-emprunt-label">Lending</label>
-                <input type="radio" id="Input_Emprunt" name="typeOperation" value="emprunt" class="pret-emprunt-radio">
-                <label for="Input_Emprunt" class="pret-emprunt-label">Borrowing</label>
+        <div class="test">
+            <div class="left-column-trading-left-column">
+                <form class="pret-emprunt-form">
+                    <p class="pret-emprunt-choice">Veuillez sélectionner votre choix : Prêt ou Emprunt</p>
+                    <div class="pret-emprunt-option">
+                        <input type="radio" id="Input_Pret" name="typeOperation" value="pret" class="pret-emprunt-radio"
+                            checked>
+                        <label for="Input_Pret" class="pret-emprunt-label">Lending</label>
+                        <input type="radio" id="Input_Emprunt" name="typeOperation" value="emprunt"
+                            class="pret-emprunt-radio">
+                        <label for="Input_Emprunt" class="pret-emprunt-label">Borrowing</label>
+                    </div>
+                </form>
+
+                <div class="temps-range-wrapper">
+                    <p id="PhraseSelection_Temps_Lending" class="temps-input-label">Sélectionnez le temps de la position
+                    </p>
+                    <div class="temps-buttons-wrapper">
+                        <button class="temps-button-lending" data-days="1">1 Jour</button>
+                        <button class="temps-button-lending" data-days="7">1 Semaine</button>
+                        <button class="temps-button-lending" data-days="182">6 Mois</button>
+                        <button class="temps-button-lending" data-days="365">1 An</button>
+                    </div>
+                    <input type="range" min="1" max="365" id="Input_RangeTemps_Lending" class="temps-range" />
+                    <span id="Temps_Value_Lending" class="temps-value-display">1</span>
+                </div>
+
+                <div class="pret-emprunt-input-wrapper" id="Wrapper_FrequenceCapitalisation">
+                    <p class="pret-emprunt-input-label">Fréquence de capitalisation :</p>
+                    <select id="Input_FrequenceCapitalisationLendingBorrwing" class="pret-emprunt-input">
+                        <option value="daily">Quotidienne</option>
+                        <option value="monthly">Mensuelle</option>
+                        <option value="quarterly">Trimestrielle</option>
+                        <option value="annually">Annuelle</option>
+                    </select>
+                </div>
+
+                <div class="pret-emprunt-input-wrapper" id="Wrapper_Recomposition">
+                    <p class="pret-emprunt-input-label">Recomposition des intérêts :</p>
+                    <input type="checkbox" id="Input_Recomposition" class="pret-emprunt-checkbox">
+                    <label for="Input_Recomposition">Réinvestir les intérêts</label>
+                </div>
+
+
+
+                <div class="pret-emprunt-input-wrapper">
+                    <p class="pret-emprunt-input-label">Montant :</p>
+                    <input type="number" min="0" step="0.000001" id="Input_Montant" class="pret-emprunt-input">
+                </div>
+
+                <div class="pret-emprunt-input-wrapper">
+                    <p class="pret-emprunt-input-label">Taux d'intérêt (% annuel) :</p>
+                    <input type="number" min="0" step="0.000001" id="Input_TauxInteret" class="pret-emprunt-input">
+                </div>
+
+
+                <div class="pret-emprunt-input-wrapper" id="Wrapper_FraisPlateforme">
+                    <p class="pret-emprunt-input-label">Frais de plateforme (% annuel) :</p>
+                    <input type="number" min="0" step="0.000001" id="Input_FraisPlateforme" class="pret-emprunt-input">
+                </div>
+
+                <div class="pret-emprunt-button-wrapper">
+                    <button type="button" id="Button_CalculerPretEmprunt" class="pret-emprunt-button">Effectuer le
+                        calcul</button>
+                </div>
+
+                <div class="pret-emprunt-button-wrapper">
+                    <button type="button" id="Button_ResetPretEmprunt"
+                        class="pret-emprunt-button-reset">Réinitialiser</button>
+                </div>
             </div>
-        </form>
-
-        <div class="temps-range-wrapper">
-            <p id="PhraseSelection_Temps_Lending" class="temps-input-label">Sélectionnez le temps de la position</p>
-            <div class="temps-buttons-wrapper">
-                <button class="temps-button-lending" data-days="1">1 Jour</button>
-                <button class="temps-button-lending" data-days="7">1 Semaine</button>
-                <button class="temps-button-lending" data-days="182">6 Mois</button>
-                <button class="temps-button-lending" data-days="365">1 An</button>
-            </div>
-            <input type="range" min="1" max="365" id="Input_RangeTemps_Lending" class="temps-range" />
-            <span id="Temps_Value_Lending" class="temps-value-display">1</span>
+            <section class="right-column-trading-results-section">
+                <p id="ResultatPret" class="pret-emprunt-result"></p>
+                <p id="ResultatEmprunt" class="pret-emprunt-result"></p>
+                <p id="InteretsPret" class="pret-emprunt-result"></p>
+                <p id="InteretsEmprunt" class="pret-emprunt-result"></p>
+                <p id="FraisTotal" class="pret-emprunt-result"></p>
+                <p id="ErrorContainerPretEmprunt" class="pret-emprunt-error"></p>
+            </section>
         </div>
-
-        <div class="pret-emprunt-input-wrapper" id="Wrapper_FrequenceCapitalisation">
-            <p class="pret-emprunt-input-label">Fréquence de capitalisation :</p>
-            <select id="Input_FrequenceCapitalisationLendingBorrwing" class="pret-emprunt-input">
-                <option value="daily">Quotidienne</option>
-                <option value="monthly">Mensuelle</option>
-                <option value="quarterly">Trimestrielle</option>
-                <option value="annually">Annuelle</option>
-            </select>
-        </div>
-
-        <div class="pret-emprunt-input-wrapper" id="Wrapper_Recomposition">
-            <p class="pret-emprunt-input-label">Recomposition des intérêts :</p>
-            <input type="checkbox" id="Input_Recomposition" class="pret-emprunt-checkbox">
-            <label for="Input_Recomposition">Réinvestir les intérêts</label>
-        </div>
-
-
-
-        <div class="pret-emprunt-input-wrapper">
-            <p class="pret-emprunt-input-label">Montant :</p>
-            <input type="number" min="0" step="0.000001" id="Input_Montant" class="pret-emprunt-input">
-        </div>
-
-        <div class="pret-emprunt-input-wrapper">
-            <p class="pret-emprunt-input-label">Taux d'intérêt (% annuel) :</p>
-            <input type="number" min="0" step="0.000001" id="Input_TauxInteret" class="pret-emprunt-input">
-        </div>
-
-
-        <div class="pret-emprunt-input-wrapper" id="Wrapper_FraisPlateforme">
-            <p class="pret-emprunt-input-label">Frais de plateforme (% annuel) :</p>
-            <input type="number" min="0" step="0.000001" id="Input_FraisPlateforme" class="pret-emprunt-input">
-        </div>
-
-        <div class="pret-emprunt-button-wrapper">
-            <button type="button" id="Button_CalculerPretEmprunt" class="pret-emprunt-button">Effectuer le
-                calcul</button>
-        </div>
-
-        <div class="pret-emprunt-button-wrapper">
-            <button type="button" id="Button_ResetPretEmprunt" class="pret-emprunt-button-reset">Réinitialiser</button>
-        </div>
-
-        <section class="right-column-pret-emprunt-results-section">
-            <p id="ResultatPret" class="pret-emprunt-result"></p>
-            <p id="ResultatEmprunt" class="pret-emprunt-result"></p>
-            <p id="InteretsPret" class="pret-emprunt-result"></p>
-            <p id="InteretsEmprunt" class="pret-emprunt-result"></p>
-            <p id="FraisTotal" class="pret-emprunt-result"></p>
-            <p id="ErrorContainerPretEmprunt" class="pret-emprunt-error"></p>
-        </section>
     </container>
+
+
+    <!-- 
+   ##############################################################
+   ##                                                          ##
+   ##                      FOOTER                              ##
+   ##                                                          ##
+   ##############################################################
+-->
+    <!-- Footer -->
+
+
+
 
 
     <script type="module" src="main.js"></script>
