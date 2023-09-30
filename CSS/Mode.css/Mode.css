@@ -25,6 +25,13 @@
     right: -420px;
 }
 
+.medium-icon {
+    color: black;
+    font-size: 30px;
+    position: relative;
+    right: -300px;
+}
+
 
 .mode-radio:checked+.mode-label {
     background-color: #007BFF;
@@ -67,6 +74,10 @@
     display: none;
 }
 
+.medium-icon-menu {
+    display: none;
+}
+
 /* Mode pour le button */
 .menu-button {
     display: none;
@@ -82,7 +93,17 @@
     display: none;
 }
 
-/* Styles pour les écrans plus petits */
+
+/* 
+##############################################################
+##                                                          ##
+##                      RESPONSIVE                          ##
+##                                                          ##
+##############################################################
+*/
+
+
+
 @media (max-width: 768px) {
 
 
@@ -113,6 +134,10 @@
         display: none;
     }
 
+    .medium-icon {
+        display: none;
+    }
+
     .top-bar {
         display: flex;
         justify-content: space-between;
@@ -126,11 +151,18 @@
 
     .twitter-icon-menu {
         color: blue;
-        font-size: 30px;
+        font-size: 25px;
         margin-right: auto;
         position: relative;
         right: -220px;
+    }
 
+    .medium-icon-menu {
+        color: black;
+        font-size: 25px;
+        margin-right: auto;
+        position: relative;
+        right: -150px;
     }
 
 
