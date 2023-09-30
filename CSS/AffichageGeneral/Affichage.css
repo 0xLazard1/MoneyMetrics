@@ -7,7 +7,6 @@
 }
 
 /* affichage general */
-
 .trading-title {
     text-align: center;
 }
@@ -17,7 +16,6 @@
     border: 3px solid black;
     border-radius: 8px;
     height: 100%;
-
 }
 
 .test {
@@ -46,9 +44,7 @@
     border-radius: 8px;
 }
 
-
 /* button */
-
 .Button-Trading {
     display: flex;
     justify-content: center;
@@ -64,37 +60,11 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
 }
-
-.trading-button {
-    background-color: #007bff;
-    color: white;
-}
-
-.button.is-large {
-    background-color: #f1f1f1;
-    color: #333;
-}
-
-/* Pour un effet au survol */
-.trading-button:hover,
-.button.is-large:hover {
-    background-color: #0056b3;
-    /* une teinte plus foncée pour le bouton bleu */
-}
-
-.button.is-large:hover {
-    background-color: #ccc;
-    /* une teinte plus foncée pour le bouton gris */
-}
-
-
-
 
 @media (max-width: 768px) {
 
-    /* titre principaux  */
+    /* titre principaux */
     .trading-title,
     .staking-title,
     .nft-title,
@@ -102,12 +72,18 @@
         font-size: 15px;
     }
 
+    /* Colonne de gauche et de droite */
+    .left-column-trading-left-column,
+    .right-column-trading-results-section {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
 
-    @media (max-width: 768px) {
-
-        .left-column-trading-left-column,
-        .right-column-trading-results-section {
-            min-width: 100%;
-        }
+    /* bouton */
+    .trading-button,
+    .button.is-large {
+        font-size: 14px;
+        padding: 8px 16px;
     }
 }

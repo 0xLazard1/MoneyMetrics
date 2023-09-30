@@ -172,7 +172,7 @@
 -->
 
 
-    <div id="PartieStaking" class="staking-container">
+    <div id="PartieStaking" class="trading-container">
 
         <div class="staking-heading">
             <h1 class="trading-title">Estimation de gain/perte en staking avec APR/APY</h1>
@@ -235,15 +235,7 @@
                 </div>
 
 
-                <div class="staking-button-wrapper">
-                    <button type="button" id="Button_CalculerLesResultatsStaking" class="staking-button">Effectuer le
-                        calcul
-                        pour obtenir les résultats</button>
-                </div>
 
-                <div class="staking-button-wrapper">
-                    <button type="button" id="Button_ResetStaking" class="staking-button-reset">Reset</button>
-                </div>
             </div>
 
 
@@ -259,6 +251,15 @@
                 <p id="ErrorContainerStaking" class="staking-error"></p>
             </section>
         </div>
+        <div class="Button-Trading">
+            <div class="trading-button-wrapper">
+                <button type="button" id="Button_CalculerLesResultatsStaking" class="trading-button">Effectuer le
+                    calcul pour obtenir les résultats</button>
+            </div>
+            <div class="trading-button-wrapper">
+                <button type="button" id="Button_ResetStaking" class="button is-large">Reset</button>
+            </div>
+        </div>
     </div>
 
 
@@ -270,7 +271,7 @@
    ##                                                          ##
    ##############################################################
 -->
-    <container id="PartieNFT" class="nft-container">
+    <container id="PartieNFT" class="trading-container">
         <div class="nft-heading">
             <h1 class="trading-title"> Estimation de gain/perte sur les NFTs </h1>
         </div>
@@ -303,15 +304,7 @@
                         <input type="number" min="0" step="0.000001" id="Input_FraisMarketNFT" class="nft-input">
                     </div>
 
-                    <div class="nft-button-wrapper">
-                        <button type="button" id="Button_CalculerLesResultatsNFT" class="nft-button">Effectuer le calcul
-                            pour
-                            obtenir les résultats</button>
-                    </div>
 
-                    <div class="nft-button-wrapper">
-                        <button type="button" id="Button_ResetNFT" class="nft-button-reset">Reset</button>
-                    </div>
                 </section>
             </div>
 
@@ -323,6 +316,17 @@
                 <p id="CommissionNFTPourcentage" class="nft-result"></p>
                 <p id="ErrorContainerNFT" class="nft-error"></p>
             </section>
+
+        </div>
+
+        <div class="Button-Trading">
+            <div class="trading-button-wrapper">
+                <button type="button" id="Button_CalculerLesResultatsNFT" class="trading-button">Effectuer le
+                    calcul pour obtenir les résultats</button>
+            </div>
+            <div class="trading-button-wrapper">
+                <button type="button" id="Button_ResetNFT" class="button is-large">Reset</button>
+            </div>
         </div>
 
     </container>
@@ -337,7 +341,7 @@
 ##############################################################
 -->
 
-    <container id="PartieLending" class="pret-emprunt-container">
+    <container id="PartieLending" class="trading-container">
         <div class="pret-emprunt-heading">
             <h1 class="trading-title">Estimation de prêt & emprunt</h1>
         </div>
@@ -403,15 +407,6 @@
                     <input type="number" min="0" step="0.000001" id="Input_FraisPlateforme" class="pret-emprunt-input">
                 </div>
 
-                <div class="pret-emprunt-button-wrapper">
-                    <button type="button" id="Button_CalculerPretEmprunt" class="pret-emprunt-button">Effectuer le
-                        calcul</button>
-                </div>
-
-                <div class="pret-emprunt-button-wrapper">
-                    <button type="button" id="Button_ResetPretEmprunt"
-                        class="pret-emprunt-button-reset">Réinitialiser</button>
-                </div>
             </div>
             <section class="right-column-trading-results-section">
                 <p id="ResultatPret" class="pret-emprunt-result"></p>
@@ -421,6 +416,16 @@
                 <p id="FraisTotal" class="pret-emprunt-result"></p>
                 <p id="ErrorContainerPretEmprunt" class="pret-emprunt-error"></p>
             </section>
+        </div>
+
+        <div class="Button-Trading">
+            <div class="trading-button-wrapper">
+                <button type="button" id="Button_CalculerPretEmprunt" class="trading-button">Effectuer le
+                    calcul pour obtenir les résultats</button>
+            </div>
+            <div class="trading-button-wrapper">
+                <button type="button" id="Button_ResetPretEmprunt" class="button is-large">Reset</button>
+            </div>
         </div>
     </container>
 
