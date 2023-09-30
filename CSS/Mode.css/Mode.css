@@ -26,7 +26,6 @@
 }
 
 
-
 .mode-radio:checked+.mode-label {
     background-color: #007BFF;
     color: white;
@@ -59,6 +58,14 @@
     content: " ✔️";
 }
 
+.top-bar {
+    display: none;
+}
+
+
+.twitter-icon-menu {
+    display: none;
+}
 
 /* Mode pour le button */
 .menu-button {
@@ -83,13 +90,6 @@
         border: none;
     }
 
-    .menu-button-checkbox:checked~.mode-selection {
-        display: flex;
-    }
-
-    .menu-button {
-        display: block;
-    }
 
     .mode-selection {
         display: none;
@@ -106,6 +106,37 @@
         z-index: 9999;
         background-color: black;
 
+    }
+
+
+    .twitter-icon {
+        display: none;
+    }
+
+    .top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-button {
+        display: block;
+        margin-left: auto;
+    }
+
+    .twitter-icon-menu {
+        color: blue;
+        font-size: 30px;
+        margin-right: auto;
+        position: relative;
+        right: -220px;
+
+    }
+
+
+
+    .menu-button-checkbox:checked~.mode-selection {
+        display: flex;
     }
 
     .mode-radio {
