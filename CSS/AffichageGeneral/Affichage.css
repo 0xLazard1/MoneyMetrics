@@ -89,4 +89,9 @@
         font-size: 14px;
         /* Diminue la taille de la police */
     }
+
+    .trading-container {
+        height: auto;
+
+    }
 }

@@ -292,16 +292,15 @@
         /* réduit l'espacement en bas */
     }
 
-    .left-column-trading-left-column {
+    .left-column-trading-left-column,
+    .right-column-trading-results-section {
         width: 100%;
         min-height: auto;
         margin: 10px 0;
         padding: 10px;
     }
 
-    .right-column-trading-results-section {
-        display: none;
-    }
+
 
     .trading-input,
     .stoploss-input {
