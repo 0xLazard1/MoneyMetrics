@@ -292,8 +292,7 @@
         /* réduit l'espacement en bas */
     }
 
-    .left-column-trading-left-column,
-    .right-column-trading-results-section {
+    .left-column-trading-left-column {
         width: 100%;
         min-height: auto;
         margin: 10px 0;
@@ -303,6 +302,9 @@
     .right-column-trading-results-section {
         background-color: transparent;
         border: none;
+        min-width: 0;
+        width: 100%;
+        min-height: 0;
     }
 
 

@@ -94,4 +94,21 @@
         height: auto;
 
     }
+
+    .Button-Trading {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 50px;
+        size: 10px;
+    }
+
+    .trading-button,
+    .button.is-large {
+        size: 10px;
+        font-size: 20px;
+        border: solid 3px black;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 }
