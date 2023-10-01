@@ -284,13 +284,19 @@
         /* réduit la taille de la police */
     }
 
-    .trading-result,
-    .trading-error {
-        font-size: 1rem;
-        /* réduit la taille de la police */
-        margin-bottom: 0.4rem;
-        /* réduit l'espacement en bas */
+    .trading-result {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        color: #333;
     }
+
+    /* Style pour les messages d'erreur */
+    .trading-error {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: red;
+    }
+
 
     .left-column-trading-left-column {
         width: 100%;
