@@ -189,6 +189,22 @@
 
 
 @media (max-width: 768px) {
+
+    .trading-choice,
+    .lever-choice,
+    .lever-input-choice {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        text-decoration: underline;
+        text-underline-position: under;
+
+    }
+
+
+
+
     .rangelevier {
         width: 100%;
         /* change de 100vh à 100% pour adapter la largeur */
@@ -207,7 +223,7 @@
     }
 
     .InputClass {
-        margin: 8px 4px 0 4px;
+        margin: 8px 9px 0 4px;
         /* réduit les marges */
     }
 
@@ -215,7 +231,7 @@
     .stoploss-input-wrapper,
     .stoploss-toggle-wrapper {
         width: 100%;
-        /* utilise toute la largeur disponible */
+        margin-left: 20px;
         box-sizing: border-box;
         /* cela permet d'inclure le padding et la bordure dans la largeur totale */
     }
@@ -248,21 +264,20 @@
     .left-column-trading-left-column,
     .right-column-trading-results-section {
         width: 100%;
-        /* Utiliser toute la largeur disponible */
         min-height: auto;
-        /* Enlever la hauteur minimale pour plus de flexibilité */
         margin: 10px 0;
-        /* Ajouter des marges verticales pour l'espacement */
         padding: 10px;
-        /* Ajouter du padding pour l'espacement interne */
+    }
+
+    .right-column-trading-results-section {
+        min-width: 0;
+        min-height: 0;
     }
 
     .trading-input,
     .stoploss-input {
         width: calc(100% - 20px);
-        /* Enlève 20px pour le padding */
         box-sizing: border-box;
-        /* Inclure la bordure et le padding dans la taille totale */
     }
 
 }
