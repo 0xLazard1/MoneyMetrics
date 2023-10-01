@@ -208,6 +208,32 @@
     }
 
 
+    .block_levier {
+        margin: 10px 2px 0 2px;
+        /* réduit les marges */
+        border: solid 1px black;
+        /* rend la bordure plus fine */
+    }
+
+    .lever-option {
+        margin: 10px 20px 0 20px;
+
+        /* réduit les marges */
+        /* change la disposition en colonne */
+        align-items: center;
+        /* centre les éléments */
+    }
+
+    .lever-radio {
+        margin-right: 5px;
+        /* réduit la marge à droite */
+        height: 12px;
+        /* réduit la hauteur */
+        width: 12px;
+        /* réduit la largeur */
+    }
+
+
 
 
     .rangelevier {
