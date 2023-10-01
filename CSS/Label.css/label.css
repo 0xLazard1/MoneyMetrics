@@ -244,4 +244,25 @@
         margin-bottom: 0.4rem;
         /* réduit l'espacement en bas */
     }
+
+    .left-column-trading-left-column,
+    .right-column-trading-results-section {
+        width: 100%;
+        /* Utiliser toute la largeur disponible */
+        min-height: auto;
+        /* Enlever la hauteur minimale pour plus de flexibilité */
+        margin: 10px 0;
+        /* Ajouter des marges verticales pour l'espacement */
+        padding: 10px;
+        /* Ajouter du padding pour l'espacement interne */
+    }
+
+    .trading-input,
+    .stoploss-input {
+        width: calc(100% - 20px);
+        /* Enlève 20px pour le padding */
+        box-sizing: border-box;
+        /* Inclure la bordure et le padding dans la taille totale */
+    }
+
 }

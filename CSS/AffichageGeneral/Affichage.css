@@ -82,26 +82,11 @@
 
 @media (max-width: 768px) {
 
-    /* titre principaux */
     .trading-title,
     .staking-title,
     .nft-title,
     .pret-emprunt-title {
-        font-size: 15px;
-    }
-
-    /* Colonne de gauche et de droite */
-    .left-column-trading-left-column,
-    .right-column-trading-results-section {
-        width: 100%;
-        margin-right: 0;
-        margin-left: 0;
-    }
-
-    /* bouton */
-    .trading-button,
-    .button.is-large {
         font-size: 14px;
-        padding: 8px 16px;
+        /* Diminue la taille de la police */
     }
 }
