@@ -186,3 +186,56 @@
     margin-bottom: 0.5rem;
     color: red;
 }
+
+
+@media (max-width: 768px) {
+    .rangelevier {
+        width: 100%;
+        /* change de 100vh à 100% pour adapter la largeur */
+    }
+
+    .levier-range2 {
+        font-size: 16px;
+        /* réduit la taille de la police */
+        height: 60px;
+        /* réduit la hauteur */
+    }
+
+    .lever-value-display {
+        font-size: 16px;
+        /* réduit la taille de la police */
+    }
+
+
+    .InputClass {
+        margin: 8px 4px 0 4px;
+        /* réduit les marges */
+    }
+
+    .trading-input-wrapper,
+    .stoploss-input-wrapper,
+    .stoploss-toggle-wrapper {
+        width: 100%;
+        /* utilise toute la largeur disponible */
+    }
+
+    .trading-input,
+    .stoploss-input {
+        font-size: 0.8rem;
+        /* réduit la taille de la police */
+    }
+
+    .stoploss-toggle-label,
+    .multiplicator-indicator {
+        font-size: 0.8rem;
+        /* réduit la taille de la police */
+    }
+
+    .trading-result,
+    .trading-error {
+        font-size: 1rem;
+        /* réduit la taille de la police */
+        margin-bottom: 0.4rem;
+        /* réduit l'espacement en bas */
+    }
+}
