@@ -2,6 +2,7 @@ import { ChoixMode } from "./ChoixMode.js"
 import { TradingVisibilité } from "./TradingMode/FunctionVisibilitéTrading/TradingVisibilté.js";
 import { StakingVisibilité } from "./StakingMode/FunctionVisibilité/VisibilitéStaking.js";
 import { LendingBorrowingVisibilité } from "./LendingMode/LendingVisibilté/LendingVisibilté.js";
+import { StopLoss } from "./TradingMode/FunctionStopLoss/StopLoss.js";
 
 const Tableau_Id = [
     "Input_Trading", "Input_Staking",
@@ -64,17 +65,20 @@ window.addEventListener("DOMContentLoaded", () => {
     const inputSpot = elements.Input_Spot;
     const inputLong = elements.Input_Long;
     const inputapy = elements.Input_APY;
+    const stopLoss = elements.Toggle_StopLoss;
     const inputlending = elements.Input_Pret;
-    if (radioButtons.length > 0 && inputSpot && inputLong && inputapy && inputlending) {
+    if (radioButtons.length > 0 && inputSpot && inputLong && inputapy && inputlending && stopLoss) {
         radioButtons.forEach(button => button.checked = false);
         inputSpot.checked = true;
         inputLong.checked = true;
         inputapy.checked = true;
         inputlending.checked = true;
+        stopLoss.checked = true;
         ChoixMode();
         TradingVisibilité();
         StakingVisibilité();
         LendingBorrowingVisibilité();
+        StopLoss();
     } else {
         console.error("Ne trouve pas les radios dans modes");
     }

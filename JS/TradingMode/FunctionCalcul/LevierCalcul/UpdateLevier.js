@@ -43,6 +43,7 @@ export const UpdateLevier = () => {
     if (elements.Input_Levier.checked && !elements.Input_Spot.checked) {
         elements.Levier_Value.textContent = elements.Input_RangeLevier.value;
 
+        let inial = null;
 
         if (inial == null) {
             inial = elements.Input_CapitalInvesi.value;

@@ -34,16 +34,16 @@ export const Reset = () => {
     const valueStopLoss = parseFloat(elements.Input_StopLoss.value);
 
     if (valuePrixdentree > 0 || valueCapitalInvesi > 0 || valueNiveauDeSortie > 0 || valueStopLoss > 0) {
-        [elements.Input_Prixdentree, elements.Input_CapitalInvesi, elements.Input_NiveauDeSortie].forEach(input => input.value = "0");
+        [elements.Input_Prixdentree, elements.Input_CapitalInvesi, elements.Input_NiveauDeSortie].forEach(input => input.value = "");
         [elements.ResultatCalcul, elements.Pourcentage, elements.WalletBenefice, elements.WalletSl, elements.multiplicator, elements.Liquidation, elements.RisqueReward].forEach(element => element.textContent = "");
 
 
         if ((elements.Input_Spot.checked && !elements.Toggle_StopLoss.checked && valueStopLoss > 0) || (elements.Input_Levier.checked && valueStopLoss > 0)) {
-            elements.Input_StopLoss.value = "0";
+            elements.Input_StopLoss.value = "";
             elements.PerteStopLoss.textContent = "";
         }
 
-        
+
     } else {
         console.error("Toute les valeurs sont à 0");
     }
