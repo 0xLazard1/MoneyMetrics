@@ -300,6 +300,10 @@
         padding: 10px;
     }
 
+    .right-column-trading-results-section {
+        background-color: transparent;
+        border: none;
+    }
 
 
     .trading-input,
