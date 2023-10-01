@@ -285,18 +285,17 @@
     }
 
     .trading-result {
-        font-size: 0.9rem;
+        font-size: calc(0.9rem + 0.5vw);
         margin-bottom: 0.5rem;
-        color: #333;
+
     }
 
     /* Style pour les messages d'erreur */
     .trading-error {
-        font-size: 1.2rem;
+        font-size: calc(1.2rem + 0.5vw);
         margin-bottom: 0.5rem;
-        color: red;
-    }
 
+    }
 
     .left-column-trading-left-column {
         width: 100%;
