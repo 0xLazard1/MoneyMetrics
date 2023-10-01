@@ -206,7 +206,6 @@
         /* réduit la taille de la police */
     }
 
-
     .InputClass {
         margin: 8px 4px 0 4px;
         /* réduit les marges */
@@ -217,12 +216,19 @@
     .stoploss-toggle-wrapper {
         width: 100%;
         /* utilise toute la largeur disponible */
+        box-sizing: border-box;
+        /* cela permet d'inclure le padding et la bordure dans la largeur totale */
     }
 
     .trading-input,
     .stoploss-input {
+        width: 100%;
+        padding: 0.4rem;
+        /* réduit le padding */
         font-size: 0.8rem;
         /* réduit la taille de la police */
+        box-sizing: border-box;
+        /* cela permet d'inclure le padding et la bordure dans la largeur totale */
     }
 
     .stoploss-toggle-label,
