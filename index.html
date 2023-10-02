@@ -211,19 +211,20 @@
                 </div>
             </form>
 
-            <div class="temps-range-wrapper">
-                <p id="PhraseSelection_Temps" class="temps-input-label">Sélectionnez le temps de la position
-                </p>
-                <div class="temps-buttons-wrapper">
-                    <button class="temps-button" data-days="1">1 Jour</button>
-                    <button class="temps-button" data-days="7">1 Semaine</button>
-                    <button class="temps-button" data-days="182">6 Mois</button>
-                    <button class="temps-button" data-days="365">1 An</button>
+            <div class="range-form">
+                <p id="PhraseSelection_Temps" class="input-choice">Sélectionnez le temps de la position</p>
+                <div class="buttons-wrapper">
+                    <button class="button" data-days="1">1 Jour</button>
+                    <button class="button" data-days="7">1 Semaine</button>
+                    <button class="button" data-days="182">6 Mois</button>
+                    <button class="button" data-days="365">1 An</button>
                 </div>
-
-                <input type="range" min="1" max="365" id="Input_RangeTemps" class="temps-range" />
-                <span id="Temps_Value" class="temps-value-display">1 </span>
+                <div class="range">
+                    <input type="range" min="1" max="365" id="Input_RangeTemps" class="range-input" />
+                    <span id="Temps_Value" class="value-display">1 </span>
+                </div>
             </div>
+
 
             <div class="trading-input-wrapper">
                 <p id="stakingapymode" class="trading-input-label">Fréquence de capitalisation pour l'APY

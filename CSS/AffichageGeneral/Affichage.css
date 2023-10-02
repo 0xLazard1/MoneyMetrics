@@ -22,14 +22,31 @@
 
 .AffichageDeuxButton {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
+    gap: 20px;
 }
+
+.ButtonAffichageSousResult,
+.AffichageButtonSousReset {
+    padding: 15px 30px;
+    font-size: 15px;
+    border: none;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ButtonAffichageSousResult:hover,
+.AffichageButtonSousReset:hover {
+    background-color: #007BFF;
+}
+
 
 /* Styles pour les écrans plus petits (jusqu'à 768px) */
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
 
     .AffichageSuperieur {
         width: 100%;
