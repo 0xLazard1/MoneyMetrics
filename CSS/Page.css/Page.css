@@ -1,22 +1,13 @@
-/* Réinitialisation des éléments de base */
-body,
-h1,
-h2,
-h3,
-p,
-ul,
-li {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Configuration globale */
 body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     font-family: 'Monaco', monospace;
     line-height: 1.6;
     color: #333;
-    background-color: #f9f9f9;
+    background-color: #e2e2e2;
     margin: 1rem;
 }
 

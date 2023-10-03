@@ -17,6 +17,7 @@ import { Borrowing } from "./JS/LendingMode/LendingCalcul/Borrowing.js";
 import { ResetLendingBorrowing } from "./JS/LendingMode/LendingReset/LendingReset.js";
 import { UpdateTemps } from "./JS/StakingMode/FunctionCalculStaking/UpdateTemps/UpdateTemps.js";
 import { UpdateTemps_lending } from "./JS/LendingMode/LendingCalcul/UpdateTemps/UpdateTemps.js";
+import { HiddenResult } from "./JS/HiddenResult.js";
 
 
 
@@ -102,3 +103,7 @@ Input_RangeTemps.addEventListener("input", UpdateTemps);
 Input_RangeTemps_Lending.addEventListener("input", UpdateTemps_lending);
 
 
+Button_CalculerLesResultats.addEventListener("click", HiddenResult);
+Button_CalculerLesResultatsStaking.addEventListener("click", HiddenResult);
+Button_CalculerLesResultatsNFT.addEventListener("click", HiddenResult);
+Button_CalculerPretEmprunt.addEventListener("click", HiddenResult);

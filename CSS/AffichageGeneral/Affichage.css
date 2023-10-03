@@ -1,9 +1,11 @@
 /* Styles par défaut pour grands écrans */
 
 .AffichageSuperieur {
-    border: solid 1px black;
     border-radius: 8px;
     box-sizing: border-box;
+    margin-top: 25px;
+    background-color: whitesmoke;
+    min-width: 65%;
 }
 
 .AffichageTitre {
@@ -18,6 +20,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.AffichageDroite {
+    display: none;
 }
 
 .AffichageDeuxButton {

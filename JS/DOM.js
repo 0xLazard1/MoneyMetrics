@@ -3,6 +3,7 @@ import { TradingVisibilité } from "./TradingMode/FunctionVisibilitéTrading/Tra
 import { StakingVisibilité } from "./StakingMode/FunctionVisibilité/VisibilitéStaking.js";
 import { LendingBorrowingVisibilité } from "./LendingMode/LendingVisibilté/LendingVisibilté.js";
 import { StopLoss } from "./TradingMode/FunctionStopLoss/StopLoss.js";
+import { HiddenResult2 } from "./HiddenResult.js";
 
 const Tableau_Id = [
     "Input_Trading", "Input_Staking",
@@ -39,10 +40,14 @@ const Tableau_Id = [
     "Wrapper_Recomposition", "ResultatPret",
     "ResultatEmprunt", "InteretsPret", "InteretsEmprunt", "FraisTotal",
     "ErrorContainerPretEmprunt", "Button_CalculerPretEmprunt", "Button_ResetPretEmprunt",
-    "Input_FraisPlateforme", "Input_Recomposition", "Input_FrequenceCapitalisationLendingBorrwing",
+    "Input_FraisPlateforme", "Input_Recomposition",
+    "Input_FrequenceCapitalisationLendingBorrwing",
     , "Input_TauxInteret", "Input_Montant", "Input_RangeTemps", "Temps_Value",
-    "TokensParSemaineDisplay", "TokensParMoisDisplay", "TempsPourDoublerDisplay", "TokensParJourDisplay",
-    "levierbuttonsfast", "WalletPerte", "Input_FrequenceCapitalisationLendingBorrwing", "Input_RangeTemps_Lending", "Temps_Value_Lending"];
+    "TokensParSemaineDisplay", "TokensParMoisDisplay", "TempsPourDoublerDisplay",
+    "TokensParJourDisplay",
+    "levierbuttonsfast", "WalletPerte", "Input_FrequenceCapitalisationLendingBorrwing",
+    "Input_RangeTemps_Lending", "Temps_Value_Lending", "AffichageDroiteID",
+    "AffichageDroiteIDStaking", "AffichageDroiteIDLending", "AffichageDroiteIDNFT"];
 
 
 const getDomElements = ids => ids.reduce((obj, id) => {
@@ -79,6 +84,7 @@ window.addEventListener("DOMContentLoaded", () => {
         StakingVisibilité();
         LendingBorrowingVisibilité();
         StopLoss();
+        HiddenResult2();
     } else {
         console.error("Ne trouve pas les radios dans modes");
     }
@@ -106,6 +112,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+
+
 });
 
 
