@@ -77,4 +77,12 @@
         justify-content: center;
         padding: 10px;
     }
+
+    .AffichageDeuxButton {
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+        margin: 0 5px 0 5px;
+    }
+
 }
