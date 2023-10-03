@@ -160,16 +160,22 @@
     font-size: 1rem;
 }
 
-/* Style pour les résultats de trading */
+
 .trading-result {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     color: #333;
 }
 
-/* Style pour les messages d'erreur */
 .trading-error {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     color: red;
+}
+
+@media (max-width: 768px) {
+    .rangelevier {
+        width: 65%;
+
+    }
 }
