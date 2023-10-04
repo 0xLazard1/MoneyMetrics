@@ -44,6 +44,8 @@
     margin: 20px 5px 0 5px;
     border-radius: 8px;
 
+
+
 }
 
 .lever-option {
@@ -174,8 +176,13 @@
 }
 
 @media (max-width: 768px) {
-    .rangelevier {
-        width: 65%;
 
+
+    .rangelevier {
+        width: 55%;
+    }
+
+    .block_levier {
+        width: 85%
     }
 }
