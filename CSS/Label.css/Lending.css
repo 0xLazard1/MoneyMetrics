@@ -1,0 +1,10 @@
+.range-inputLending {
+    margin-top: 5px;
+    width: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.value-displayLending {
+    font-size: 20px;
+}
