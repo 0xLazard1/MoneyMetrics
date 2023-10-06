@@ -1,6 +1,26 @@
 @media (max-width: 500px) {
 
 
+    /* Configuration globale */
+    body {
+        margin: 2rem;
+    }
+
+    /* Titres */
+    h1,
+    h2,
+    h3 {
+        margin-bottom: 1rem;
+    }
+
+    /* Espacement pour les listes */
+    ul {
+        margin-top: 1rem;
+        padding-left: 2rem;
+
+    }
+
+
 
     /* 
 ##############################################################
@@ -154,7 +174,7 @@
     /* 
 ##############################################################
 ##                                                          ##
-##                      PAGE                                ##
+##                      LABEL                               ##
 ##                                                          ##
 ##############################################################
 */
