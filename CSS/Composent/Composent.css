@@ -1,0 +1,18 @@
+@media screen and (max-width: 500px) {
+    .Composent_Generaux_Radio {
+        align-items: center;
+    }
+
+    .Composent_SpotLevier_Radio {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Composent_Generaux_Text,
+    .Radio {
+        font-size: 0.9rem;
+        margin: 8px;
+        /* Augmente l'espacement pour les petits écrans */
+    }
+}

@@ -1,8 +1,4 @@
-@import "./Page.css/Page.css";
-@import "./Mode.css/Mode.css";
-@import "./AffichageGeneral/Affichage.css";
-@import "./Label.css/label.css";
-@import "./Label.css/Staking.css";
-@import "./Label.css/NFT.css";
-@import "./Label.css/Lending.css";
-@import "./Responsive/Responsive.css";
+@import "./Page/Page.css";
+@import "./Mode/Mode.css";
+@import "./Affichage/Affichage.css";
+@import "./Composent/Composent.css";

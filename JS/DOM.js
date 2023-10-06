@@ -91,12 +91,12 @@ window.addEventListener("DOMContentLoaded", () => {
 })
 
 document.addEventListener("DOMContentLoaded", function () {
-    var menuButton = document.querySelector(".menu-button");
-    var modeSelection = document.querySelector(".mode-selection");
-    var modeRadios = document.querySelectorAll(".mode-radio");
+    var menuButton = document.querySelector(".Menu_Responsive_Button");
+    var modeSelection = document.querySelector(".Mode_Normal_Choix");
+    var modeRadios = document.querySelectorAll(".Mode_Normal_Radio");
 
     function isMobile() {
-        return window.innerWidth <= 768;
+        return window.innerWidth <= 500;
     }
 
     menuButton.addEventListener("click", function () {
