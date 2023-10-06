@@ -205,8 +205,17 @@
         margin: 0px 0px 0px 0px;
     }
 
+    .range-form {
+        margin-top: 1px;
+        width: 35vh;
+    }
+
     .rangelevier {
         width: 28vh;
+    }
+
+    .lever-range-option {
+        margin: 0px 0px 0px 0px;
     }
 
 
