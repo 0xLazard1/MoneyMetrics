@@ -5,14 +5,14 @@
     box-sizing: border-box;
     margin-top: 25px;
     background-color: whitesmoke;
-    min-width: 65%;
+    min-width: 69%;
     border: solid 1px black;
 
 }
 
 .AffichageTitre {
     text-align: center;
-    margin: 0px 80px 0 15px;
+    margin: 0px 120px 0 120px;
     font-size: 18px;
 }
 

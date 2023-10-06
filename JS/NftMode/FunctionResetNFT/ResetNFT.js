@@ -38,7 +38,7 @@ export const ResetNFT = () => {
     const valueCommissionMarketPlace = parseFloat(elements.Input_FraisMarketNFT.value);
 
     if (valueAchatNFT > 0 || valueReventeNFT > 0 || valueCommissionCreator > 0 || valueCommissionMarketPlace > 0) {
-        [elements.Input_PrixdentreeNFT, elements.Input_PrixdeReventeNFT, elements.Input_FraisCreateurNFT, elements.Input_FraisMarketNFT].forEach(input => input.value = "0");
+        [elements.Input_PrixdentreeNFT, elements.Input_PrixdeReventeNFT, elements.Input_FraisCreateurNFT, elements.Input_FraisMarketNFT].forEach(input => input.value = "");
         [elements.ResultatCalculNFT, elements.WalletBeneficeNFT, elements.CommissionNFTPourcentage, elements.CommissionNFTenDollard, elements.PourcentageNFT].forEach(element => element.innerHTML = "");
     }
 }

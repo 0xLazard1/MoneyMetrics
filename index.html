@@ -229,34 +229,36 @@
                 </div>
             </div>
 
+            <div class="InputClass">
+                <div class="trading-input-wrapper">
+                    <p id="stakingapymode" class="trading-input-label"></p>
+                    <select id="Input_CapitalizationFrequency" class="trading-input">
+                        <option value="daily">Quotidienne</option>
+                        <option value="monthly">Mensuelle</option>
+                        <option value="quarterly">Trimestrielle</option>
+                        <option value="annually">Annuelle</option>
+                    </select>
+                </div>
 
-            <div class="trading-input-wrapper">
-                <p id="stakingapymode" class="trading-input-label"></p>
-                <select id="Input_CapitalizationFrequency" class="trading-input">
-                    <option value="daily">Quotidienne</option>
-                    <option value="monthly">Mensuelle</option>
-                    <option value="quarterly">Trimestrielle</option>
-                    <option value="annually">Annuelle</option>
-                </select>
-            </div>
+                <div class="trading-input-wrapper">
+                    <input type="number" placeholder="Quantity (Tokens)" min="0" step="0.000001"
+                        id="Input_QuantiteStaking" class="trading-input">
+                </div>
 
-            <div class="trading-input-wrapper">
-                <input type="number" placeholder="Quantity (Tokens)" min="0" step="0.000001" id="Input_QuantiteStaking"
-                    class="trading-input">
-            </div>
+                <div class="trading-input-wrapper">
+                    <p id="Phrase_APR" class="trading-input-label"></p>
+                    <p id="Phrase_APY" class="trading-input-label"></p>
+                    <input type="number" min="0" step="0.000001" id="Input_PourcentageAPR" class="trading-input"
+                        placeholder="Apy or APR (%)">
+                </div>
 
-            <div class="trading-input-wrapper">
-                <p id="Phrase_APR" class="trading-input-label">APR (en %)</p>
-                <p id="Phrase_APY" class="trading-input-label">APY (en %)</p>
-                <input type="number" min="0" step="0.000001" id="Input_PourcentageAPR" class="trading-input">
-            </div>
-
-            <div class="trading-input-wrapper">
-                <p id="Phrase_NiveauDeSortie" class="trading-input-label">Commision (en %)</p>
-                <input type="number" min="0" step="0.000001" id="Input_CommisionStaking" class="trading-input">
+                <div class="trading-input-wrapper">
+                    <p id="Phrase_NiveauDeSortie" class="trading-input-label"></p>
+                    <input type="number" min="0" step="0.000001" id="Input_CommisionStaking" class="trading-input"
+                        placeholder="Commision (%)">
+                </div>
             </div>
         </div>
-
 
         <div class="AffichageDroite" id="AffichageDroiteIDStaking">
             <p id="ResultatCalculStaking" class="trading-result"></p>
@@ -297,35 +299,29 @@
         </div>
 
         <div class="AffichageGauche">
+            <div class="InputClass">
 
+                <div class="trading-input-wrapper">
+                    <input type="number" min="0" step="0.000001" id="Input_PrixdentreeNFT" class="trading-input"
+                        placeholder="Purchase Value (UST)">
+                </div>
 
-            <div class="nft-instruction">
-                <p>Veuillez entrée les valeurs correspondante </p>
+                <div class="trading-input-wrapper">
+                    <input type="number" min="0" step="0.000001" id="Input_PrixdeReventeNFT" class="trading-input"
+                        placeholder="Resal Value (UST)">
+                </div>
+
+                <div class="trading-input-wrapper">
+                    <input type="number" min="0" step="0.000001" id="Input_FraisCreateurNFT" class="trading-input"
+                        placeholder="Creator Fees (%)">
+                </div>
+
+                <div class="trading-input-wrapper">
+                    <input type="number" min="0" step="0.000001" id="Input_FraisMarketNFT" class="trading-input"
+                        placeholder="MarketPlace Fees (%)">
+                </div>
+
             </div>
-
-            <section class="nft-input-section">
-                <div class="nft-input-wrapper">
-                    <p id="Phrase_PrixdentreeNFT" class="nft-input-label">Valeur à l'achat du NFT (en $)</p>
-                    <input type="number" min="0" step="0.000001" id="Input_PrixdentreeNFT" class="nft-input">
-                </div>
-
-                <div class="nft-input-wrapper">
-                    <p id="Phrase_PrixdeReventeNFT" class="nft-input-label">Valeur à la revente du NFT (en $)</p>
-                    <input type="number" min="0" step="0.000001" id="Input_PrixdeReventeNFT" class="nft-input">
-                </div>
-
-                <div class="nft-input-wrapper">
-                    <p id="Phrase_FraisCreateurNFT" class="nft-input-label">Frais Créateur (en %)</p>
-                    <input type="number" min="0" step="0.000001" id="Input_FraisCreateurNFT" class="nft-input">
-                </div>
-
-                <div class="nft-input-wrapper">
-                    <p id="Phrase_FraisMarketNFT" class="nft-input-label">Frais MarketPlace (en %)</p>
-                    <input type="number" min="0" step="0.000001" id="Input_FraisMarketNFT" class="nft-input">
-                </div>
-
-
-            </section>
         </div>
 
         <section class="AffichageDroite" id="AffichageDroiteIDNFT">

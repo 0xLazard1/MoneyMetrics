@@ -24,7 +24,7 @@ export const ResetStaking = () => {
     const valueComission = parseFloat(elements.Input_CommisionStaking.value);
 
     if (valueQuantitéToken > 0 || valuePourcentageAPR > 0 || valueComission > 0) {
-        [elements.Input_QuantiteStaking, elements.Input_PourcentageAPR, elements.Input_CommisionStaking].forEach(input => input.value = "0");
+        [elements.Input_QuantiteStaking, elements.Input_PourcentageAPR, elements.Input_CommisionStaking].forEach(input => input.value = "");
         [elements.ResultatCalculStaking, elements.WalletBeneficeStaking, elements.CommissionStaking, elements.TokensParJourDisplay, elements.TokensParSemaineDisplay,
         elements.TokensParMoisDisplay, elements.TempsPourDoublerDisplay].forEach(element => element.textContent = "");
     }
