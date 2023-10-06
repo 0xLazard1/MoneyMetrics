@@ -1,4 +1,4 @@
-@media (max-width: 500px) {
+@media (max-width: 768px) {
 
 
     /* Configuration globale */
@@ -169,8 +169,6 @@
         border-bottom: none;
     }
 
-
-
     /* 
 ##############################################################
 ##                                                          ##
@@ -179,19 +177,39 @@
 ##############################################################
 */
 
+    .trading-form {
+        margin: 0px 30px 0px 0px;
+    }
+
+    .trading-label {
+        margin: 0px 30px 0px 30px;
+    }
+
+    .reverse,
+    .LongReverse {
+        font-size: 15px;
+    }
+
+    .trading-labe,
+    .lever-label1 {
+        font-size: 15px;
+    }
+
+    .lever-option {
+        margin: 0px 60px 0px 60px;
+    }
+
+    .lever-button {
+        font-size: 15px;
+        width: 50px;
+        margin: 0px 0px 0px 0px;
+    }
 
     .rangelevier {
-        width: 55%;
+        width: 28vh;
     }
 
-    .block_levier {
-        width: 85%
-    }
 
-    .trading-form {
-        align-items: center;
-        margin: 0 150px 0 150px;
-        display: flex;
-        justify-content: space-evenly;
-    }
+
+
 }
