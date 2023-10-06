@@ -106,7 +106,7 @@
                 </div>
 
                 <div class="range-form">
-                    <!-- <p id="PhraseSelection_Levier" class="lever-input-choice">Choose effect of Leverrage</p> -->
+                    <p id="PhraseSelection_Levier"></p>
                     <div class="lever-range-option">
                         <div class="lever-buttons-wrapper" id="levierbuttonsfast">
 
@@ -206,22 +206,22 @@
 
         <div class="AffichageGauche">
             <form class="trading-form">
-                <p class="trading-choice">Veuillez sélectionner votre choix de staking : APR ou APY</p>
+                <p class="trading-choice"></p>
                 <div class="trading-option">
                     <input type="radio" id="Input_APY" name="contact" value="APY" class="trading-radio" checked>
-                    <label for="Input_APY" class="trading-label">APY (Annual Percentage Yield)</label>
+                    <label for="Input_APY" class="trading-label">APY</label>
                     <input type="radio" id="Input_APR" name="contact" value="APR" class="trading-radio">
-                    <label for="Input_APR" class="trading-label">APR (Annual Percentage Rate)</label>
+                    <label for="Input_APR" class="trading-label">APR</label>
                 </div>
             </form>
 
             <div class="range-form">
-                <p id="PhraseSelection_Temps" class="input-choice">Sélectionnez le temps de la position</p>
+                <p id="PhraseSelection_Temps"></p>
                 <div class="buttons-wrapper">
-                    <button class="button" data-days="1">1 Jour</button>
-                    <button class="button" data-days="7">1 Semaine</button>
-                    <button class="button" data-days="182">6 Mois</button>
-                    <button class="button" data-days="365">1 An</button>
+                    <button class="button" data-days="1">1 Day</button>
+                    <button class="button" data-days="7">1 Week</button>
+                    <button class="button" data-days="182">6 Month</button>
+                    <button class="button" data-days="365">1 Year</button>
                 </div>
                 <div class="range">
                     <input type="range" min="1" max="365" id="Input_RangeTemps" class="range-input" />
@@ -231,8 +231,7 @@
 
 
             <div class="trading-input-wrapper">
-                <p id="stakingapymode" class="trading-input-label">Fréquence de capitalisation pour l'APY
-                </p>
+                <p id="stakingapymode" class="trading-input-label"></p>
                 <select id="Input_CapitalizationFrequency" class="trading-input">
                     <option value="daily">Quotidienne</option>
                     <option value="monthly">Mensuelle</option>
@@ -242,8 +241,8 @@
             </div>
 
             <div class="trading-input-wrapper">
-                <p id="Phrase_QuantiteToken" class="trading-input-label">Quantité de tokens</p>
-                <input type="number" min="0" step="0.000001" id="Input_QuantiteStaking" class="trading-input">
+                <input type="number" placeholder="Quantity (Tokens)" min="0" step="0.000001" id="Input_QuantiteStaking"
+                    class="trading-input">
             </div>
 
             <div class="trading-input-wrapper">
