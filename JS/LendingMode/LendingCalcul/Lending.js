@@ -35,7 +35,6 @@ export const LendingCalcul = () => {
         elements.ResultatPret.innerHTML = "";
         elements.InteretsPret.innerHTML = "";
         elements.FraisTotal.innerHTML = "";
-        elements.ErrorContainerPretEmprunt.innerHTML = "Veuillez renseigner tous les champs nécessaires.";
         return;
     }
 

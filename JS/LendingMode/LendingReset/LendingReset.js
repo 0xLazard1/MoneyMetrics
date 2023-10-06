@@ -33,7 +33,7 @@ export const ResetLendingBorrowing = () => {
     const valueFraisPlateforme = parseFloat(elements.Input_FraisPlateforme.value);
 
     if (valueMontant > 0 || valueTauxInteret > 0 || valueFraisPlateforme > 0) {
-        [elements.Input_Montant, elements.Input_TauxInteret, elements.Input_FraisPlateforme].forEach(input => input.value = "0");
+        [elements.Input_Montant, elements.Input_TauxInteret, elements.Input_FraisPlateforme].forEach(input => input.value = "");
         [elements.ResultatPret, elements.InteretsPret, elements.FraisTotal, elements.ResultatEmprunt, elements.InteretsEmprunt].forEach(element => element.innerHTML = "");
     }
 }
