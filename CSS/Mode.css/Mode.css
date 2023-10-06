@@ -8,34 +8,34 @@
     border: 1px solid black;
     border-radius: 12px;
     background-color: whitesmoke;
-    width: 65%;
+    width: 69%;
 }
 
 
 .mode-selection {
     display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    margin: 0 10px;
-    padding: 0 10px;
+    flex-direction: row;
+    position: relative;
 }
+
+.Logo {
+    position: absolute;
+    right: -170px;
+    top: 55%;
+    transform: translateY(-50%);
+}
+
 
 .twitter-icon {
     color: blue;
-    font-size: 30px;
-    position: relative;
-    right: -280px;
-    margin-right: 10px;
+    font-size: 25px;
 }
 
-.medium-icon {
+/* .medium-icon {
     color: black;
-    font-size: 30px;
-    position: relative;
-    right: -280px;
-}
+    font-size: 25px;
+} */
+
 
 
 .mode-radio:checked+.mode-label {
@@ -56,6 +56,8 @@
     cursor: pointer;
     padding: 5px 10px;
     transition: background-color 0.3s ease;
+    min-width: 120px;
+    max-width: 100px;
 }
 
 .mode-label:hover {
