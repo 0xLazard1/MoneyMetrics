@@ -47,7 +47,7 @@ const Tableau_Id = [
     "TokensParJourDisplay",
     "levierbuttonsfast", "WalletPerte", "Input_FrequenceCapitalisationLendingBorrwing",
     "Input_RangeTemps_Lending", "Temps_Value_Lending", "AffichageDroiteID",
-    "AffichageDroiteIDStaking", "AffichageDroiteIDLending", "AffichageDroiteIDNFT"];
+    "AffichageDroiteIDStaking", "AffichageDroiteIDLending", "AffichageDroiteIDNFT", "Input_Long"];
 
 
 const getDomElements = ids => ids.reduce((obj, id) => {
@@ -72,7 +72,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const inputapy = elements.Input_APY;
     const stopLoss = elements.Toggle_StopLoss;
     const inputlending = elements.Input_Pret;
-    if (radioButtons.length > 0 && inputSpot && inputLong && inputapy && inputlending && stopLoss) {
+    if (radioButtons.length > 0 && inputSpot && inputapy && inputlending && stopLoss) {
         radioButtons.forEach(button => button.checked = false);
         inputSpot.checked = true;
         inputLong.checked = true;
@@ -89,6 +89,7 @@ window.addEventListener("DOMContentLoaded", () => {
         console.error("Ne trouve pas les radios dans modes");
     }
 })
+
 
 document.addEventListener("DOMContentLoaded", function () {
     var menuButton = document.querySelector(".Menu_Responsive_Button");

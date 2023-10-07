@@ -19,6 +19,7 @@ import { elements } from "../../../DOM.js";
 
 export const Spot = () => {
 
+
     // Récupération et conversion des valeurs des inputs
     const [capitalInvesti, niveauSortie, prixEntree, stopLoss] =
         [elements.Input_CapitalInvesi, elements.Input_NiveauDeSortie, elements.Input_Prixdentree, elements.Input_StopLoss]
@@ -30,6 +31,7 @@ export const Spot = () => {
         [elements.ResultatCalcul, elements.Pourcentage, elements.PerteStopLoss, elements.WalletBenefice].forEach(el => el.innerHTML = "");
         return;
     }
+
     if (elements.Input_Spot && elements.Input_Spot.checked && !elements.Input_Levier.checked) {
         // Calcul des différents paramètres
         const gainBrute = capitalInvesti / prixEntree * niveauSortie;
@@ -39,8 +41,6 @@ export const Spot = () => {
         const perteNet = capitalInvesti * (prixEntree - stopLoss) / prixEntree;
         const WalletAvecBenefice = gainNet + capitalInvesti;
         const WalletAfterSl = capitalInvesti - perteNet;
-
-
 
         const displayResults = (element, value, color, suffix = '') => {
             element.innerHTML = `${value} : <span style="color: ${color}">${suffix}</span>`;
@@ -64,5 +64,4 @@ export const Spot = () => {
             displayResults(elements.PartieStopLoss.style, "none");
         }
     }
-
 }

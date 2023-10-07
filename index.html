@@ -75,8 +75,9 @@
                 <div class="Composent_Generaux_Radio">
                     <form>
                         <div class="Composent_SpotLevier_Radio">
+
                             <label for="Input_Spot" class="Composent_Generaux_Text">
-                                <input type="radio" id="Input_Spot" name="contact" value="Spot">Spot
+                                <input type="radio" id="Input_Spot" name="contact" value="Spot" checked>Spot
                             </label>
                             <label for="Input_Levier" class="Composent_Generaux_Text">
                                 <input type="radio" id="Input_Levier" name="contact" value="Levier">Leverage
@@ -85,20 +86,23 @@
                     </form>
 
 
-                    <div id="Block_Levier">
-                        <div>
-                            <label for="Input_Long" class="Composent_Generaux_Text">
-                                <input type="radio" id="Input_Long" name="contact" value="Long" class="Radio">
-                                Long
-                            </label>
 
-                            <label for="Input_Short" class="Composent_Generaux_Text">
-                                <input type="radio" id="Input_Short" name="contact" value="Short" class="Radio">
-                                Short
-                            </label>
+
+                    <div id="Block_Levier">
+
+
+                        <div class="lever-option">
+                            <form>
+
+                                <label><input type="radio" id="Input_Long" name="contact" value="Long">Long</label>
+                                <label for="Input_Short" class="lever-label"> <input type="radio" id="Input_Short"
+                                        name="contact" value="Short" class="lever-radio">Short</label>
                         </div>
+                        </form>
+
 
                     </div>
+
                 </div>
 
                 <div>
