@@ -9,7 +9,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: red;
         width: 100%;
     }
 
@@ -17,7 +16,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: green;
         height: auto;
         width: 100%;
     }
@@ -28,15 +26,9 @@
         min-width: 80px;
     }
 
-
-
-
-
-
-
-
-
-
+    .RadioButtonLongShort {
+        margin: 20px;
+    }
 
 
     .Composoent_LevierButton {
