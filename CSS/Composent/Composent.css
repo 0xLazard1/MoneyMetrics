@@ -104,18 +104,38 @@
         border-radius: 8px;
     }
 
-    .Composent_Class_Selection {
+    .Composent_Class_Selection,
+    .stoploss-input-wrapper,
+    .stoploss-toggle-wrapper {
         position: relative;
         width: 90%;
         margin: 5px 20px 5px 10px;
     }
 
-    .Composent_Class_Input {
+    .Composent_Class_Input,
+    .stoploss-input {
         width: 100%;
         padding: 0.5rem;
         font-size: 1rem;
         border: 1px solid #ccc;
         border-radius: 0.75rem;
+    }
+
+    .stoploss-toggle {
+        margin-right: 0.5rem;
+    }
+
+
+    .stoploss-toggle-label {
+        font-size: 1rem;
+    }
+
+    .multiplicator-indicator {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1rem;
     }
 
 
