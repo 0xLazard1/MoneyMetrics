@@ -15,7 +15,6 @@
 
     .Composent_SpotLevier_Radio {
         display: flex;
-        flex-direction: row;
         justify-content: center;
         align-items: center;
         background-color: green;
