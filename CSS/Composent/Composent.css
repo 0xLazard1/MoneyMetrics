@@ -37,11 +37,16 @@
 
     .Composent_Tranding_Range_General {
         text-align: center;
+        width: 100%;
+        margin: 0 auto;
     }
 
     .Composent_Trading_Range {
-        font-size: 20px;
+        width: 90%;
+        margin: 0 auto;
+        display: block;
     }
+
 
     .Composent_Input_ClassBOX {
         display: flex;
