@@ -118,19 +118,19 @@
                 </div>
 
 
-                <div class="Composent_Input_ClassBOX">
-                    <div>
+                <div class="Composent_ClassBOX">
+                    <div class="Composent_Class_Selection">
                         <input type="number" placeholder="Entry Price (UST)" step="10" min="0" max="100"
-                            id="Input_Prixdentree">
+                            id="Input_Prixdentree" class="Composent_Class_Input">
                     </div>
-                    <div>
-                        <input type="number" placeholder="Invest (UST)" min="0" step="0.000001"
-                            id="Input_CapitalInvesi">
+                    <div class="Composent_Class_Selection">
+                        <input type="number" placeholder="Invest (UST)" min="0" step="0.000001" id="Input_CapitalInvesi"
+                            class="Composent_Class_Input">
                         <span id="multiplicator"></span>
                     </div>
-                    <div>
+                    <div class="Composent_Class_Selection">
                         <input type="number" placeholder="Target Price (UST)" min="0" step="0.000001"
-                            id="Input_NiveauDeSortie">
+                            id="Input_NiveauDeSortie" class="Composent_Class_Input">
                     </div>
                     <div id="PartieStopLoss">
                         <input type="number" placeholder="StopLoss (UST)" min="0" step="0.000001" id="Input_StopLoss">
@@ -214,37 +214,37 @@
                     </div>
                 </div>
 
-                <div>
-                    <div class="Composent_Capitilusation_General">
-                        <p id="stakingapymode"></p>
-                        <select id="Input_CapitalizationFrequency">
-                            <option value="daily">Quotidienne</option>
-                            <option value="monthly">Mensuelle</option>
-                            <option value="quarterly">Trimestrielle</option>
-                            <option value="annually">Annuelle</option>
-                        </select>
-                    </div>
 
-                    <div>
+                <div class="Composent_Capitilusation_General">
+                    <p id="stakingapymode"></p>
+                    <select id="Input_CapitalizationFrequency">
+                        <option value="daily">Quotidienne</option>
+                        <option value="monthly">Mensuelle</option>
+                        <option value="quarterly">Trimestrielle</option>
+                        <option value="annually">Annuelle</option>
+                    </select>
+                </div>
+                <div class="Composent_ClassBOX">
+                    <div class="Composent_Class_Selection">
                         <input type="number" placeholder="Quantity (Tokens)" min="0" step="0.000001"
-                            id="Input_QuantiteStaking">
+                            id="Input_QuantiteStaking" class="Composent_Class_Input">
                     </div>
 
-                    <div>
+                    <div class="Composent_Class_Selection">
                         <p id="Phrase_APR"></p>
                         <p id="Phrase_APY"></p>
                         <input type="number" min="0" step="0.000001" id="Input_PourcentageAPR"
-                            placeholder="Apy or APR (%)">
+                            placeholder="Apy or APR (%)" class="Composent_Class_Input">
                     </div>
 
-                    <div>
+                    <div class="Composent_Class_Selection">
                         <p id="Phrase_NiveauDeSortie"></p>
                         <input type="number" min="0" step="0.000001" id="Input_CommisionStaking"
-                            placeholder="Commision (%)">
+                            placeholder="Commision (%)" class="Composent_Class_Input">
                     </div>
+
                 </div>
             </div>
-
             <div id="AffichageDroiteIDStaking" class="AffichageDroite">
                 <p id="ResultatCalculStaking"></p>
                 <p id="WalletBeneficeStaking"></p>
@@ -284,31 +284,31 @@
                 <h1>Estimation of gain/loss on NFTs</h1>
             </div> -->
             <div class="AffichageGauche">
-                <div>
-                    <div>
 
-                        <div>
-                            <input type="number" min="0" step="0.000001" id="Input_PrixdentreeNFT"
-                                placeholder="Purchase Value (UST)">
-                        </div>
+                <div class="Composent_ClassBOX">
 
-                        <div>
-                            <input type="number" min="0" step="0.000001" id="Input_PrixdeReventeNFT"
-                                placeholder="Resal Value (UST)">
-                        </div>
-
-                        <div>
-                            <input type="number" min="0" step="0.000001" id="Input_FraisCreateurNFT"
-                                placeholder="Creator Fees (%)">
-                        </div>
-
-                        <div>
-                            <input type="number" min="0" step="0.000001" id="Input_FraisMarketNFT"
-                                placeholder="MarketPlace Fees (%)">
-                        </div>
-
+                    <div class="Composent_Class_Selection">
+                        <input type="number" min="0" step="0.000001" id="Input_PrixdentreeNFT"
+                            placeholder="Purchase Value (UST)" class="Composent_Class_Input">
                     </div>
+
+                    <div class="Composent_Class_Selection">
+                        <input type="number" min="0" step="0.000001" id="Input_PrixdeReventeNFT"
+                            placeholder="Resal Value (UST)" class="Composent_Class_Input">
+                    </div>
+
+                    <div class="Composent_Class_Selection">
+                        <input type="number" min="0" step="0.000001" id="Input_FraisCreateurNFT"
+                            placeholder="Creator Fees (%)" class="Composent_Class_Input">
+                    </div>
+
+                    <div class="Composent_Class_Selection">
+                        <input type="number" min="0" step="0.000001" id="Input_FraisMarketNFT"
+                            placeholder="MarketPlace Fees (%)" class="Composent_Class_Input">
+                    </div>
+
                 </div>
+
             </div>
             <section id="AffichageDroiteIDNFT" class="AffichageDroite">
                 <p id="ResultatCalculNFT"></p>
@@ -374,37 +374,36 @@
                     </div>
                 </div>
 
-                <div>
-                    <div id="Wrapper_FrequenceCapitalisation">
-                        <p>Capitilusation frequency :</p>
-                        <select id="Input_FrequenceCapitalisationLendingBorrwing">
-                            <option value="daily">Quotidienne</option>
-                            <option value="monthly">Mensuelle</option>
-                            <option value="quarterly">Trimestrielle</option>
-                            <option value="annually">Annuelle</option>
-                        </select>
+
+                <div id="Wrapper_FrequenceCapitalisation" class="Composent_Capitilusation_General">
+                    <select id="Input_FrequenceCapitalisationLendingBorrwing">
+                        <option value="daily">Quotidienne</option>
+                        <option value="monthly">Mensuelle</option>
+                        <option value="quarterly">Trimestrielle</option>
+                        <option value="annually">Annuelle</option>
+                    </select>
+                </div>
+
+                <div id="Wrapper_Recomposition" class="Composent_AutoCompound">
+                    <input type="checkbox" id="Input_Recomposition">
+                    <label for="Input_Recomposition">AutoCompound</label>
+                </div>
+                <div class="Composent_ClassBOX">
+                    <div class="Composent_Class_Selection">
+                        <input type="number" min="0" step="0.000001" id="Input_Montant" placeholder="Amount"
+                            class="Composent_Class_Input">
                     </div>
 
-                    <div id="Wrapper_Recomposition">
-                        <input type="checkbox" id="Input_Recomposition">
-                        <label for="Input_Recomposition">AutoCompound</label>
-                    </div>
+                    <div class="Composent_Class_Selection">
 
-                    <div>
-                        <p></p>
-                        <input type="number" min="0" step="0.000001" id="Input_Montant" placeholder="Amount">
-                    </div>
-
-                    <div>
-                        <p></p>
                         <input type="number" min="0" step="0.000001" id="Input_TauxInteret"
-                            placeholder="Interest Rate (%)">
+                            placeholder="Interest Rate (%)" class="Composent_Class_Input">
                     </div>
 
-                    <div id="Wrapper_FraisPlateforme">
-                        <p></p>
+                    <div id="Wrapper_FraisPlateforme" class="Composent_Class_Selection">
+
                         <input type="number" min="0" step="0.000001" id="Input_FraisPlateforme"
-                            placeholder="MarketPlace Fees (%)">
+                            placeholder="MarketPlace Fees (%)" class="Composent_Class_Input">
                     </div>
                 </div>
             </div>

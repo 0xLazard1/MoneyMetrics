@@ -81,17 +81,6 @@
     }
 
 
-
-    .Composent_Input_ClassBOX {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        margin-top: 20px;
-        height: auto;
-    }
-
-
     .Composent_Capitilusation_General {
         display: flex;
         justify-content: center;
@@ -99,6 +88,35 @@
         width: 85%;
         margin: 0 auto;
         text-align: center;
+        margin-top: 10px;
     }
+
+    .Composent_AutoCompound {
+        margin-top: 10px;
+    }
+
+
+
+    .Composent_ClassBOX {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 8px;
+    }
+
+    .Composent_Class_Selection {
+        position: relative;
+        width: 90%;
+        margin: 5px 20px 5px 10px;
+    }
+
+    .Composent_Class_Input {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 0.75rem;
+    }
+
 
 }
