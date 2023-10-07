@@ -90,4 +90,15 @@
         margin-top: 20px;
         height: auto;
     }
+
+
+    .Composent_Capitilusation_General {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
 }
