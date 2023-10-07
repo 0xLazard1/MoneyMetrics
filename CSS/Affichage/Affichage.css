@@ -12,6 +12,20 @@
         height: 100vh;
         text-align: center;
         margin-top: 50px;
+
+    }
+
+    .AffichageGauche {
+        border: 2px solid black;
+        border-radius: 8px;
+        background-color: whitesmoke;
+    }
+
+    .AffichageDroite {
+        border: 2px solid black;
+        border-radius: 8px;
+        background-color: whitesmoke;
+        margin-top: 20px;
     }
 
 

@@ -70,76 +70,77 @@
                 <h1>Estimation of gain/loss in Spot or Trading</h1>
             </div> -->
 
+            <div class="AffichageGauche">
+                <div class="Composent_Generaux_Radio">
+                    <form>
+                        <div class="Composent_SpotLevier_Radio">
+                            <span class="Composent_Generaux_Text">Spot</span>
+                            <input class="RadioButton" type="radio" id="Input_Spot" name="contact" value="Spot" checked>
+                            <input class="RadioButton" type="radio" id="Input_Levier" name="contact" value="Levier">
+                            <span class="Composent_Generaux_Text">Leverage</span>
+                        </div>
+                    </form>
+                </div>
 
-            <div class="Composent_Generaux_Radio">
-                <form>
-                    <div class="Composent_SpotLevier_Radio">
-                        <span class="Composent_Generaux_Text">Spot</span>
-                        <input class="RadioButton" type="radio" id="Input_Spot" name="contact" value="Spot" checked>
-                        <input class="RadioButton" type="radio" id="Input_Levier" name="contact" value="Levier">
-                        <span class="Composent_Generaux_Text">Leverage</span>
+
+
+                <div id="Block_Levier" class="Composent_Generaux_Radio">
+                    <form>
+                        <div class="Composent_SpotLevier_Radio">
+                            <span class="Composent_Generaux_Text">Long</span>
+                            <input class="RadioButtonLongShort" type="radio" id="Input_Long" name="contact" checked>
+                            <input class="RadioButtonLongShort" type="radio" id="Input_Short" name="contact">
+                            <span class="Composent_Generaux_Text">Short</span>
+                        </div>
+                    </form>
+
+
+                </div>
+
+
+
+
+                <div class="Composoent_LevierButton">
+                    <p id="PhraseSelection_Levier"></p>
+                    <div>
+                        <div id="levierbuttonsfast" class="Composent_Trading_Button">
+                            <button data-lever="8" class="Composent_TradingButton_Selection">x8</button>
+                            <button data-lever="20" class="Composent_TradingButton_Selection">x20</button>
+                            <button data-lever="25" class="Composent_TradingButton_Selection">x25</button>
+                            <button data-lever="100" class="Composent_TradingButton_Selection">x100</button>
+                        </div>
                     </div>
-                </form>
-            </div>
 
-
-
-            <div id="Block_Levier" class="Composent_Generaux_Radio">
-                <form>
-                    <div class="Composent_SpotLevier_Radio">
-                        <span class="Composent_Generaux_Text">Long</span>
-                        <input class="RadioButtonLongShort" type="radio" id="Input_Long" name="contact" checked>
-                        <input class="RadioButtonLongShort" type="radio" id="Input_Short" name="contact">
-                        <span class="Composent_Generaux_Text">Short</span>
-                    </div>
-                </form>
-
-
-            </div>
-
-
-
-
-            <div class="Composoent_LevierButton">
-                <p id="PhraseSelection_Levier"></p>
-                <div>
-                    <div id="levierbuttonsfast" class="Composent_Trading_Button">
-                        <button data-lever="8" class="Composent_TradingButton_Selection">x8</button>
-                        <button data-lever="20" class="Composent_TradingButton_Selection">x20</button>
-                        <button data-lever="25" class="Composent_TradingButton_Selection">x25</button>
-                        <button data-lever="100" class="Composent_TradingButton_Selection">x100</button>
+                    <div class="Composent_Tranding_Range_General">
+                        <input type="range" min="1" max="100" id="Input_RangeLevier" class="Composent_Trading_Range">
+                        <span id="Levier_Value" class="Composent_Trading_LevierValue">1</span>
                     </div>
                 </div>
 
-                <div class="Composent_Tranding_Range_General">
-                    <input type="range" min="1" max="100" id="Input_RangeLevier" class="Composent_Trading_Range">
-                    <span id="Levier_Value" class="Composent_Trading_LevierValue">1</span>
+
+                <div class="Composent_Input_ClassBOX">
+                    <div>
+                        <input type="number" placeholder="Entry Price (UST)" step="10" min="0" max="100"
+                            id="Input_Prixdentree">
+                    </div>
+                    <div>
+                        <input type="number" placeholder="Invest (UST)" min="0" step="0.000001"
+                            id="Input_CapitalInvesi">
+                        <span id="multiplicator"></span>
+                    </div>
+                    <div>
+                        <input type="number" placeholder="Target Price (UST)" min="0" step="0.000001"
+                            id="Input_NiveauDeSortie">
+                    </div>
+                    <div id="PartieStopLoss">
+                        <input type="number" placeholder="StopLoss (UST)" min="0" step="0.000001" id="Input_StopLoss">
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Toggle_StopLoss" name="Toggle_StopLoss">
+                        <label for="Toggle_StopLoss" id="LabelTextStopLoss"></label>
+                    </div>
                 </div>
             </div>
-
-
-            <div class="Composent_Input_ClassBOX">
-                <div>
-                    <input type="number" placeholder="Entry Price (UST)" step="10" min="0" max="100"
-                        id="Input_Prixdentree">
-                </div>
-                <div>
-                    <input type="number" placeholder="Invest (UST)" min="0" step="0.000001" id="Input_CapitalInvesi">
-                    <span id="multiplicator"></span>
-                </div>
-                <div>
-                    <input type="number" placeholder="Target Price (UST)" min="0" step="0.000001"
-                        id="Input_NiveauDeSortie">
-                </div>
-                <div id="PartieStopLoss">
-                    <input type="number" placeholder="StopLoss (UST)" min="0" step="0.000001" id="Input_StopLoss">
-                </div>
-                <div>
-                    <input type="checkbox" id="Toggle_StopLoss" name="Toggle_StopLoss">
-                    <label for="Toggle_StopLoss" id="LabelTextStopLoss"></label>
-                </div>
-            </div>
-
 
             <div id="AffichageDroiteID" class="AffichageDroite">
                 <p id="ResultatCalcul"></p>
