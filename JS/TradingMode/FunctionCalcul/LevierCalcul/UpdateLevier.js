@@ -32,7 +32,7 @@ document.querySelectorAll('.lever-button').forEach(button => {
         let inial = elements.Input_CapitalInvesi.value;
         let multiplicator1 = inial * parseFloat(lever);
         if (multiplicator1 != 0) {
-            elements.multiplicator.innerHTML = `(<span>${multiplicator1}$</span>)`;
+            elements.multiplicator.innerHTML = `(<span>${multiplicator1}</span>)`;
         } else {
             elements.multiplicator.innerHTML = "";
         }
