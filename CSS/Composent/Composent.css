@@ -49,6 +49,7 @@
         margin: 0px 9px 0px 5px;
         flex-grow: 1;
         max-width: calc(100% / 4);
+        white-space: nowrap;
     }
 
     .Composent_Tranding_Range_General {
