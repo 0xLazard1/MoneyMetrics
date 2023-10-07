@@ -30,6 +30,17 @@
 
 
 
+    .AffichageDeuxButton {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+        margin: 0 5px 0 5px;
+    }
+
+
+
 
 
 

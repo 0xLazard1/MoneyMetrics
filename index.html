@@ -154,12 +154,13 @@
                 <p id="ErrorContainer"></p>
             </div>
 
-            <div>
+            <div class="AffichageDeuxButton">
                 <div>
-                    <button type="button" id="Button_CalculerLesResultats">Results</button>
+                    <button type="button" id="Button_CalculerLesResultats"
+                        class="ButtonAffichageSousResult">Results</button>
                 </div>
                 <div>
-                    <button type="button" id="ResetAll">Reset</button>
+                    <button type="button" id="ResetAll" class="AffichageButtonSousReset">Reset</button>
                 </div>
             </div>
         </div>
@@ -185,65 +186,66 @@
             </div> -->
 
 
+            <div class="AffichageGauche">
+                <div class="Composent_Generaux_Radio">
+                    <form>
+                        <div class="Composent_SpotLevier_Radio">
+                            <span class="Composent_Generaux_Text">APY</span>
+                            <input class="RadioButton" type="radio" id="Input_APY" name="contact" value="APY" checked>
+                            <input class="RadioButton" type="radio" id="Input_APR" name="contact" value="APR">
+                            <span class="Composent_Generaux_Text">APR</span>
 
-            <div class="Composent_Generaux_Radio">
-                <form>
-                    <div class="Composent_SpotLevier_Radio">
-                        <span class="Composent_Generaux_Text">APY</span>
-                        <input class="RadioButton" type="radio" id="Input_APY" name="contact" value="APY" checked>
-                        <input class="RadioButton" type="radio" id="Input_APR" name="contact" value="APR">
-                        <span class="Composent_Generaux_Text">APR</span>
+                        </div>
+                    </form>
+                </div>
 
+
+                <div class="Composoent_LevierButton">
+                    <p id="PhraseSelection_Temps"></p>
+                    <div class="Composent_Staking_Button">
+                        <button data-days="1" class="Composent_TradingButton_Selection_Staking"> 1Day</button>
+                        <button data-days="7" class="Composent_TradingButton_Selection_Staking">1 Week</button>
+                        <button data-days="182" class="Composent_TradingButton_Selection_Staking">6 Month</button>
+                        <button data-days="365" class="Composent_TradingButton_Selection_Staking">1 Year</button>
                     </div>
-                </form>
-            </div>
-
-
-            <div class="Composoent_LevierButton">
-                <p id="PhraseSelection_Temps"></p>
-                <div class="Composent_Staking_Button">
-                    <button data-days="1" class="Composent_TradingButton_Selection_Staking"> 1Day</button>
-                    <button data-days="7" class="Composent_TradingButton_Selection_Staking">1 Week</button>
-                    <button data-days="182" class="Composent_TradingButton_Selection_Staking">6 Month</button>
-                    <button data-days="365" class="Composent_TradingButton_Selection_Staking">1 Year</button>
-                </div>
-                <div class="Composent_Tranding_Range_General">
-                    <input type="range" min="1" max="365" id="Input_RangeTemps" class="Composent_Trading_Range" />
-                    <span id="Temps_Value">1 </span>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <p id="stakingapymode"></p>
-                    <select id="Input_CapitalizationFrequency">
-                        <option value="daily">Quotidienne</option>
-                        <option value="monthly">Mensuelle</option>
-                        <option value="quarterly">Trimestrielle</option>
-                        <option value="annually">Annuelle</option>
-                    </select>
+                    <div class="Composent_Tranding_Range_General">
+                        <input type="range" min="1" max="365" id="Input_RangeTemps" class="Composent_Trading_Range" />
+                        <span id="Temps_Value">1 </span>
+                    </div>
                 </div>
 
                 <div>
-                    <input type="number" placeholder="Quantity (Tokens)" min="0" step="0.000001"
-                        id="Input_QuantiteStaking">
-                </div>
+                    <div>
+                        <p id="stakingapymode"></p>
+                        <select id="Input_CapitalizationFrequency">
+                            <option value="daily">Quotidienne</option>
+                            <option value="monthly">Mensuelle</option>
+                            <option value="quarterly">Trimestrielle</option>
+                            <option value="annually">Annuelle</option>
+                        </select>
+                    </div>
 
-                <div>
-                    <p id="Phrase_APR"></p>
-                    <p id="Phrase_APY"></p>
-                    <input type="number" min="0" step="0.000001" id="Input_PourcentageAPR" placeholder="Apy or APR (%)">
-                </div>
+                    <div>
+                        <input type="number" placeholder="Quantity (Tokens)" min="0" step="0.000001"
+                            id="Input_QuantiteStaking">
+                    </div>
 
-                <div>
-                    <p id="Phrase_NiveauDeSortie"></p>
-                    <input type="number" min="0" step="0.000001" id="Input_CommisionStaking"
-                        placeholder="Commision (%)">
+                    <div>
+                        <p id="Phrase_APR"></p>
+                        <p id="Phrase_APY"></p>
+                        <input type="number" min="0" step="0.000001" id="Input_PourcentageAPR"
+                            placeholder="Apy or APR (%)">
+                    </div>
+
+                    <div>
+                        <p id="Phrase_NiveauDeSortie"></p>
+                        <input type="number" min="0" step="0.000001" id="Input_CommisionStaking"
+                            placeholder="Commision (%)">
+                    </div>
                 </div>
             </div>
 
-
-            <div id="AffichageDroiteIDStaking">
+            <div id="AffichageDroiteIDStaking" class="AffichageDroite">
                 <p id="ResultatCalculStaking"></p>
                 <p id="WalletBeneficeStaking"></p>
                 <p id="CommissionStaking"></p>
@@ -253,12 +255,14 @@
                 <p id="TempsPourDoublerDisplay"></p>
                 <p id="ErrorContainerStaking"></p>
             </div>
-            <div>
+
+            <div class="AffichageDeuxButton">
                 <div>
-                    <button type="button" id="Button_CalculerLesResultatsStaking">Results</button>
+                    <button class="ButtonAffichageSousResult" type="button"
+                        id="Button_CalculerLesResultatsStaking">Results</button>
                 </div>
                 <div>
-                    <button type="button" id="Button_ResetStaking">Reset</button>
+                    <button class="AffichageButtonSousReset" type="button" id="Button_ResetStaking">Reset</button>
                 </div>
             </div>
 
@@ -279,34 +283,34 @@
             <!-- <div>
                 <h1>Estimation of gain/loss on NFTs</h1>
             </div> -->
-
-            <div>
+            <div class="AffichageGauche">
                 <div>
-
                     <div>
-                        <input type="number" min="0" step="0.000001" id="Input_PrixdentreeNFT"
-                            placeholder="Purchase Value (UST)">
-                    </div>
 
-                    <div>
-                        <input type="number" min="0" step="0.000001" id="Input_PrixdeReventeNFT"
-                            placeholder="Resal Value (UST)">
-                    </div>
+                        <div>
+                            <input type="number" min="0" step="0.000001" id="Input_PrixdentreeNFT"
+                                placeholder="Purchase Value (UST)">
+                        </div>
 
-                    <div>
-                        <input type="number" min="0" step="0.000001" id="Input_FraisCreateurNFT"
-                            placeholder="Creator Fees (%)">
-                    </div>
+                        <div>
+                            <input type="number" min="0" step="0.000001" id="Input_PrixdeReventeNFT"
+                                placeholder="Resal Value (UST)">
+                        </div>
 
-                    <div>
-                        <input type="number" min="0" step="0.000001" id="Input_FraisMarketNFT"
-                            placeholder="MarketPlace Fees (%)">
-                    </div>
+                        <div>
+                            <input type="number" min="0" step="0.000001" id="Input_FraisCreateurNFT"
+                                placeholder="Creator Fees (%)">
+                        </div>
 
+                        <div>
+                            <input type="number" min="0" step="0.000001" id="Input_FraisMarketNFT"
+                                placeholder="MarketPlace Fees (%)">
+                        </div>
+
+                    </div>
                 </div>
             </div>
-
-            <section id="AffichageDroiteIDNFT">
+            <section id="AffichageDroiteIDNFT" class="AffichageDroite">
                 <p id="ResultatCalculNFT"></p>
                 <p id="WalletBeneficeNFT"></p>
                 <p id="PourcentageNFT"></p>
@@ -315,7 +319,7 @@
                 <p id="ErrorContainerNFT"></p>
             </section>
 
-            <div>
+            <div class="AffichageDeuxButton">
                 <div>
                     <button type="button" id="Button_CalculerLesResultatsNFT">Results</button>
                 </div>
@@ -341,67 +345,70 @@
                 <h1>Estimation of Loan & Borrowing</h1>
             </div> -->
 
+            <div class="AffichageGauche">
+                <div class="Composent_Generaux_Radio">
+                    <form>
+                        <div class="Composent_SpotLevier_Radio">
+                            <span class="Composent_Generaux_Text">Lending</span>
+                            <input class="RadioButton" type="radio" id="Input_Pret" name="typeOperation" value="pret"
+                                checked>
+                            <input class="RadioButton" type="radio" id="Input_Emprunt" name="typeOperation"
+                                value="emprunt">
+                            <span class="Composent_Generaux_Text">Borrowing</span>
+                        </div>
+                    </form>
+                </div>
 
-            <div class="Composent_Generaux_Radio">
-                <form>
-                    <div class="Composent_SpotLevier_Radio">
-                        <span class="Composent_Generaux_Text">Lending</span>
-                        <input class="RadioButton" type="radio" id="Input_Pret" name="typeOperation" value="pret"
-                            checked>
-                        <input class="RadioButton" type="radio" id="Input_Emprunt" name="typeOperation" value="emprunt">
-                        <span class="Composent_Generaux_Text">Borrowing</span>
+                <div class="Composoent_LevierButton">
+                    <p id="PhraseSelection_Temps_Lending"></p>
+                    <div class="Composent_Staking_Button">
+                        <button data-days="1" class="Composent_TradingButton_Selection_Staking">1 Day</button>
+                        <button data-days="7" class="Composent_TradingButton_Selection_Staking">1 Week</button>
+                        <button data-days="182" class="Composent_TradingButton_Selection_Staking">6 Month</button>
+                        <button data-days="365" class="Composent_TradingButton_Selection_Staking">1 Year</button>
                     </div>
-                </form>
-            </div>
-
-            <div class="Composoent_LevierButton">
-                <p id="PhraseSelection_Temps_Lending"></p>
-                <div class="Composent_Staking_Button">
-                    <button data-days="1" class="Composent_TradingButton_Selection_Staking">1 Day</button>
-                    <button data-days="7" class="Composent_TradingButton_Selection_Staking">1 Week</button>
-                    <button data-days="182" class="Composent_TradingButton_Selection_Staking">6 Month</button>
-                    <button data-days="365" class="Composent_TradingButton_Selection_Staking">1 Year</button>
-                </div>
-                <div class="Composent_Tranding_Range_General">
-                    <input type="range" min="1" max="365" id="Input_RangeTemps_Lending" class="Composent_Trading_Range">
-                    <span id="Temps_Value_Lending" class="Composent_Trading_Range">1</span>
-                </div>
-            </div>
-
-            <div>
-                <div id="Wrapper_FrequenceCapitalisation">
-                    <p>Capitilusation frequency :</p>
-                    <select id="Input_FrequenceCapitalisationLendingBorrwing">
-                        <option value="daily">Quotidienne</option>
-                        <option value="monthly">Mensuelle</option>
-                        <option value="quarterly">Trimestrielle</option>
-                        <option value="annually">Annuelle</option>
-                    </select>
-                </div>
-
-                <div id="Wrapper_Recomposition">
-                    <input type="checkbox" id="Input_Recomposition">
-                    <label for="Input_Recomposition">AutoCompound</label>
+                    <div class="Composent_Tranding_Range_General">
+                        <input type="range" min="1" max="365" id="Input_RangeTemps_Lending"
+                            class="Composent_Trading_Range">
+                        <span id="Temps_Value_Lending" class="Composent_Trading_Range">1</span>
+                    </div>
                 </div>
 
                 <div>
-                    <p></p>
-                    <input type="number" min="0" step="0.000001" id="Input_Montant" placeholder="Amount">
-                </div>
+                    <div id="Wrapper_FrequenceCapitalisation">
+                        <p>Capitilusation frequency :</p>
+                        <select id="Input_FrequenceCapitalisationLendingBorrwing">
+                            <option value="daily">Quotidienne</option>
+                            <option value="monthly">Mensuelle</option>
+                            <option value="quarterly">Trimestrielle</option>
+                            <option value="annually">Annuelle</option>
+                        </select>
+                    </div>
 
-                <div>
-                    <p></p>
-                    <input type="number" min="0" step="0.000001" id="Input_TauxInteret" placeholder="Interest Rate (%)">
-                </div>
+                    <div id="Wrapper_Recomposition">
+                        <input type="checkbox" id="Input_Recomposition">
+                        <label for="Input_Recomposition">AutoCompound</label>
+                    </div>
 
-                <div id="Wrapper_FraisPlateforme">
-                    <p></p>
-                    <input type="number" min="0" step="0.000001" id="Input_FraisPlateforme"
-                        placeholder="MarketPlace Fees (%)">
+                    <div>
+                        <p></p>
+                        <input type="number" min="0" step="0.000001" id="Input_Montant" placeholder="Amount">
+                    </div>
+
+                    <div>
+                        <p></p>
+                        <input type="number" min="0" step="0.000001" id="Input_TauxInteret"
+                            placeholder="Interest Rate (%)">
+                    </div>
+
+                    <div id="Wrapper_FraisPlateforme">
+                        <p></p>
+                        <input type="number" min="0" step="0.000001" id="Input_FraisPlateforme"
+                            placeholder="MarketPlace Fees (%)">
+                    </div>
                 </div>
             </div>
-
-            <div id="AffichageDroiteIDLending">
+            <div id="AffichageDroiteIDLending" class="AffichageDroite">
                 <p id="ResultatPret"></p>
                 <p id="ResultatEmprunt"></p>
                 <p id="InteretsPret"></p>
@@ -411,7 +418,7 @@
             </div>
 
 
-            <div>
+            <div class="AffichageDeuxButton">
                 <div>
                     <button type="button" id="Button_CalculerPretEmprunt">Results</button>
                 </div>

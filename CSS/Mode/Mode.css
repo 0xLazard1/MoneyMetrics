@@ -7,6 +7,9 @@
         width: 65%;
         border-radius: 14px;
         padding: 0px 5px 0 0px;
+        background-color: whitesmoke;
+        border: 2px solid black;
+        border-radius: 15px;
     }
 
     .Mode_Responsive_InputRadio {
