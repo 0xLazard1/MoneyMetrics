@@ -15,4 +15,32 @@
         margin: 8px;
     }
 
+    .Composoent_LevierButton {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 10vh;
+    }
+
+    .Composent_Trading_Button {
+        margin-bottom: 20px;
+        display: flex;
+    }
+
+    .Composent_TradingButton_Selection {
+        font-size: 15px;
+        padding: 0 20px 0 20px;
+    }
+
+
+    .Composent_Tranding_Range_General {
+        text-align: center;
+    }
+
+    .Composent_Trading_Range {
+        font-size: 20px;
+    }
+
 }
