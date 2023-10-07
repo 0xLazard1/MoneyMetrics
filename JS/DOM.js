@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var modeRadios = document.querySelectorAll(".Mode_Normal_Radio");
 
     function isMobile() {
-        return window.innerWidth <= 500;
+        return window.innerWidth <= 768;
     }
 
     menuButton.addEventListener("click", function () {
