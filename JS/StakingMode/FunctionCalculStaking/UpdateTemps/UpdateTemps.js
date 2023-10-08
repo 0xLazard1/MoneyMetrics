@@ -13,7 +13,7 @@
 import { elements } from "../../../DOM.js";
 
 
-document.querySelectorAll('.temps-button').forEach(button => {
+document.querySelectorAll('.Composent_TradingButton_Selection_Staking').forEach(button => {
      button.addEventListener('click', function () {
           const jours = this.getAttribute('data-days');
           elements.Input_RangeTemps.value = jours;

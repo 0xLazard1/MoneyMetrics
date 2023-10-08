@@ -1,6 +1,6 @@
 import { elements } from "../../../DOM.js";
 
-document.querySelectorAll('.temps-button-lending').forEach(button => {
+document.querySelectorAll('.Composent_TradingButton_Selection_Staking').forEach(button => {
     button.addEventListener('click', function () {
         const jours = this.getAttribute('data-days');
         elements.Input_RangeTemps_Lending.value = jours;

@@ -22,7 +22,7 @@
 import { elements } from "../../../DOM.js";
 
 
-document.querySelectorAll('.lever-button').forEach(button => {
+document.querySelectorAll('.Composent_TradingButton_Selection').forEach(button => {
     button.addEventListener('click', function () {
         const lever = this.getAttribute('data-lever');
         elements.Input_RangeLevier.value = lever;
