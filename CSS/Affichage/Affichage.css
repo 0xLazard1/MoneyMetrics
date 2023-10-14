@@ -1,3 +1,32 @@
+.AffichagePageEntiere {
+    display: flex;
+    width: 69%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.AffichageGauche,
+.AffichageDroite {
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    margin: 20px;
+}
+
+.AffichageDeuxButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 0 5px 0 5px;
+}
+
+
+
+
 @media screen and (max-width: 500px) {
     .Général {
         display: flex;
@@ -29,7 +58,6 @@
     }
 
 
-
     .AffichageDeuxButton {
         align-items: center;
         justify-content: center;
@@ -38,12 +66,5 @@
         padding: 5px;
         margin: 0 5px 0 5px;
     }
-
-
-
-
-
-
-
 
 }

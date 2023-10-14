@@ -1,3 +1,152 @@
+.Radio_Wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.Composent_Generaux_Radio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.Composent_SpotLevier_Radio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+}
+
+
+.Composent_Generaux_Text {
+    font-size: 0.9rem;
+    margin: 8px;
+    min-width: 80px;
+}
+
+.RadioButtonLongShort {
+    margin: 20px;
+}
+
+
+.Composoent_LevierButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+.Composent_Trading_Button {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.Composent_Staking_Button {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 85%;
+}
+
+.Composent_TradingButton_Selection {
+    font-size: 25px;
+    margin: 0px 9px 0px 5px;
+    flex-grow: 1;
+    max-width: calc(100% / 4);
+    white-space: nowrap;
+}
+
+.Composent_TradingButton_Selection_Staking {
+    font-size: 14px;
+    margin: 0px 9px 0px 5px;
+    flex-grow: 1;
+    max-width: calc(100% / 4);
+    white-space: nowrap;
+}
+
+.Composent_Tranding_Range_General {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.Composent_Trading_Range {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+}
+
+
+.Composent_Capitilusation_General {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.Composent_AutoCompound {
+    margin-top: 10px;
+}
+
+
+
+.Composent_ClassBOX {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.Composent_Class_Selection,
+.stoploss-input-wrapper,
+.stoploss-toggle-wrapper {
+    position: relative;
+    width: 90%;
+    margin: 5px 20px 5px 10px;
+}
+
+.Composent_Class_Input,
+.stoploss-input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.75rem;
+}
+
+.stoploss-toggle {
+    margin-right: 0.5rem;
+}
+
+
+.stoploss-toggle-label {
+    font-size: 1rem;
+}
+
+.multiplicator-indicator {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
 @media screen and (max-width: 500px) {
     .Radio_Wrapper {
         display: flex;

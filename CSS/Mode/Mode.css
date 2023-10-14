@@ -1,3 +1,78 @@
+/* Styles par défaut pour les grands écrans */
+.NavBar_Normal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 12px;
+    background-color: whitesmoke;
+    width: 69%;
+    margin: auto;
+}
+
+.Mode_Normal_Choix {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.Mode_Normal_Choix div {
+    position: absolute;
+    right: -170px;
+    top: 55%;
+    transform: translateY(-50%);
+}
+
+.Normal_TwitterLogo {
+    color: blue;
+    font-size: 25px;
+}
+
+.Mode_Normal_Radio:checked+.Mode_Normal_NomMode {
+    background-color: #007BFF;
+    color: white;
+    border-radius: 0.25rem;
+}
+
+.Mode_Normal_Radio {
+    display: none;
+}
+
+.Mode_Normal_NomMode {
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+    min-width: 120px;
+    max-width: 100px;
+}
+
+.Mode_Normal_NomMode:hover {
+    background-color: #f0f0f0;
+}
+
+.Mode_Normal_NomMode:focus-within {
+    box-shadow: 0 0 3px #007BFF;
+}
+
+.Mode_Normal_Radio:checked+.Mode_Normal_NomMode::after {
+    content: " ✔️";
+}
+
+
+
+
+
+.NavBar_Responsive {
+    display: none;
+}
+
+
 @media screen and (max-width: 500px) {
 
     .NavBar_Responsive {
