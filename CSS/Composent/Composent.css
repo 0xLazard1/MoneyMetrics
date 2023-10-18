@@ -6,12 +6,11 @@
 }
 
 .Composent_Generaux_Radio {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   
     width: 100%;
     margin: 0;
     font-size: 1rem;
+    
 
 }
 
@@ -20,22 +19,49 @@
     justify-content: center;
     align-items: center;
     height: auto;
-    width: 100%;
-    margin: 20px;
+    width: auto;
+    margin-top: 20px;
+    
     font-size: 1rem;
+    
 }
 
 
 
 .Composent_Generaux_Text {
-    font-size: 0.9rem;
-    margin: 8px;
-    min-width: 80px;
+    font-size: 1.1rem;
+   margin-left: 20px;
+   margin-right: 20px;
+    width: 60px;
 }
 
-.RadioButtonLongShort {
-    margin: 20px;
-}
+input[type='radio']:after { 
+    width: 15px;
+    height: 15px; 
+    border-radius: 15px; 
+    top: -2px; 
+    left: -1px; 
+    position: relative; 
+    background-color: #d1d3d1; 
+    content: ''; 
+    display: inline-block; 
+    visibility: visible; 
+    border: 2px solid white; 
+} 
+input[type='radio']:checked:after { 
+    width: 15px; 
+    height: 15px; 
+    border-radius: 15px; 
+    top: -2px; left: -1px; 
+    position: relative; 
+    background-color: #1e293b; 
+    content: ''; 
+    display: inline-block; 
+    visibility: visible; 
+    border: 2px solid white; }
+
+
+
 
 
 .Composoent_LevierButton {
@@ -185,6 +211,7 @@
 
     .RadioButtonLongShort {
         margin: 20px;
+       
     }
 
 
