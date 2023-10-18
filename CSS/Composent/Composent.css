@@ -10,6 +10,8 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin: 0;
+    font-size: 1rem;
 
 }
 
@@ -19,7 +21,10 @@
     align-items: center;
     height: auto;
     width: 100%;
+    margin: 20px;
+    font-size: 1rem;
 }
+
 
 
 .Composent_Generaux_Text {
@@ -56,16 +61,18 @@
 }
 
 .Composent_TradingButton_Selection {
-    font-size: 25px;
-    margin: 0px 9px 0px 5px;
+    font-size: 20px;
+    margin: 0px 9px 0px 9px;
     flex-grow: 1;
     max-width: calc(100% / 4);
     white-space: nowrap;
+    width: 80px;
+    text-align: center;
 }
 
 .Composent_TradingButton_Selection_Staking {
     font-size: 14px;
-    margin: 0px 9px 0px 5px;
+    margin: 0px 15px 0px 15px;
     flex-grow: 1;
     max-width: calc(100% / 4);
     white-space: nowrap;
@@ -81,7 +88,9 @@
     width: 90%;
     margin: 0 auto;
     display: block;
+
 }
+
 
 
 .Composent_Capitilusation_General {
@@ -140,7 +149,6 @@
     transform: translateY(-50%);
     font-size: 1rem;
 }
-
 
 
 

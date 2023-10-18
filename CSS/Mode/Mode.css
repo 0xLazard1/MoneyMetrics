@@ -8,7 +8,7 @@
     border: 1px solid black;
     border-radius: 12px;
     background-color: whitesmoke;
-    width: 69%;
+    width: 40%;
     margin: auto;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .Mode_Normal_Radio:checked+.Mode_Normal_NomMode {
-    background-color: #007BFF;
+    background-color: #1e293b;
     color: white;
     border-radius: 0.25rem;
 }
@@ -41,15 +41,19 @@
 }
 
 .Mode_Normal_NomMode {
-    margin-right: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     font-size: 20px;
     font-weight: bold;
     color: black;
     cursor: pointer;
     padding: 5px 10px;
     transition: background-color 0.3s ease;
-    min-width: 120px;
-    max-width: 100px;
+    width: 89px;
+    text-align: center;
+
 }
 
 .Mode_Normal_NomMode:hover {
@@ -57,20 +61,15 @@
 }
 
 .Mode_Normal_NomMode:focus-within {
-    box-shadow: 0 0 3px #007BFF;
+    box-shadow: 0 0 3px #1e293b;
 }
-
-.Mode_Normal_Radio:checked+.Mode_Normal_NomMode::after {
-    content: " ✔️";
-}
-
-
-
 
 
 .NavBar_Responsive {
     display: none;
 }
+
+
 
 
 @media screen and (max-width: 500px) {
@@ -140,4 +139,5 @@
     .Mode_Normal_NomMode:last-child {
         border-bottom: none;
     }
+
 }
