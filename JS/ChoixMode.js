@@ -12,6 +12,10 @@
 
 
 import { elements } from "./DOM.js";
+import { ResetLendingBorrowing } from "./LendingMode/LendingReset/LendingReset.js";
+import { ResetNFT } from "./NftMode/FunctionResetNFT/ResetNFT.js";
+import { ResetStaking } from "./StakingMode/FunctionReset/ResetStaking.js";
+import { Reset } from "./TradingMode/FunctionReset/Reset.js";
 
 export const ChoixMode = () => {
     const mappings = {
@@ -33,4 +37,9 @@ export const ChoixMode = () => {
             break;
         }
     }
+
+    ResetNFT();
+    ResetLendingBorrowing();
+    ResetStaking();
+    Reset();
 }

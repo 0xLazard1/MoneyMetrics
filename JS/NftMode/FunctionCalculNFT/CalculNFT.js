@@ -61,17 +61,19 @@ export const NFTCalcul = () => {
         const isProfit = NetTokenGagné >= 0;
 
         if (isProfit) {
-            displayResults(ResultatCalculNFT, 'Bénéfice net de la revente', 'green', `${NetTokenGagné.toFixed(2)}$`);
-            displayResults(WalletBeneficeNFT, 'Wallet total après revente', 'green', `${TokenTotal.toFixed(2)}$`);
-            displayResults(PourcentageNFT, 'Pourcentage de gain', 'green', `${pourcentageChangement.toFixed(2)}%`);
+            displayResults(ResultatCalculNFT, 'Net Profit from Resale', 'green', `${NetTokenGagné.toFixed(2)}$`);
+            displayResults(WalletBeneficeNFT, 'Total Wallet after Resale', 'green', `${TokenTotal.toFixed(2)}$`);
+            displayResults(PourcentageNFT, 'Percentage of Gain', 'green', `${pourcentageChangement.toFixed(2)}%`);
         } else {
-            displayResults(ResultatCalculNFT, 'Perte net après revente', 'red', `${Math.abs(NetTokenGagné).toFixed(2)}$`); // Utilise Math.abs pour montrer le montant de la perte en valeur positive
-            displayResults(WalletBeneficeNFT, 'Wallet total après revente en perte', 'red', `${TokenTotal.toFixed(2)}$`);
-            displayResults(PourcentageNFT, 'Pourcentage de perte', 'red', `${Math.abs(pourcentageChangement).toFixed(2)}%`);
+            displayResults(ResultatCalculNFT, 'Net Loss after Resale', 'red', `${Math.abs(NetTokenGagné).toFixed(2)}$`);
+            displayResults(WalletBeneficeNFT, 'Total Wallet after Resale in Loss', 'red', `${TokenTotal.toFixed(2)}$`);
+            displayResults(PourcentageNFT, 'Percentage of Loss', 'red', `${Math.abs(pourcentageChangement).toFixed(2)}%`);
         }
 
-        displayResults(elements.CommissionNFTPourcentage, 'Taux total de commission', 'red', `${(commissionCreator + commissionMarketPlace).toFixed(2)}%`);
-        displayResults(elements.CommissionNFTenDollard, 'Commissions déduites', 'red', `${CommissionTotale.toFixed(2)}$`);
+        displayResults(elements.CommissionNFTPourcentage, 'Total Commission Rate', 'red', `${(commissionCreator + commissionMarketPlace).toFixed(2)}%`);
+        displayResults(elements.CommissionNFTenDollard, 'Commissions Deducted', 'red', `${CommissionTotale.toFixed(2)}$`);
+
+
     }
 
 }

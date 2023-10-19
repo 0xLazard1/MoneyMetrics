@@ -43,8 +43,10 @@ export const Reset = () => {
             elements.PerteStopLoss.textContent = "";
         }
 
-
     } else {
-        console.error("Toute les valeurs sont à 0");
+        console.error("Toute les valeurs sont à 0 en trading");
     }
+
+    let affichageDroite = document.querySelector(".AffichageDroite");
+    affichageDroite.style.display = "none";
 }

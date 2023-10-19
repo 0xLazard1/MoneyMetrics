@@ -35,5 +35,17 @@ export const ResetLendingBorrowing = () => {
     if (valueMontant > 0 || valueTauxInteret > 0 || valueFraisPlateforme > 0) {
         [elements.Input_Montant, elements.Input_TauxInteret, elements.Input_FraisPlateforme].forEach(input => input.value = "");
         [elements.ResultatPret, elements.InteretsPret, elements.FraisTotal, elements.ResultatEmprunt, elements.InteretsEmprunt].forEach(element => element.innerHTML = "");
+
+
+
+    } else {
+        console.error("Toute les valeurs sont à 0 en lending");
     }
+
+    let affichageDroite = document.querySelector(".class4");
+    affichageDroite.style.display = "none";
+
+
+
+
 }

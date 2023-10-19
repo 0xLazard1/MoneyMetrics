@@ -59,7 +59,7 @@ export const LendingCalcul = () => {
     const frais = interets * fraisPlateforme;
     const montantFinal = montant + interets - (recomposition ? 0 : frais);
 
-    displayResults(elements.ResultatPret, montantFinal.toFixed(2), 'green', 'Montant final après prêt : ', 'tokens');
-    displayResults(elements.InteretsPret, interets.toFixed(2), 'green', 'Intérêts totaux gagnés : ', 'tokens');
-    displayResults(elements.FraisTotal, frais.toFixed(2), 'red', 'Frais déduits : ', 'tokens');
+    displayResults(elements.ResultatPret, montantFinal.toFixed(2), 'green', 'Final amount after loan: ', 'tokens');
+    displayResults(elements.InteretsPret, interets.toFixed(2), 'green', 'Total interest earned: ', 'tokens');
+    displayResults(elements.FraisTotal, frais.toFixed(2), 'red', 'Fees deducted: ', 'tokens');
 }

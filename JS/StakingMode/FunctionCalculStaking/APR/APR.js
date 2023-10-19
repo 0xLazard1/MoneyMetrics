@@ -57,21 +57,22 @@ export const APR = () => {
         const TokensParMois = (TokensApresCommission / temps) * 30;
 
         // Affichage des résultats
-        displayResults(ResultatCalculStaking, 'Gains nets en tokens (après commission)', 'green', `${TokensApresCommission.toFixed(2)}`);
-        displayResults(WalletBeneficeStaking, 'Total de tokens en portefeuille après staking', 'green', `${TotalTokensFinal.toFixed(2)}`);
-        displayResults(CommissionStaking, 'Perte en tokens due à la commission', 'red', `${(TokensGagnes - TokensApresCommission).toFixed(2)}`);
+        displayResults(ResultatCalculStaking, 'Net Token Gains (after commission)', 'green', `${TokensApresCommission.toFixed(2)}`);
+        displayResults(WalletBeneficeStaking, 'Total Tokens in Wallet after Staking', 'green', `${TotalTokensFinal.toFixed(2)}`);
+        displayResults(CommissionStaking, 'Token Loss Due to Commission', 'red', `${(TokensGagnes - TokensApresCommission).toFixed(2)}`);
         if (temps >= 30) {
-            displayResults(TokensParMoisDisplay, 'Tokens par mois après commission', 'green', `${TokensParMois.toFixed(2)}`);
+            displayResults(TokensParMoisDisplay, 'Tokens per Month after Commission', 'green', `${TokensParMois.toFixed(2)}`);
         }
 
         if (temps >= 7) {
-            displayResults(TokensParSemaineDisplay, 'Tokens par semaine après commission', 'green', `${TokensParSemaine.toFixed(2)}`);
+            displayResults(TokensParSemaineDisplay, 'Tokens per Week after Commission', 'green', `${TokensParSemaine.toFixed(2)}`);
         }
 
         if (temps >= 1) {
-            displayResults(TokensParJourDisplay, 'Tokens par jour après commission', 'green', `${TokensParJour.toFixed(2)}`);
+            displayResults(TokensParJourDisplay, 'Tokens per Day after Commission', 'green', `${TokensParJour.toFixed(2)}`);
         }
-        displayResults(TempsPourDoublerDisplay, 'Temps nécessaire pour doubler les tokens', 'blue', dureePourDoubler);
+        displayResults(TempsPourDoublerDisplay, 'Time Required to Double Tokens', 'blue', dureePourDoubler);
+
     }
 
 

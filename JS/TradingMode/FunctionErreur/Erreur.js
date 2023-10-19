@@ -42,18 +42,17 @@ const displayResults = (element, value, color) => {
 
 export const ErreursLong = () => {
     Reset();
-    displayResults(elements.ErrorContainer, 'Un problème dans le mode long', 'red');
+    displayResults(elements.ErrorContainer, 'An issue in long mode', 'red');
 }
 
 export const ErreursShort = () => {
     Reset();
-    displayResults(elements.ErrorContainer, 'Un problème dans le mode short', 'red');
+    displayResults(elements.ErrorContainer, 'An issue in short mode', 'red');
 }
 
 
-export const ErreursLiquidation = () => { }
 
 export const ErreurStopLoss = () => {
     Reset();
-    displayResults(elements.ErrorContainer, 'Un problème dans le StopLoss', 'red');
+    displayResults(elements.ErrorContainer, 'An issue in StopLoss', 'red');
 }

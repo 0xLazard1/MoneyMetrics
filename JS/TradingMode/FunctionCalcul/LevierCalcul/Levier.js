@@ -45,7 +45,7 @@ export const Levier = () => {
     if (elements.Input_Levier && elements.Input_Levier.checked && !elements.Input_Spot.checked) {
         // Formules communes
         const nombreAction = (capitalInvesti * rangelevier) / prixEntree;
-       
+
 
         if (elements.Input_Long.checked && !elements.Input_Short.checked) {
             // Formules pour le mode Long
@@ -60,13 +60,13 @@ export const Levier = () => {
 
             // Affichage pour le mode Long
             if (prixEntree < niveauSortie && capitalInvesti != 0) {
-                displayResults(ResultatCalcul, 'Bénéfice', 'green', `${gainNetLevier.toFixed(2)}$`);
-                displayResults(WalletBenefice, 'Wallet Après Vente en Bénéfice ', 'green', `${walletApresBeneficeLevier.toFixed(2)} $`);
+                displayResults(ResultatCalcul, 'Profit', 'green', `${gainNetLevier.toFixed(2)}$`);
+                displayResults(WalletBenefice, 'Wallet After Profitable Sale', 'green', `${walletApresBeneficeLevier.toFixed(2)} $`);
                 displayResults(Liquidation, 'Liquidation', 'blue', `${LiquidationLevierLong.toFixed(2)} $`);
                 displayResults(RisqueReward, 'R/R', 'blue', `${Math.abs(riskRewardRatioLong).toFixed(2)}`);
-                if (stopLoss < prixEntree) { //Affichage Erreur
-                    displayResults(PerteStopLoss, 'Perte en cas de StopLoss ', 'red', `${Math.abs(perteNetSansLevier).toFixed(2)} $`);
-                    displayResults(WalletSl, 'Wallet Après sl ', 'red', `${walletApresSlSansLevier.toFixed(2)} $`);
+                if (stopLoss < prixEntree) { // Display Error
+                    displayResults(PerteStopLoss, 'Loss in Case of StopLoss', 'red', `${Math.abs(perteNetSansLevier).toFixed(2)} $`);
+                    displayResults(WalletSl, 'Wallet After sl', 'red', `${walletApresSlSansLevier.toFixed(2)} $`);
                     elements.ErrorContainer.textContent = "";
                 } else {
                     ErreurStopLoss();
@@ -88,23 +88,22 @@ export const Levier = () => {
 
 
             // Affichage pour le mode Short
-            if (prixEntree > niveauSortie && capitalInvesti != 0) {
-                displayResults(ResultatCalcul, 'Bénéfice ', 'green', `${gainNetLevierShort.toFixed(2)}$`);
-                displayResults(WalletBenefice, 'Wallet Après Vente en Bénéfice ', 'green', `${walletApresBeneficeLevierShort.toFixed(2)} $`);
-                displayResults(Liquidation, 'Liquidation', 'blue', `${LiquidationLevierShort.toFixed(2)} $`);
-                displayResults(RisqueReward, 'R/R', 'blue', `${riskRewardRatioShort.toFixed(2)}`);
+            displayResults(ResultatCalcul, 'Profit', 'green', `${gainNetLevierShort.toFixed(2)}$`);
+            displayResults(WalletBenefice, 'Wallet After Profitable Sale', 'green', `${walletApresBeneficeLevierShort.toFixed(2)} $`);
+            displayResults(Liquidation, 'Liquidation', 'blue', `${LiquidationLevierShort.toFixed(2)} $`);
+            displayResults(RisqueReward, 'R/R', 'blue', `${riskRewardRatioShort.toFixed(2)}`);
+            elements.ErrorContainer.textContent = "";
+            if (stopLoss > prixEntree) {
+                displayResults(PerteStopLoss, 'Loss in Case of StopLoss', 'red', `${perteNetSansLevier.toFixed(2)} $`);
+                displayResults(WalletSl, 'Wallet After sl', 'red', `${walletApresSlSansLevierEnSL.toFixed(2)} $`);
                 elements.ErrorContainer.textContent = "";
-                if (stopLoss > prixEntree) {
-                    displayResults(PerteStopLoss, 'Perte en cas de StopLoss ', 'red', `${perteNetSansLevier.toFixed(2)} $`);
-                    displayResults(WalletSl, 'Wallet Après sl ', 'red', `${walletApresSlSansLevierEnSL.toFixed(2)} $`);
-                    elements.ErrorContainer.textContent = "";
-                } else {
-                    ErreurStopLoss();
-                }
 
             } else {
-                ErreursShort();
+                ErreurStopLoss();
             }
+
+        } else {
+            ErreursShort();
         }
     }
 }

@@ -69,8 +69,8 @@ export const Borrowing = () => {
 
         montantTotal += frais;
 
-        displayResults(elements.ResultatEmprunt, 'Montant total à rembourser après emprunt', 'red', `${montantTotal.toFixed(2)} tokens`);
-        displayResults(elements.InteretsEmprunt, 'Intérêts accumulés', 'red', `${interetsTotal.toFixed(2)} tokens`);
-        displayResults(elements.FraisTotal, 'Frais de plateforme', 'red', `${frais.toFixed(2)} tokens`);
+        displayResults(elements.ResultatEmprunt, 'Total amount to repay after loan', 'red', `${montantTotal.toFixed(2)} tokens`);
+        displayResults(elements.InteretsEmprunt, 'Accumulated interest', 'red', `${interetsTotal.toFixed(2)} tokens`);
+        displayResults(elements.FraisTotal, 'Platform fees', 'red', `${frais.toFixed(2)} tokens`);
     }
 }

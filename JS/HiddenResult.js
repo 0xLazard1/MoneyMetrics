@@ -17,3 +17,4 @@ export const HiddenResult2 = () => {
     Object.assign(elements.AffichageDroiteIDNFT.style, { display: "none" })
     console.log("test2")
 }
+

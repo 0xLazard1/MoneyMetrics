@@ -49,9 +49,10 @@ export const APY = () => {
         const NetTokenGagné = BrutTokenGagné - commissionCalculee;
         const TokenBenefice = NetTokenGagné + numeriqueQuantitestaking;
 
-        displayResults(elements.ResultatCalculStaking, 'Tokens obtenus avec capitalisation', 'green', `${NetTokenGagné.toFixed(2)}`)
-        displayResults(elements.WalletBeneficeStaking, 'Total de tokens après staking avec capitalisation', 'green', `${TokenBenefice.toFixed(2)}`)
-        displayResults(elements.CommissionStaking, 'Tokens déduits en commission avec capitalisation', 'red', `${commissionCalculee.toFixed(2)}`)
+        displayResults(elements.ResultatCalculStaking, 'Tokens Earned with Capitalization', 'green', `${NetTokenGagné.toFixed(2)}`);
+        displayResults(elements.WalletBeneficeStaking, 'Total Tokens after Staking with Capitalization', 'green', `${TokenBenefice.toFixed(2)}`);
+        displayResults(elements.CommissionStaking, 'Tokens Deducted as Commission with Capitalization', 'red', `${commissionCalculee.toFixed(2)}`);
+
     }
 
 }

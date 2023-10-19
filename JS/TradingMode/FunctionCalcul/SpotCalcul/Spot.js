@@ -47,18 +47,19 @@ export const Spot = () => {
         };
 
         if (gainBrute > capitalInvesti) {
-            displayResults(elements.ResultatCalcul, 'Bénéfice', 'green', `${gainNet.toFixed(2)}$`);
-            displayResults(elements.Pourcentage, 'Pourcentage', 'green', `${PourcentageNet.toFixed(2)}%`);
-            displayResults(elements.WalletBenefice, 'Wallet Après Vente en Bénéfice', 'green', `${WalletAvecBenefice.toFixed(2)}$`);
+            displayResults(elements.ResultatCalcul, 'Profit', 'green', `${gainNet.toFixed(2)}$`);
+            displayResults(elements.Pourcentage, 'Percentage', 'green', `${PourcentageNet.toFixed(2)}%`);
+            displayResults(elements.WalletBenefice, 'Wallet After Profitable Sale', 'green', `${WalletAvecBenefice.toFixed(2)}$`);
         } else {
-            displayResults(elements.ResultatCalcul, 'Perte', 'red', `${gainNet.toFixed(2)}$`);
-            displayResults(elements.Pourcentage, 'Pourcentage', 'red', `${PourcentageNet.toFixed(2)}%`);
-            displayResults(elements.WalletBenefice, 'Wallet Après Vente en Perte', 'red', `${WalletAvecBenefice.toFixed(2)}$`);
+            displayResults(elements.ResultatCalcul, 'Loss', 'red', `${gainNet.toFixed(2)}$`);
+            displayResults(elements.Pourcentage, 'Percentage', 'red', `${PourcentageNet.toFixed(2)}%`);
+            displayResults(elements.WalletBenefice, 'Wallet After Loss Sale', 'red', `${WalletAvecBenefice.toFixed(2)}$`);
         }
 
         if (!elements.Toggle_StopLoss.checked) {
-            displayResults(elements.PerteStopLoss, 'Perte en cas de StopLoss', 'red', `${perteNet.toFixed(2)}$`);
-            displayResults(elements.WalletSl, 'Wallet Après sl', 'red', `${WalletAfterSl.toFixed(2)}$`);
+            displayResults(elements.PerteStopLoss, 'Loss in Case of StopLoss', 'red', `${perteNet.toFixed(2)}$`);
+            displayResults(elements.WalletSl, 'Wallet After sl', 'red', `${WalletAfterSl.toFixed(2)}$`);
+
         } else {
             elements.PerteStopLoss.innerHTML = "";
             displayResults(elements.PartieStopLoss.style, "none");

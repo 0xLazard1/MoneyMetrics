@@ -27,5 +27,9 @@ export const ResetStaking = () => {
         [elements.Input_QuantiteStaking, elements.Input_PourcentageAPR, elements.Input_CommisionStaking].forEach(input => input.value = "");
         [elements.ResultatCalculStaking, elements.WalletBeneficeStaking, elements.CommissionStaking, elements.TokensParJourDisplay, elements.TokensParSemaineDisplay,
         elements.TokensParMoisDisplay, elements.TempsPourDoublerDisplay].forEach(element => element.textContent = "");
+
+
     }
+    let test = document.querySelector(".class2");
+    test.style.display = "none";
 }

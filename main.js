@@ -55,8 +55,7 @@ Button_CalculerLesResultats.addEventListener("click", Levier);
 Input_RangeLevier.addEventListener("input", UpdateLevier);
 
 
-//Utilisation pour le fichier Reset.js
-ResetAll.addEventListener("click", Reset);
+
 
 
 //Utilisation pour le fichier APR.js
@@ -67,8 +66,19 @@ Button_CalculerLesResultatsStaking.addEventListener("click", APR);
 Button_CalculerLesResultatsStaking.addEventListener("click", APY);
 
 
+//Utilisation pour le fichier Reset.js
+ResetAll.addEventListener("click", Reset);
+
+
 //Utilisation pour le fichier StakingReset.js
 Button_ResetStaking.addEventListener("click", ResetStaking);
+
+
+//Utilisation pour le ficher ResetNFT.js
+Button_ResetNFT.addEventListener("click", ResetNFT);
+
+//Utilisation pour le fichier ResetLendingBorrowing.js
+Button_ResetPretEmprunt.addEventListener("click", ResetLendingBorrowing);
 
 
 //Utilisation pour le fichier StakingVisibilité.js
@@ -80,8 +90,6 @@ Input_APR.addEventListener("change", StakingVisibilité);
 Button_CalculerLesResultatsNFT.addEventListener("click", NFTCalcul);
 
 
-//Utilisation pour le ficher ResetNFT.js
-Button_ResetNFT.addEventListener("click", ResetNFT);
 
 
 //Utilisation pour le fichier LendingBorrwingVisibilité.js
@@ -94,8 +102,7 @@ Button_CalculerPretEmprunt.addEventListener("click", LendingCalcul);
 //Utilisation pour le fichier Borrowing.js
 Button_CalculerPretEmprunt.addEventListener("click", Borrowing);
 
-//Utilisation pour le fichier ResetLendingBorrowing.js
-Button_ResetPretEmprunt.addEventListener("click", ResetLendingBorrowing);
+
 
 //Utilisation pour le fichier UpdateTemps.js
 Input_RangeTemps.addEventListener("input", UpdateTemps);
@@ -107,3 +114,4 @@ Button_CalculerLesResultats.addEventListener("click", HiddenResult);
 Button_CalculerLesResultatsStaking.addEventListener("click", HiddenResult);
 Button_CalculerLesResultatsNFT.addEventListener("click", HiddenResult);
 Button_CalculerPretEmprunt.addEventListener("click", HiddenResult);
+
