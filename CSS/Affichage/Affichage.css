@@ -14,6 +14,11 @@
     margin: 20px;
 }
 
+.AffichageDiv {
+    
+    margin-left: 55px;
+}
+
 .AffichageDeuxButton {
     display: flex;
     flex-direction: row;
@@ -25,8 +30,9 @@
 .ButtonAffichageSousResult,
 .AffichageButtonSousReset {
     background-color: #fff;
-    border: 0 solid #e2e8f0;
+    border: 1px solid #0d172a;
     border-radius: 1.5rem;
+    
     box-sizing: border-box;
     color: #0d172a;
     cursor: pointer;
