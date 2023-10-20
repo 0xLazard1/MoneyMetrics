@@ -72,6 +72,8 @@ window.addEventListener("DOMContentLoaded", () => {
     const inputapy = elements.Input_APY;
     const stopLoss = elements.Toggle_StopLoss;
     const inputlending = elements.Input_Pret;
+    const Trading = elements.Input_Trading;
+    Trading.checked = true;
     if (radioButtons.length > 0 && inputSpot && inputapy && inputlending && stopLoss) {
         radioButtons.forEach(button => button.checked = false);
         inputSpot.checked = true;
@@ -79,6 +81,7 @@ window.addEventListener("DOMContentLoaded", () => {
         inputapy.checked = true;
         inputlending.checked = true;
         stopLoss.checked = true;
+        Trading.checked = true;
         ChoixMode();
         TradingVisibilité();
         StakingVisibilité();
