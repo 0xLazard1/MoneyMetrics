@@ -1,5 +1,6 @@
 Organisation Projet 
 
+https://twitter.com/0xLazard/status/1715310561775231092
 
 Le fichier principal, (Main.js), contient tous les écouteurs d événements. Il est lu par le fichier (index.html).
 Le fichier (DOM.js) regroupe toutes les ID dans un tableau. Une fonction parcourt ce tableau et récupère chaque ID pour le push sur des éléments.
