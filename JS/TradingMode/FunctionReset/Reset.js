@@ -44,7 +44,7 @@ export const Reset = () => {
         }
 
     } else {
-        console.error("Toute les valeurs sont à 0 en trading");
+        return;
     }
 
     let affichageDroite = document.querySelector(".AffichageDroite");

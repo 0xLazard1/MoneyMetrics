@@ -5,7 +5,6 @@
     justify-content: center;
     flex-direction: column;
     margin-top: 20px;
-    border: 1px solid black;
     border-radius: 12px;
     background-color: whitesmoke;
     width: 40%;
@@ -27,7 +26,10 @@
 
 .Normal_TwitterLogo {
     color: blue;
-    font-size: 25px;
+    font-size: 35px;
+    position: absolute;
+    top: 15px;
+    right: 25px;
 }
 
 .Mode_Normal_Radio:checked+.Mode_Normal_NomMode {
@@ -69,6 +71,10 @@
     display: none;
 }
 
+.Responsive-twitter-icon-menu {
+    display: none;
+}
+
 
 
 
@@ -92,12 +98,16 @@
 
     .Responsive-twitter-icon-menu {
         font-size: 25px;
-        color: #1DA1F2;
+        color: blue;
+    }
+
+    .LogoNormal {
+        display: none;
     }
 
     .Menu_Responsive_Button {
         display: block;
-        background-color: #3498db;
+        background-color: #1e293b;
         color: white;
         padding: 8px 15px;
         border: none;
@@ -106,6 +116,7 @@
         cursor: pointer;
         transition: background-color 0.3s ease;
     }
+
 
     .Mode_Normal_Choix {
         display: none;

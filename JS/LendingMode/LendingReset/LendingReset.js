@@ -39,7 +39,7 @@ export const ResetLendingBorrowing = () => {
 
 
     } else {
-        console.error("Toute les valeurs sont à 0 en lending");
+        return;
     }
 
     let affichageDroite = document.querySelector(".class4");
