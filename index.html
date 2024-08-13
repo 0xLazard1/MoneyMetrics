@@ -7,10 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link media="all" rel="stylesheet" href="./CSS/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Favicon en SVG pour les navigateurs modernes -->
+  
 
     <title>MoneyMetrics by 0xLazard</title>
-
 </head>
+
 
 <body>
 
@@ -22,7 +25,15 @@
    ##                                                          ##
    ##############################################################
 -->
+
+<div class="BigLogo">
+<a href="https://discord.gg/tMZtVeJK7J" target="_blank">
+<img src="./logo.svg" alt="Twitter Logo" style="height: 200px; vertical-align: middle;">
+</a>
+</div>
+
         <div class="NavBar_Normal">
+          
             <div class="Mode_Normal_Choix">
                 <input type="radio" id="Input_Trading" name="Choice" value="Trading" class="Mode_Normal_Radio">
                 <label for="Input_Trading" class="Mode_Normal_NomMode">Trading</label>
@@ -32,11 +43,9 @@
                 <label for="Input_NFT" class="Mode_Normal_NomMode">NFT</label>
                 <input type="radio" id="Input_Lending" name="Choice" value="Lending" class="Mode_Normal_Radio">
                 <label for="Input_Lending" class="Mode_Normal_NomMode">Lending</label>
-
+              
             </div>
-            <a href="https://twitter.com/0xLazard" target="_blank" class="LogoNormal">
-                <i class="fab fa-twitter Normal_TwitterLogo"></i>
-            </a>
+          
         </div>
 
 
@@ -44,10 +53,12 @@
         <div class="NavBar_Responsive">
             <input type="checkbox" id="menu-button-checkbox" class="Mode_Responsive_InputRadio">
             <label for="menu-button-checkbox" class="Menu_Responsive_Button">☰ Menu</label>
-            <a href="https://twitter.com/0xLazard" target="_blank">
-                <i class="fab fa-twitter Responsive-twitter-icon-menu"></i>
+            <a href="https://discord.gg/tMZtVeJK7J" target="_blank">
+                <img src="./logo.svg" alt="Custom Logo" class="Responsive-logo-icon-menu">
             </a>
         </div>
+        
+        
 
 
         <!-- 
@@ -87,8 +98,6 @@
                             <span class="Composent_Generaux_Text">Short</span>
                         </div>
                     </form>
-
-
                 </div>
 
                 <div class="Composoent_LevierButton">
@@ -444,10 +453,23 @@
    ##############################################################
 -->
     <!-- Footer -->
+    <footer style="position: fixed; left: 0; right: 0; bottom: 0; padding: 5px; text-align: center; color: #000000; border-top: 1px solid #e0e0e0;">
+        <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
+            <p style="margin: 0; padding-right: 10px; font-size: 1rem;">
+                Created by 
+                <a href="https://twitter.com/0xLazard" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">
+                    0xLazard 
+                </a> 
+                - <span id="currentYear"></span>
+            </p>
+            <a href="https://discord.gg/tMZtVeJK7J" target="_blank">
+                <img src="./logo2.svg" alt="Discord Logo" style="height: 100px; vertical-align: middle;">
+            </a>
+        </div>
+    </footer>
 
-
-
-
+    
+    
 
     <script type="module" src="main.js"></script>
 
@@ -457,6 +479,11 @@
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
     <script defer src="https://cdn.vercel-insights.com/v1/script.debug.js"></script>
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById('currentYear').textContent = currentYear ;
+    </script>
+    
 
 </body>
 

@@ -25,11 +25,7 @@
 }
 
 .Normal_TwitterLogo {
-    color: blue;
-    font-size: 35px;
-    position: absolute;
-    top: 15px;
-    right: 25px;
+   display: none;
 }
 
 .Mode_Normal_Radio:checked+.Mode_Normal_NomMode {
@@ -99,6 +95,10 @@
     .Responsive-twitter-icon-menu {
         font-size: 25px;
         color: blue;
+    }
+
+    .BigLogo {
+        display: none;
     }
 
     .LogoNormal {
