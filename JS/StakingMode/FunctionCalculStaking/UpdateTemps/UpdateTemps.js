@@ -17,11 +17,11 @@ document.querySelectorAll('.Composent_TradingButton_Selection_Staking').forEach(
      button.addEventListener('click', function () {
           const jours = this.getAttribute('data-days');
           elements.Input_RangeTemps.value = jours;
-          elements.Temps_Value.textContent = jours + ' jours';
+          elements.Temps_Value.textContent = jours + ' days';
      });
 });
 
 // Mettre à jour le texte quand le slider change
 export const UpdateTemps = () => {
-     elements.Temps_Value.textContent = elements.Input_RangeTemps.value + ' jours';
+     elements.Temps_Value.textContent = elements.Input_RangeTemps.value + ' days';
 }
